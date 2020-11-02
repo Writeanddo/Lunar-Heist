@@ -5,27 +5,27 @@ public class PlayerController : MonoBehaviour
     public int Speed;
     public int JumpHeight;
 
-    private Rigidbody2D _body;
-    private Vector2 _inputs;
+    private Rigidbody2D Body;
+    private Vector2 Inputs;
 
     void Start()
     {
-        _body = GetComponent<Rigidbody2D>();
+        Body = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        _inputs = Vector2.zero;
-        _inputs.x = Input.GetAxis("Horizontal");
+        Inputs = Vector2.zero;
+        Inputs.x = Input.GetAxis("Horizontal");
 
         if (Input.GetButtonDown("Jump"))
         {
-            _body.AddForce(Vector2.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode2D.Impulse);
+            Body.AddForce(Vector2.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode2D.Impulse);
         }
     }
 
     void FixedUpdate()
     {
-        _body.MovePosition(_body.position + _inputs * Speed * Time.fixedDeltaTime);
+        Body.MovePosition(Body.position + Inputs * Speed * Time.fixedDeltaTime);
     }
 }
