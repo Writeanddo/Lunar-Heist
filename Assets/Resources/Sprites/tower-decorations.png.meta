@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: 2e48ce98b8309f943a62b1c45b18e00b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6775543341782086425
+    second: tower-decorations_0
+  - first:
+      213: -467475614901777596
+    second: tower-decorations_1
+  - first:
+      213: -606239005179081408
+    second: tower-decorations_2
+  - first:
+      213: 5673085129236578156
+    second: tower-decorations_3
+  - first:
+      213: 3032257328989066730
+    second: tower-decorations_4
+  - first:
+      213: -6544420363781022667
+    second: tower-decorations_5
+  - first:
+      213: -7095867270710171146
+    second: tower-decorations_6
+  - first:
+      213: -4870871435949453424
+    second: tower-decorations_7
+  - first:
+      213: -7181321305232330519
+    second: tower-decorations_8
+  - first:
+      213: -2434779130902671543
+    second: tower-decorations_9
+  - first:
+      213: -7651129545165220984
+    second: tower-decorations_10
+  - first:
+      213: 6727030279017383489
+    second: tower-decorations_11
+  - first:
+      213: 3296775549007073931
+    second: tower-decorations_12
+  - first:
+      213: 3925470611997309726
+    second: tower-decorations_13
+  - first:
+      213: 5105188539340412229
+    second: tower-decorations_14
+  - first:
+      213: 4727300261578103434
+    second: tower-decorations_15
+  - first:
+      213: 7948400453820186701
+    second: tower-decorations_16
+  - first:
+      213: -6827221598525887333
+    second: tower-decorations_17
+  - first:
+      213: 9054368314835568554
+    second: tower-decorations_18
+  - first:
+      213: -604483801290015395
+    second: tower-decorations_19
+  - first:
+      213: 7132145042319933956
+    second: tower-decorations_20
+  - first:
+      213: -7010690151099707478
+    second: tower-decorations_21
+  - first:
+      213: -5743927516285267222
+    second: tower-decorations_22
+  - first:
+      213: 2399363665324015353
+    second: tower-decorations_23
+  - first:
+      213: -3666296763411385676
+    second: tower-decorations_24
+  - first:
+      213: -2081554787739377131
+    second: tower-decorations_25
+  - first:
+      213: -3542586006320295965
+    second: tower-decorations_26
+  - first:
+      213: 4148478977893243369
+    second: tower-decorations_27
+  - first:
+      213: -9097188812085893494
+    second: tower-decorations_28
+  - first:
+      213: -2174928875636490997
+    second: tower-decorations_29
+  - first:
+      213: -3063518970259727562
+    second: tower-decorations_30
+  - first:
+      213: -1455097385037817939
+    second: tower-decorations_31
+  - first:
+      213: 8788650088057127879
+    second: tower-decorations_32
+  - first:
+      213: -6227044884473372089
+    second: tower-decorations_33
+  - first:
+      213: 5250387987600692282
+    second: tower-decorations_34
+  - first:
+      213: -8939609799112307657
+    second: tower-decorations_35
+  - first:
+      213: -1865132646828254874
+    second: tower-decorations_36
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tower-decorations_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 307
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b4f90b7613389f0800000000000000
+      internalID: -467475614901777596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tower-decorations_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 35
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecc0d0aa3f68f1a0800000000000000
+      internalID: -6775543341782086425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tower-decorations_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 209
+        width: 98
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d805736d43697f0800000000000000
+      internalID: -606239005179081408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tower-decorations_3
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 175
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f72b42ed8dabe40800000000000000
+      internalID: 5673085129236578156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tower-decorations_4
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 155
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5d7f1a9fdb41a20800000000000000
+      internalID: 3032257328989066730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tower-decorations_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 307
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53cdffb5a5c8d25a0800000000000000
+      internalID: -6544420363781022667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
