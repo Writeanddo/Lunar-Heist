@@ -34,15 +34,28 @@ SpriteAtlas:
     - {fileID: 3709789598010588514, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
     - {fileID: -2079442789162390272, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
     - {fileID: 2800000, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
-    totalSpriteSurfaceArea: 275400
+    totalSpriteSurfaceArea: 375114
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: -5843410210541686958, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -1009704883915921074, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -4307936310144329067, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -7881368978358822878, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -5913171465551681087, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 3306676913460499897, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 4683506367607578722, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -7867182371257930566, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -6390872833476820598, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: 185141958482545192, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 4912225255556012866, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -6366901336626659316, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: 3131537952066324496, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -9111578601432837575, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: -8837733938843911177, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -1540776999052494768, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: -3757585105962537265, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: 492792722723299694, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: 8997102347810841553, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
@@ -75,9 +88,22 @@ SpriteAtlas:
   - {fileID: 1949845269744192091, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: -2344649814450430355, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   m_PackedSpriteNamesToIndex:
+  - vent-tiles_38
+  - vent-tiles_41
+  - vent-tiles_39
+  - vent-tiles_40
+  - vent-tiles_43
+  - vent-tiles_42
+  - vent-tiles_34
+  - vent-tiles_45
+  - vent-tiles_35
   - vent-tiles_29
+  - vent-tiles_44
+  - vent-tiles_36
   - vent-tiles_28
+  - vent-tiles_37
   - vent-tiles_27
+  - vent-tiles_46
   - vent-tiles_30
   - vent-tiles_26
   - vent-tiles_31
