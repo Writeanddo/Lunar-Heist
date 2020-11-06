@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Vent Tiles
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: -205056352502340873, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+    - {fileID: 3709789598010588514, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+    - {fileID: -2079442789162390272, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+    - {fileID: 2800000, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+    totalSpriteSurfaceArea: 423714
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 8263550521116712331, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -5395741348585352069, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -3694653673571909091, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 2086767234723041938, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -884372783251728170, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -5843410210541686958, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -1009704883915921074, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -4307936310144329067, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -7881368978358822878, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -5913171465551681087, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 3306676913460499897, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 4683506367607578722, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -7867182371257930566, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -6390872833476820598, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 185141958482545192, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 4912225255556012866, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -6366901336626659316, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 3131537952066324496, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 4022969030048811821, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -9111578601432837575, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -8837733938843911177, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -1540776999052494768, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -3757585105962537265, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 492792722723299694, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 8997102347810841553, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -107652504419017718, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 134383200768692700, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -1302924610069170720, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -6269272608810979402, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 7155863572454032668, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -5784007182666514425, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -2079442789162390272, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -5145144227820331138, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -2752580956478194783, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 1927326165095282880, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 1500131712741420501, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -3392371092411470118, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -5722790331929647777, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 4158335503544465942, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -8886902409805944392, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 511631462360986014, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -5430642627381371415, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -6969171480097388726, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -2895954901047877292, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -5798598155968055031, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 2123923624147279155, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 3360632254417690987, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 2359408194234874977, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 4852650947462170419, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 3709789598010588514, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -205056352502340873, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 1949845269744192091, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -2344649814450430355, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - vent-tiles_49
+  - vent-tiles_52
+  - vent-tiles_48
+  - vent-tiles_50
+  - vent-tiles_51
+  - vent-tiles_38
+  - vent-tiles_41
+  - vent-tiles_39
+  - vent-tiles_40
+  - vent-tiles_43
+  - vent-tiles_42
+  - vent-tiles_34
+  - vent-tiles_45
+  - vent-tiles_35
+  - vent-tiles_29
+  - vent-tiles_44
+  - vent-tiles_36
+  - vent-tiles_28
+  - vent-tiles_47
+  - vent-tiles_37
+  - vent-tiles_27
+  - vent-tiles_46
+  - vent-tiles_30
+  - vent-tiles_26
+  - vent-tiles_31
+  - vent-tiles_25
+  - vent-tiles_32
+  - vent-tiles_24
+  - vent-tiles_33
+  - vent-tiles_23
+  - vent-tiles_22
+  - vent-tiles_21
+  - vent-tiles_20
+  - vent-tiles_12
+  - vent-tiles_13
+  - vent-tiles_10
+  - vent-tiles_11
+  - vent-tiles_16
+  - vent-tiles_17
+  - vent-tiles_14
+  - vent-tiles_15
+  - vent-tiles_18
+  - vent-tiles_19
+  - vent-tiles_7
+  - vent-tiles_6
+  - vent-tiles_5
+  - vent-tiles_4
+  - vent-tiles_3
+  - vent-tiles_2
+  - vent-tiles_1
+  - vent-tiles_0
+  - vent-tiles_9
+  - vent-tiles_8
+  m_Tag: Vent Tiles
+  m_IsVariant: 0
