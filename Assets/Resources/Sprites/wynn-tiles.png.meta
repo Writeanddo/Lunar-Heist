@@ -284,8 +284,8 @@ TextureImporter:
       name: wynn-tiles_10
       rect:
         serializedVersion: 2
-        x: 630
-        y: 630
+        x: 553
+        y: 555
         width: 90
         height: 90
       alignment: 0
@@ -360,6 +360,174 @@ TextureImporter:
       bones: []
       spriteID: 683984437df8b3d80800000000000000
       internalID: -8269858136277871738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_3
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 659
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfa6ab2bc2900cf0800000000000000
+      internalID: -288068974843351074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_4
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 594
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c796a701879131e0800000000000000
+      internalID: -2219826560882010171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 90
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d5ebf5d3f7277b0800000000000000
+      internalID: -5227976315847680637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_9
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 631
+        width: 120
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8556f0ad4477980800000000000000
+      internalID: -8541282464932996889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_11
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 540
+        width: 120
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b03d23423480d880800000000000000
+      internalID: -8588219137985269578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_15
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 550
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b226a74e397f901d0800000000000000
+      internalID: -3383901430426738133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_16
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 407
+        width: 45
+        height: 90
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a6e6433e03bb140800000000000000
+      internalID: 4736433185505569438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_17
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 410
+        width: 45
+        height: 90
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be951194d74034230800000000000000
+      internalID: 3621743461479307755
       vertices: []
       indices: 
       edges: []
