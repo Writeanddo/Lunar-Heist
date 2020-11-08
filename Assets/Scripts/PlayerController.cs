@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded)
         {
-            Velocity.y += Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
+            Velocity.y = Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
         }
 
         OverlappingColliders = Physics2D.OverlapBoxAll(BoxCollider.transform.position, BoxCollider.size * transform.localScale, 0, Ground);
