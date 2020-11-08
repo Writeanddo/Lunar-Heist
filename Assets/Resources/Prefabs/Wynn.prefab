@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 6904848021679061211}
   - component: {fileID: 6904848021679061210}
   - component: {fileID: 6904848021679061213}
+  - component: {fileID: 774699450}
+  - component: {fileID: 2788187533484357791}
   m_Layer: 0
-  m_Name: Aurora
+  m_Name: Wynn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,3 +119,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sprites: {fileID: 11400000, guid: 29ec0b3dbe324d74da9894069be752d8, type: 2}
   SpriteRenderer: {fileID: 6904848021679061211}
+--- !u!114 &774699450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6904848021679061215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df684efce0ee44f4f82c8fd749ccc6dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+  JumpHeight: 0
+  Ground:
+    serializedVersion: 2
+    m_Bits: 256
+  BoxCollider: {fileID: 2788187533484357791}
+--- !u!61 &2788187533484357791
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6904848021679061215}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.51, y: 3}
+    newSize: {x: 1.51, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.51, y: 3}
+  m_EdgeRadius: 0
