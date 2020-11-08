@@ -5,10 +5,11 @@ public class PlayerController : MonoBehaviour
     public int Speed;
     public int JumpHeight;
     public LayerMask Ground;
+    public BoxCollider2D BoxCollider;
 
     private Vector2 Velocity;
     private bool IsGrounded;
-    private RaycastHit2D[] hits;
+    private Collider2D[] OverlappingColliders;
 
     /*
      *  s = ut + 0.5 * a * t^2
@@ -22,9 +23,9 @@ public class PlayerController : MonoBehaviour
     {
         IsGrounded = false;
 
-        hits = Physics2D.BoxCastAll(new Vector2(transform.position.x, transform.position.y), new Vector2(1, 1), 0f, Vector2.down, 1f, Ground);
+        OverlappingColliders = Physics2D.OverlapBoxAll(BoxCollider.transform.position, BoxCollider.size * transform.localScale, 0, Ground);
 
-        if (hits.Length > 0)
+        if (OverlappingColliders.Length > 0)
         {
             IsGrounded = true;
             Debug.Log(IsGrounded);
