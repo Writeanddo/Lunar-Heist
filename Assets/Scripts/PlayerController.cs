@@ -21,23 +21,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        IsGrounded = false;
-
-        OverlappingColliders = Physics2D.OverlapBoxAll(BoxCollider.transform.position, BoxCollider.size * transform.localScale, 0, Ground);
-
-        if (OverlappingColliders.Length > 0)
-        {
-            IsGrounded = true;
-            Debug.Log(IsGrounded);
-        }
-
-        Velocity.x = Input.GetAxisRaw("Horizontal") * Speed;
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            Velocity.y += Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
-        }
-
         if (IsGrounded)
         {
             Velocity.y = 0;
@@ -45,6 +28,22 @@ public class PlayerController : MonoBehaviour
         else
         {
             Velocity.y += Physics2D.gravity.y * Time.deltaTime;
+        }
+
+        Velocity.x = Input.GetAxisRaw("Horizontal") * Speed;
+
+        if (Input.GetButtonDown("Jump") && IsGrounded)
+        {
+            Velocity.y += Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
+        }
+
+        OverlappingColliders = Physics2D.OverlapBoxAll(BoxCollider.transform.position, BoxCollider.size * transform.localScale, 0, Ground);
+
+        IsGrounded = false;
+
+        for (int i = 0; i < OverlappingColliders.Length; i++)
+        {
+            IsGrounded = true;
         }
 
         transform.Translate(Velocity * Time.deltaTime);
