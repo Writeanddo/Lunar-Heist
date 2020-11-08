@@ -11492,7 +11492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6904848021679061215, guid: c5a161bca80e5e44da076445b9ec97cb, type: 3}
       propertyPath: m_Name
-      value: Aurora
+      value: Wynn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5a161bca80e5e44da076445b9ec97cb, type: 3}
