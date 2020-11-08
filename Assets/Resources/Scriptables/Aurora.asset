@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c637a7ca5a5784a4cbc8a994ce5d0b9a, type: 3}
+  m_Name: Aurora
+  m_EditorClassIdentifier: 
+  Run:
+  - {fileID: -3829926521259694870, guid: a6e9c1094789ad744b7db1aea2052655, type: 3}
+  - {fileID: 7616565836532410246, guid: a6e9c1094789ad744b7db1aea2052655, type: 3}
+  - {fileID: -3985301901459847982, guid: a6e9c1094789ad744b7db1aea2052655, type: 3}
+  - {fileID: -4017075246166272223, guid: a6e9c1094789ad744b7db1aea2052655, type: 3}
+  - {fileID: -7588608914727257862, guid: a6e9c1094789ad744b7db1aea2052655, type: 3}
+  - {fileID: 3228184158869035921, guid: a6e9c1094789ad744b7db1aea2052655, type: 3}
+  - {fileID: 2244106965976123885, guid: a6e9c1094789ad744b7db1aea2052655, type: 3}
+  Stand: {fileID: 21300000, guid: a505f45ec0e37ec46bba6f2cd4096557, type: 3}

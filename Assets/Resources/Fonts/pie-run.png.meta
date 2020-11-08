@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: a6e9c1094789ad744b7db1aea2052655
+guid: 17ec124f76e73ff48902437e22cce3c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3829926521259694870
-    second: aurora-run_0
+      213: -5265546796657043941
+    second: pie-run_0
   - first:
-      213: 7616565836532410246
-    second: aurora-run_1
+      213: -6922544124498395334
+    second: pie-run_1
   - first:
-      213: -3985301901459847982
-    second: aurora-run_2
+      213: -8340501165990476270
+    second: pie-run_2
   - first:
-      213: -4017075246166272223
-    second: aurora-run_3
+      213: 9093172385108293918
+    second: pie-run_3
   - first:
-      213: -7588608914727257862
-    second: aurora-run_4
+      213: 2598882467082418723
+    second: pie-run_4
   - first:
-      213: 3228184158869035921
-    second: aurora-run_5
+      213: 3136225809851764237
+    second: pie-run_5
   - first:
-      213: 2244106965976123885
-    second: aurora-run_6
+      213: 128805380274913240
+    second: pie-run_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,13 +122,76 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: aurora-run_0
+      name: pie-run_0
       rect:
         serializedVersion: 2
-        x: 14
+        x: 19
+        y: 9
+        width: 119
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b169f0526150de6b0800000000000000
+      internalID: -5265546796657043941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pie-run_1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 112
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f3e45cbce2eef90800000000000000
+      internalID: -6922544124498395334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pie-run_2
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 0
+        width: 112
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21608602166904c80800000000000000
+      internalID: -8340501165990476270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pie-run_3
+      rect:
+        serializedVersion: 2
+        x: 587
         y: 5
-        width: 126
-        height: 301
+        width: 119
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +199,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae4e778ee1e59dac0800000000000000
-      internalID: -3829926521259694870
+      spriteID: e1975c74b10713e70800000000000000
+      internalID: 9093172385108293918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aurora-run_1
+      name: pie-run_4
       rect:
         serializedVersion: 2
-        x: 186
+        x: 781
+        y: 7
+        width: 133
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a307795d5111420800000000000000
+      internalID: 2598882467082418723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pie-run_5
+      rect:
+        serializedVersion: 2
+        x: 952
         y: 0
-        width: 118
-        height: 304
+        width: 119
+        height: 277
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,83 +241,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 687e3e6264a73b960800000000000000
-      internalID: 7616565836532410246
+      spriteID: d0e40a3f1cc168b20800000000000000
+      internalID: 3136225809851764237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aurora-run_2
+      name: pie-run_6
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 112
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d40cc0290d51b8c0800000000000000
-      internalID: -3985301901459847982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aurora-run_3
-      rect:
-        serializedVersion: 2
-        x: 566
-        y: 0
-        width: 125
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1279e34d85b7048c0800000000000000
-      internalID: -4017075246166272223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aurora-run_4
-      rect:
-        serializedVersion: 2
-        x: 767
-        y: 14
-        width: 147
-        height: 275
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af8b152f568dfa690800000000000000
-      internalID: -7588608914727257862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aurora-run_5
-      rect:
-        serializedVersion: 2
-        x: 976
+        x: 1149
         y: 0
         width: 112
-        height: 290
+        height: 273
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,29 +262,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19b9eea8360dccc20800000000000000
-      internalID: 3228184158869035921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aurora-run_6
-      rect:
-        serializedVersion: 2
-        x: 1148
-        y: 0
-        width: 118
-        height: 299
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de98cf0556ba42f10800000000000000
-      internalID: 2244106965976123885
+      spriteID: 8dff1789fcb99c100800000000000000
+      internalID: 128805380274913240
       vertices: []
       indices: 
       edges: []
