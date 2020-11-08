@@ -1997,7 +1997,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9118,14 +9118,14 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 864
     m_Data: {fileID: -2079442789162390272, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -2344649814450430355, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -6366901336626659316, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -9111578601432837575, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -2344649814450430355, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 867
     m_Data:
@@ -10634,8 +10634,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1412813174}
   - component: {fileID: 1412813173}
+  - component: {fileID: 1412813175}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Scout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10709,6 +10710,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1412813175
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412813172}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64cb943cf57c1f043b4ae9f546935138, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1882687249
 GameObject:
   m_ObjectHideFlags: 0
