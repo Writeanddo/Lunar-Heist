@@ -11,6 +11,11 @@ public class Tower : MonoBehaviour
 
     public Vector2 GetRelativePlayerPosition()
     {
+        if (Player == null)
+        {
+            Debug.Log("TODO: find player");
+            return new Vector2(0, 0);
+        }
         Vector2 playerPosition = Player.transform.position;
 
         float boxStartX = TowerBounds.transform.position.x - (TowerBounds.size.x /2);

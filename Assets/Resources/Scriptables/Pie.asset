@@ -21,3 +21,5 @@ MonoBehaviour:
   - {fileID: 3136225809851764237, guid: a1bfa415cc7e14e42b5be73a4280379a, type: 3}
   - {fileID: 128805380274913240, guid: a1bfa415cc7e14e42b5be73a4280379a, type: 3}
   Stand: {fileID: 21300000, guid: 4c5a0d28c93c0f64a8e9d2daa9782a8f, type: 3}
+  Head: {fileID: 21300000, guid: ee9abaebc3b9d074ab696e2a6715a11c, type: 3}
+  SceneName: Pie

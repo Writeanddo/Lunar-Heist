@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ReskinAnimation : MonoBehaviour
 {
-    public CharacterSpriteHolder Sprites;
+    public Character Sprites;
     public SpriteRenderer SpriteRenderer;
 
     private Sprite SpriteToSet;
