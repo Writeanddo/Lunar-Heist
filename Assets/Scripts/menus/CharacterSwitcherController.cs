@@ -44,9 +44,7 @@ public class CharacterSwitcherController : MonoBehaviour
             StartCoroutine(LoadAndWait(name, isTowerScene));
         }else
         {
-            if (isTowerScene){
-                initialiseTowerScene(name);
-            }
+                initialiseScene(name, isTowerScene);
         }
     }
 
@@ -58,17 +56,23 @@ public class CharacterSwitcherController : MonoBehaviour
             yield return null;
         }
         Debug.Log("Scene loaded"+ name);
-        if (isTowerScene)
-        {
-            initialiseTowerScene(name);
-        }
+        
+            initialiseScene(name, isTowerScene);
+        
     }
 
-    private void initialiseTowerScene(String name)
+    private void initialiseScene(String name, Boolean isTowerScene)
     {
-        var w = SceneManager.GetSceneByName(name).GetRootGameObjects()[0].GetComponent<TowerSceneWrapper>();
-        wrappers.Add(w);
-        w.Activate(w.Character == SelectedCharacter);
+        if (isTowerScene)
+        {
+            var w = SceneManager.GetSceneByName(name).GetRootGameObjects()[0].GetComponent<TowerSceneWrapper>();
+            wrappers.Add(w);
+            w.Activate(w.Character == SelectedCharacter);
+        }
+        else
+        {
+            SelectedCharacter.audioSnapshot.TransitionTo(1f);
+        }
     }
 
     void Update()
@@ -98,6 +102,7 @@ public class CharacterSwitcherController : MonoBehaviour
             warpSound.Play();
             CloseSwitcher();
             UpdateSlots();
+            character.audioSnapshot.TransitionTo(1f);
         }
     }
 
