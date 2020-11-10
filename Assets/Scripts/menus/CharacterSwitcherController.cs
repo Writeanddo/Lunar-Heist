@@ -7,6 +7,8 @@ using System.Collections;
 
 public class CharacterSwitcherController : MonoBehaviour
 {
+    public AudioSource warpSound;
+
     public CharacterSlot Slot1;
     public CharacterSlot Slot2;
     public CharacterSlot Slot3;
@@ -93,6 +95,7 @@ public class CharacterSwitcherController : MonoBehaviour
             Debug.Log("switch to " + character.SceneName);
             wrappers.ForEach(w => w.Activate(character == w.Character));
             SelectedCharacter = character;
+            warpSound.Play();
             CloseSwitcher();
             UpdateSlots();
         }
