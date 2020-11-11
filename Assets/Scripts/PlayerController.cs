@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonUp("Jump"))
         {
             IsJumping = false;
+            if (Velocity.y > 0) {
+                Velocity.y = Velocity.y * 0.5f;
+            }
         }
     }
 
