@@ -10313,11 +10313,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1205685661 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 8723072900355060532, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
-  m_PrefabInstance: {fileID: 6540289255633740650}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1882687249
 GameObject:
   m_ObjectHideFlags: 0
@@ -11350,10 +11345,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scout
       objectReference: {fileID: 0}
-    - target: {fileID: 6987879258261245229, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
-      propertyPath: BoxCollider
-      value: 
-      objectReference: {fileID: 1205685661}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
 --- !u!4 &6540289255633740651 stripped
