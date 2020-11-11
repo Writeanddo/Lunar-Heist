@@ -15,8 +15,7 @@ public class PlayerController : MonoBehaviour
     private bool IsJumping;
     private Collider2D[] OverlappingColliders;
 
-    public AudioSource randomJumpSound;
-    public AudioSource[] jumpSounds;
+    public Animator Animator;
 
     void Update()
     {
@@ -25,12 +24,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded)
         {
             Velocity.y = Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
-            if (jumpSounds.Length > 0)
-            {
-                randomJumpSound = jumpSounds[Random.Range(0, jumpSounds.Length)];
-                randomJumpSound.Play();
-            }
-        
             IsJumping = true;
         }
 
@@ -60,5 +53,15 @@ public class PlayerController : MonoBehaviour
         }
 
         Rb2d.MovePosition(Rb2d.position + Movement);
+
+        UpdateAnimations();
+    }
+
+    private void UpdateAnimations()
+    {
+        Animator.SetInteger("xVelocity", Mathf.FloorToInt(Velocity.x));
+        Animator.SetInteger("yVelocity", Mathf.FloorToInt(Velocity.y));
+        Animator.SetBool("isGrounded", IsGrounded);
+
     }
 }
