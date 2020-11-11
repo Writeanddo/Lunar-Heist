@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 8
-  JumpHeight: 0
+  JumpHeight: 50
   Rb2d: {fileID: 6540289255633740653}
   BoxCollider: {fileID: 8723072900355060532}
   Ground:

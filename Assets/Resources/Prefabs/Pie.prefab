@@ -159,12 +159,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 8
-  JumpHeight: 0
+  JumpHeight: 50
   Rb2d: {fileID: 25760337}
   BoxCollider: {fileID: 5505651998381563854}
   Ground:
     serializedVersion: 2
     m_Bits: 256
+  randomJumpSound: {fileID: 0}
+  jumpSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!50 &25760337
 Rigidbody2D:
   serializedVersion: 4
@@ -173,7 +178,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5505651999835610031}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

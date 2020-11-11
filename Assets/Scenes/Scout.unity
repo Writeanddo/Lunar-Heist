@@ -11345,10 +11345,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scout
       objectReference: {fileID: 0}
-    - target: {fileID: 6987879258261245229, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
-      propertyPath: JumpHeight
-      value: 50
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
 --- !u!4 &6540289255633740651 stripped
