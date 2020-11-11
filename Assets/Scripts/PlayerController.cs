@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonUp("Jump"))
         {
             IsJumping = false;
+            if (Velocity.y > 0) {
+                Velocity.y = Velocity.y * 0.5f;
+            }
         }
     }
 
@@ -45,6 +48,14 @@ public class PlayerController : MonoBehaviour
 
         for (int i = 0; i < OverlappingColliders.Length; i++)
         {
+            Collider2D collider = OverlappingColliders[i];
+            float distance = collider.Distance(BoxCollider).distance;
+
+            if (distance < 0)
+            {
+                Movement.y += Mathf.Abs(distance);
+            }
+
             if (!IsJumping)
             {
                 Movement.y = 0;
