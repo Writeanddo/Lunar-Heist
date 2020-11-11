@@ -58,15 +58,17 @@ public class PlayerController : MonoBehaviour
             Collider2D collider = OverlappingColliders[i];
             float distance = collider.Distance(BoxCollider).distance;
 
-            if (distance < 0)
-            {
-                Movement.y += Mathf.Abs(distance);
-            }
+            Debug.Log(distance);
 
             if (!IsJumping)
             {
                 Movement.y = 0;
                 IsGrounded = true;
+            }
+
+            if (distance < 0)
+            {
+                Movement.y += Mathf.Abs(distance);
             }
         }
 
