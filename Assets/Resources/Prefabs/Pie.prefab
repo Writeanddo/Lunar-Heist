@@ -120,8 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d005af75231104c83a5fd2b9726904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Character: {fileID: 0}
+  Character: {fileID: 11400000, guid: ee00bbca6948b49478dd5fde221c610b, type: 2}
   SpriteRenderer: {fileID: 5505651999835610019}
+  CharacterSoundPlayer: {fileID: 1159064571}
 --- !u!61 &5505651998381563854
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,12 +168,7 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 256
-  randomJumpSound: {fileID: 0}
-  jumpSounds:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Animator: {fileID: 0}
+  Animator: {fileID: 5505651999835610028}
 --- !u!50 &25760337
 Rigidbody2D:
   serializedVersion: 4
