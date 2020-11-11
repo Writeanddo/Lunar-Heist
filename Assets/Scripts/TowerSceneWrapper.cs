@@ -20,6 +20,7 @@ public class TowerSceneWrapper : MonoBehaviour
         if (activate)
         {
             FindObjectOfType<CinemachineVirtualCamera>().Follow = Player.transform;
+            FindObjectOfType<Tower>().Player = Player;
         }
     }
 

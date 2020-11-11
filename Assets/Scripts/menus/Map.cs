@@ -19,6 +19,8 @@ public class Map : MonoBehaviour
     void FixedUpdate()
     {
         TowerMiniMap.transform.position = bounds.TopRightScreen() - Offset;
-        Marker.transform.localPosition = Tower.GetRelativePlayerPosition();
+
+
+        Marker.transform.localPosition = Tower.GetRatioOfPlayer() - new Vector2(0.5f, 2);
     }
 }

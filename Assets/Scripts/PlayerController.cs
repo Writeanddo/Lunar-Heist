@@ -52,8 +52,6 @@ public class PlayerController : MonoBehaviour
             Collider2D collider = OverlappingColliders[i];
             float distance = collider.Distance(BoxCollider).distance;
 
-            Debug.Log(distance);
-
             if (!IsJumping)
             {
                 Movement.y = 0;
