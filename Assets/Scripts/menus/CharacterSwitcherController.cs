@@ -29,10 +29,10 @@ public class CharacterSwitcherController : MonoBehaviour
         SelectedCharacter = (SelectedCharacter == null) ? Characters[0] : SelectedCharacter;
         UpdateSlots();
 
-       LoadScene("MenuOverlay");
-       LoadScene(Characters[0].SceneName, true);
-       LoadScene(Characters[1].SceneName, true);
-       LoadScene(Characters[2].SceneName, true);
+        LoadScene("MenuOverlay");
+        LoadScene(Characters[0].SceneName, true);
+        LoadScene(Characters[1].SceneName, true);
+        LoadScene(Characters[2].SceneName, true);
 
     }
 
@@ -42,9 +42,10 @@ public class CharacterSwitcherController : MonoBehaviour
         if (!scene.isLoaded)
         {
             StartCoroutine(LoadAndWait(name, isTowerScene));
-        }else
+        }
+        else
         {
-                initialiseScene(name, isTowerScene);
+            initialiseScene(name, isTowerScene);
         }
     }
 
@@ -55,19 +56,18 @@ public class CharacterSwitcherController : MonoBehaviour
         {
             yield return null;
         }
-        Debug.Log("Scene loaded"+ name);
-        
-            initialiseScene(name, isTowerScene);
-        
+
+        initialiseScene(name, isTowerScene);
+
     }
 
     private void initialiseScene(String name, Boolean isTowerScene)
     {
         if (isTowerScene)
         {
-            var w = SceneManager.GetSceneByName(name).GetRootGameObjects()[0].GetComponent<TowerSceneWrapper>();
-            wrappers.Add(w);
-            w.Activate(w.Character == SelectedCharacter);
+            var wrapper = SceneManager.GetSceneByName(name).GetRootGameObjects()[0].GetComponent<TowerSceneWrapper>();
+            wrappers.Add(wrapper);
+            wrapper.Activate(wrapper.Character == SelectedCharacter);
         }
         else
         {
@@ -75,7 +75,7 @@ public class CharacterSwitcherController : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Vector2 v2 = bounds.TopLeftScreen() + new Vector2(Offset, -Offset);
         transform.position = new Vector3(v2.x, v2.y, transform.position.z);
@@ -129,5 +129,5 @@ public class CharacterSwitcherController : MonoBehaviour
         Slot2.Setup(OtherCharacters[0], this, false, disabledColour);
         Slot3.Setup(OtherCharacters[1], this, false, disabledColour);
     }
-    
+
 }
