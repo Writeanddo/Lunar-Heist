@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D Rb2d;
     public BoxCollider2D BoxCollider;
     public LayerMask Ground;
+    public Animator Animator;
+    public SpriteRenderer Sprite;
 
     private int GravityModifier = 10;
     private Vector2 Velocity;
@@ -14,9 +16,6 @@ public class PlayerController : MonoBehaviour
     private bool IsGrounded;
     private bool IsJumping;
     private Collider2D[] OverlappingColliders;
-
-    public Animator Animator;
-    public SpriteRenderer Sprite;
 
     void Update()
     {
@@ -30,10 +29,11 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonUp("Jump"))
         {
-            IsJumping = false;
-            if (Velocity.y > 0) {
+            if (Velocity.y > 0)
+            {
                 Velocity.y = Velocity.y * 0.5f;
             }
+            IsJumping = false;
         }
     }
 
@@ -75,7 +75,9 @@ public class PlayerController : MonoBehaviour
         {
             Sprite.flipX = false;
         }
-        if (Velocity.x < 0){
+
+        if (Velocity.x < 0)
+        {
             Sprite.flipX = true;
         }
 
