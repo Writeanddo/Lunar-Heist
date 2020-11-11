@@ -25,8 +25,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded)
         {
             Velocity.y = Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
-            randomJumpSound = jumpSounds[Random.Range(0, jumpSounds.Length)];
-            randomJumpSound.Play();
+            if (jumpSounds.Length > 0)
+            {
+                randomJumpSound = jumpSounds[Random.Range(0, jumpSounds.Length)];
+                randomJumpSound.Play();
+            }
+        
             IsJumping = true;
         }
 
