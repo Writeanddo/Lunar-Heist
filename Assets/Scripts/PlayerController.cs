@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private Collider2D[] OverlappingColliders;
 
     public Animator Animator;
+    public SpriteRenderer Sprite;
 
     void Update()
     {
@@ -72,9 +73,16 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateAnimations()
     {
+        if (Velocity.x > 0)
+        {
+            Sprite.flipX = false;
+        }
+        if (Velocity.x < 0){
+            Sprite.flipX = true;
+        }
+
         Animator.SetInteger("xVelocity", Mathf.FloorToInt(Velocity.x));
         Animator.SetInteger("yVelocity", Mathf.FloorToInt(Velocity.y));
         Animator.SetBool("isGrounded", IsGrounded);
-
     }
 }

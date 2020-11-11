@@ -122,7 +122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 11400000, guid: ee00bbca6948b49478dd5fde221c610b, type: 2}
   SpriteRenderer: {fileID: 5505651999835610019}
-  CharacterSoundPlayer: {fileID: 1159064571}
 --- !u!61 &5505651998381563854
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -169,6 +168,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   Animator: {fileID: 5505651999835610028}
+  Sprite: {fileID: 5505651999835610019}
 --- !u!50 &25760337
 Rigidbody2D:
   serializedVersion: 4

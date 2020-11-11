@@ -327,6 +327,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   Animator: {fileID: 6540289256507552285}
+  Sprite: {fileID: 6540289256507552287}
 --- !u!61 &8723072900355060532
 BoxCollider2D:
   m_ObjectHideFlags: 0
