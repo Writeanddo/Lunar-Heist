@@ -16,7 +16,7 @@ public class Map : MonoBehaviour
         Tower = FindObjectOfType<Tower>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         TowerMiniMap.transform.position = bounds.TopRightScreen() - Offset;
         Marker.transform.localPosition = Tower.GetRelativePlayerPosition();
