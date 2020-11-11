@@ -71,7 +71,7 @@ public class CharacterSwitcherController : MonoBehaviour
         }
         else
         {
-            SelectedCharacter.audioSnapshot.TransitionTo(0.2f);
+            SelectedCharacter.audioSnapshot.TransitionTo(0.1f);
         }
     }
 
@@ -102,7 +102,7 @@ public class CharacterSwitcherController : MonoBehaviour
             warpSound.Play();
             CloseSwitcher();
             UpdateSlots();
-            character.audioSnapshot.TransitionTo(0.5f);
+            character.audioSnapshot.TransitionTo(0.005f);
         }
     }
 
