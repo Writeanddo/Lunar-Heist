@@ -24,6 +24,7 @@ public class CharacterSoundPlayer : MonoBehaviour
 
     public void SetLand()
     {
+        Debug.Log("SetLand");
         if (Character.LandSounds.Length > 0)
         {
             source.PlayOneShot(Character.LandSounds.PickRandom());
