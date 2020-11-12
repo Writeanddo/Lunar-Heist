@@ -7,7 +7,10 @@ public class CharacterSoundPlayer : MonoBehaviour
 
     public void SetRunning(int index)
     {
-        // TODO
+        if (Character.FootstepSounds.Length > 0)
+        {
+            source.PlayOneShot(Character.FootstepSounds.PickRandom());
+        }
     }
  
 
