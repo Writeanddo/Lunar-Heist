@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
             if (!IsJumping)
             {
                 Movement.y = 0;
+                Velocity.y = 0;
                 IsGrounded = true;
             }
 
