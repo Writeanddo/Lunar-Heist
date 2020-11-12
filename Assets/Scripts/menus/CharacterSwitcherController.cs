@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System;
@@ -11,6 +12,8 @@ public class CharacterSwitcherController : MonoBehaviour
     public CharacterSlot Slot1;
     public CharacterSlot Slot2;
     public CharacterSlot Slot3;
+    private ScreenBounds bounds = new ScreenBounds();
+
     public Character SelectedCharacter;
     public List<Character> Characters;
 
@@ -31,6 +34,8 @@ public class CharacterSwitcherController : MonoBehaviour
         LoadScene(Characters[1].SceneName, true);
         LoadScene(Characters[2].SceneName, true);
 
+        Vector2 v2 = bounds.TopLeftScreen() + new Vector2(Offset, -Offset);
+        transform.position = new Vector3(v2.x, v2.y, transform.position.z);
     }
 
     private void LoadScene(string name, bool isTowerScene = false)
