@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class btnFX : MonoBehaviour
 {
-    public AudioSource hoverFx;
+    public AudioSource buttonFx;
+    public AudioClip hoverFx;
     public AudioSource clickFx;
 
     public void HoverSound()
     {
-        hoverFx.Play();
+        buttonFx.PlayOneShot(hoverFx);
     }
 
     public void ClickSound()

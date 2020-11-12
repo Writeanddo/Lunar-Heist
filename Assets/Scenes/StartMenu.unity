@@ -819,9 +819,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ceb32c1a36b4a284a9bd1d96b819d8ed, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.416
+  m_audioClip: {fileID: 8300000, guid: bcdf54a6e0a5372499de4c83a750087b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1897,7 +1897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1779780b9086849811b01c5830d0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverFx: {fileID: 480953826}
+  buttonFx: {fileID: 480953826}
+  hoverFx: {fileID: 8300000, guid: bcdf54a6e0a5372499de4c83a750087b, type: 3}
   clickFx: {fileID: 1711783412}
 --- !u!114 &1182379353
 MonoBehaviour:
@@ -3281,7 +3282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8817c1b44fb763940a50690328319343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playGameSound: {fileID: 1711783412}
 --- !u!4 &2026251320
 Transform:
   m_ObjectHideFlags: 0
