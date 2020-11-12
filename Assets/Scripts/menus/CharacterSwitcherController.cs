@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Linq;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System;
@@ -12,8 +11,6 @@ public class CharacterSwitcherController : MonoBehaviour
     public CharacterSlot Slot1;
     public CharacterSlot Slot2;
     public CharacterSlot Slot3;
-    private ScreenBounds bounds = new ScreenBounds();
-
     public Character SelectedCharacter;
     public List<Character> Characters;
 
@@ -73,12 +70,6 @@ public class CharacterSwitcherController : MonoBehaviour
         {
             SelectedCharacter.audioSnapshot.TransitionTo(0.1f);
         }
-    }
-
-    void FixedUpdate()
-    {
-        Vector2 v2 = bounds.TopLeftScreen() + new Vector2(Offset, -Offset);
-        transform.position = new Vector3(v2.x, v2.y, transform.position.z);
     }
 
     public void SelectCharacter(Character character)
