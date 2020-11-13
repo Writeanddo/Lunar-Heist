@@ -34,12 +34,13 @@ SpriteAtlas:
     - {fileID: 3709789598010588514, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
     - {fileID: -2079442789162390272, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
     - {fileID: 2800000, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
-    totalSpriteSurfaceArea: 431814
+    totalSpriteSurfaceArea: 504174
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: -2529047126697589632, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: 8263550521116712331, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: -5395741348585352069, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: -3694653673571909091, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
@@ -95,6 +96,7 @@ SpriteAtlas:
   - {fileID: 1949845269744192091, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: -2344649814450430355, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   m_PackedSpriteNamesToIndex:
+  - vent-tiles_54
   - vent-tiles_49
   - vent-tiles_52
   - vent-tiles_48
