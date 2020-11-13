@@ -33,18 +33,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6dbb68fe6ab2b8448bc155a9c831f2c6, type: 3}
   - {fileID: 8300000, guid: b2bc725b43dcab443ac3253ac242d635, type: 3}
   LandSounds:
-  - {fileID: 8300000, guid: 76ac25ac448501a4686691112954a9b9, type: 3}
-  - {fileID: 8300000, guid: 33d358c14effa0446a2ca19a1346ad8f, type: 3}
-  - {fileID: 8300000, guid: 13dd48c373ea43240a59984f368c7dc6, type: 3}
-  - {fileID: 8300000, guid: ff36d66740da79747aaa43aeab180e84, type: 3}
-  - {fileID: 8300000, guid: f2e50f3d7cb19a24aa5ea234a6ece7bf, type: 3}
   - {fileID: 8300000, guid: 86079d5515a9fb34fa2f45cb29bf5d38, type: 3}
-  FootstepSounds:
-  - {fileID: 8300000, guid: f59c20e64e17cd74cadca5feca884ea5, type: 3}
-  - {fileID: 8300000, guid: b381647a7ad6893478c2bfe7ddaaa030, type: 3}
-  - {fileID: 8300000, guid: 50a0c3a0ac790fd40b17dcb33ef3e9f7, type: 3}
-  - {fileID: 8300000, guid: 9f2ffa0c52fde1340835bb4f1127d03a, type: 3}
-  - {fileID: 8300000, guid: 97ac13525ce1f9e4bbc51ebe218a3a54, type: 3}
-  - {fileID: 8300000, guid: 10444761901981c4ababa404dc2dd361, type: 3}
-  - {fileID: 8300000, guid: 3cfb25378ee951642b10b28171c85f55, type: 3}
-  - {fileID: 8300000, guid: 75d4620230265f646bbc8a0c71d887e5, type: 3}
+  FootstepSounds: []

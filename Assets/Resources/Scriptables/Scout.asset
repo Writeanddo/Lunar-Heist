@@ -27,6 +27,10 @@ MonoBehaviour:
   Head: {fileID: 21300000, guid: c7e69bad0d27edf4c8b3c23a78b00b16, type: 3}
   SceneName: Scout
   audioSnapshot: {fileID: -8145483164800001561, guid: a7515fa8f8ab25a499bf2772037867e4, type: 2}
-  JumpSounds: []
-  LandSounds: []
-  FootstepSounds: []
+  JumpSounds:
+  - {fileID: 8300000, guid: 40f95a1245fdf8e42ba49605db81e37b, type: 3}
+  - {fileID: 8300000, guid: a834a75473a67ec47922de6dc0b68a3a, type: 3}
+  LandSounds:
+  - {fileID: 8300000, guid: 0097bf0022d946940a9924d8b07b4f99, type: 3}
+  FootstepSounds:
+  - {fileID: 8300000, guid: bf8da7c8d5e16aa459cc6c16a37da463, type: 3}
