@@ -7,7 +7,7 @@ public class CharacterSoundPlayer : MonoBehaviour
 
     public void SetRunning(int index)
     {
-        if (Character.FootstepSounds.Length > 0 && index % 3 == 0)
+        if (Character.FootstepSounds.Length > 0 && index % 4 == 0)
         {
             source.PlayOneShot(Character.FootstepSounds.PickRandom());
         }
@@ -27,10 +27,7 @@ public class CharacterSoundPlayer : MonoBehaviour
         Debug.Log("SetLand");
         if (Character.LandSounds.Length > 0)
         {
-            source = GetComponent<AudioSource>();
-            source.pitch = (Random.Range(0.9f, 1.1f));
             source.PlayOneShot(Character.LandSounds.PickRandom(), 2.5f);
-            source.pitch = 1;
         }
     }
 }
