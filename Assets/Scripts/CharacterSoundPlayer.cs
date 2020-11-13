@@ -27,7 +27,10 @@ public class CharacterSoundPlayer : MonoBehaviour
         Debug.Log("SetLand");
         if (Character.LandSounds.Length > 0)
         {
-            source.PlayOneShot(Character.LandSounds.PickRandom());
+            source = GetComponent<AudioSource>();
+            source.pitch = (Random.Range(0.9f, 1.1f));
+            source.PlayOneShot(Character.LandSounds.PickRandom(), 2.5f);
+            source.pitch = 1;
         }
     }
 }
