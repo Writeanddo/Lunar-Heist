@@ -1,14 +1,24 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+    private enum EnemyState
+    {
+        NEUTRAL,
+        TARGETING,
+        ATTACK
+    }
+
     public float AttackSpeed;
     public float VisionDistance = 4f;
     public SpriteRenderer sprite;
     public Moving Moving;
     public Sprite AttackSprite;
     public Sprite NeutralSprite;
-    private bool targeting = false;
+    private EnemyState enemyState = EnemyState.NEUTRAL;
+    public Respawner Respawner;
 
     private float sizeY;
 
@@ -19,20 +29,23 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (targeting)
+        Debug.Log(enemyState);
+        switch (enemyState)
         {
-            bool shouldReturn = TargetingLookAround();
-            if (shouldReturn)
-            {
-                return;
-            }
-            targeting = false;
-            sprite.sprite = NeutralSprite;
-            UpdateMoving(true);
-        }
-        else
-        {
-             NeutralLookAround();
+            case EnemyState.NEUTRAL:
+                NeutralLookAround();
+                break;
+            case EnemyState.TARGETING:
+                bool shouldContinuingAttacking = TargetingLookAround();
+                if (shouldContinuingAttacking)
+                {
+                    return;
+                }
+                SetToNeutral();
+                break;
+            case EnemyState.ATTACK:
+                AttackInProgress();
+                break;
         }
     }
 
@@ -48,7 +61,7 @@ public class Enemy : MonoBehaviour
         {
             if (CollidedWithPlayer(ray))
             {
-                targeting = true;
+                enemyState = EnemyState.TARGETING;
                 sprite.sprite = AttackSprite;
                 UpdateMoving(false);
                 MoveTowardsTarget(ray.collider.gameObject);
@@ -75,10 +88,38 @@ public class Enemy : MonoBehaviour
         return false;
     }
 
+    private void AttackInProgress()
+    {
+        bool collidedWithPlayer = false;
+        var rays = new RaycastHit2D[]
+       {
+                DrawRay(transform.position.x, Vector2.left),
+                DrawRay(transform.position.x, Vector2.right)
+       };
+        foreach (RaycastHit2D ray in rays)
+        {
+            if (CollidedWithPlayer(ray))
+            {
+                collidedWithPlayer = true;
+            }
+        }
+
+        if (!collidedWithPlayer)
+        {
+            SetToNeutral();
+        }
+    }
+
     private void MoveTowardsTarget(GameObject gameObject)
     {
         float step = AttackSpeed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, gameObject.transform.position, step);
+
+        if (transform.position == gameObject.transform.position)
+        {
+            enemyState = EnemyState.ATTACK;
+            Respawner.Respawn("caught");
+        }
 
     }
 
@@ -101,5 +142,12 @@ public class Enemy : MonoBehaviour
     private bool CollidedWithPlayer(RaycastHit2D ray)
     {
         return ray.collider != null && ray.collider.gameObject.tag == "Player";
+    }
+
+    private void SetToNeutral()
+    {
+        enemyState = EnemyState.NEUTRAL;
+        sprite.sprite = NeutralSprite;
+        UpdateMoving(true);
     }
 }

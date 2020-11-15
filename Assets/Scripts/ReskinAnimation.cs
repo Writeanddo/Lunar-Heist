@@ -9,7 +9,10 @@ public class ReskinAnimation : MonoBehaviour
 
     void LateUpdate()
     {
-        SpriteRenderer.sprite = SpriteToSet;
+        if (SpriteToSet != null)
+        {
+            SpriteRenderer.sprite = SpriteToSet;
+        }
     }
 
     public void SetRunning(int index)
@@ -35,5 +38,19 @@ public class ReskinAnimation : MonoBehaviour
     public void SetFall()
     {
         SpriteToSet = Character.Fall;
+    }
+
+    public void SetCaught()
+    {
+        SpriteToSet = Character.Caught;
+    }
+
+    public void SetRespawnOut()
+    {
+        SpriteToSet = null;
+    }
+    public void SetRespawnIn()
+    {
+        SpriteToSet = null;
     }
 }

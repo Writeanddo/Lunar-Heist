@@ -10,7 +10,7 @@ public class DeathZone : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            Respawner.Respawn();
+            Respawner.Respawn(null);
         }
     }
 }

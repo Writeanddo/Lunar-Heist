@@ -24,6 +24,7 @@ MonoBehaviour:
   Jump: {fileID: -8340501165990476270, guid: a1bfa415cc7e14e42b5be73a4280379a, type: 3}
   Land: {fileID: 128805380274913240, guid: a1bfa415cc7e14e42b5be73a4280379a, type: 3}
   Fall: {fileID: 2598882467082418723, guid: a1bfa415cc7e14e42b5be73a4280379a, type: 3}
+  Caught: {fileID: 0}
   Head: {fileID: 21300000, guid: ee9abaebc3b9d074ab696e2a6715a11c, type: 3}
   SceneName: Pie
   audioSnapshot: {fileID: -2494341812874072331, guid: a7515fa8f8ab25a499bf2772037867e4, type: 2}

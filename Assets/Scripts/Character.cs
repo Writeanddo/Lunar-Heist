@@ -9,6 +9,7 @@ public class Character : ScriptableObject
     public Sprite Jump;
     public Sprite Land;
     public Sprite Fall;
+    public Sprite Caught;
 
     public Sprite Head;
 
