@@ -23,8 +23,8 @@ public class Respawner : MonoBehaviour
         if (animationTrigger != null)
         {
             PlayerAnimator.SetTrigger(animationTrigger);
-            StartCoroutine(RespawnPlayer());
         }
+        StartCoroutine(RespawnPlayer());
     }
 
     IEnumerator RespawnPlayer()

@@ -29,7 +29,6 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(enemyState);
         switch (enemyState)
         {
             case EnemyState.NEUTRAL:
