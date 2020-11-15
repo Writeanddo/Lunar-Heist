@@ -30,13 +30,22 @@ public class Enemy : MonoBehaviour
         sizeY = sprite.size.y;
     }
 
+    void Update()
+    {
+        switch (enemyState)
+        {
+            case EnemyState.NEUTRAL:
+                PlayerSneakAttack();
+                break;
+        }
+    }
+
     void FixedUpdate()
     {
         switch (enemyState)
         {
             case EnemyState.NEUTRAL:
                 NeutralLookAround();
-                PlayerSneakAttack();
                 break;
             case EnemyState.TARGETING:
                 bool shouldContinuingAttacking = TargetingLookAround();
