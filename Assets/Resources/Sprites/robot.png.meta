@@ -136,7 +136,7 @@ TextureImporter:
         width: 182
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,7 +157,7 @@ TextureImporter:
         width: 105
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,27 +165,6 @@ TextureImporter:
       bones: []
       spriteID: 03f49bf285484a500800000000000000
       internalID: 406595380662849328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robot_2
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 0
-        width: 105
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ff5f19a2a8139d70800000000000000
-      internalID: 9048603163218632696
       vertices: []
       indices: 
       edges: []

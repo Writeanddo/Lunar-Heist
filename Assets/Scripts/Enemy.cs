@@ -6,7 +6,8 @@ public class Enemy : MonoBehaviour
     public float VisionDistance = 4f;
     public SpriteRenderer sprite;
     public Moving Moving;
-
+    public Sprite AttackSprite;
+    public Sprite NeutralSprite;
     private bool targeting = false;
 
     private float sizeY;
@@ -26,19 +27,16 @@ public class Enemy : MonoBehaviour
                 return;
             }
             targeting = false;
+            sprite.sprite = NeutralSprite;
             UpdateMoving(true);
         }
         else
         {
-            bool shouldReturn = NeutralLookAround();
-            if (shouldReturn)
-            {
-                return;
-            }
+             NeutralLookAround();
         }
     }
 
-    private bool NeutralLookAround()
+    private void NeutralLookAround()
     {
         bool isLookingLeft = sprite.flipX;
 
@@ -51,13 +49,11 @@ public class Enemy : MonoBehaviour
             if (CollidedWithPlayer(ray))
             {
                 targeting = true;
+                sprite.sprite = AttackSprite;
                 UpdateMoving(false);
                 MoveTowardsTarget(ray.collider.gameObject);
-                return true;
             }
         }
-
-        return false;
     }
 
     private bool TargetingLookAround()
