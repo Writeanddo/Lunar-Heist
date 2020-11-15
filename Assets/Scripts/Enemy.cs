@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
     {
         NEUTRAL,
         TARGETING,
-        ATTACK
+        ATTACK,
+        SLEEP
     }
 
     public float AttackSpeed;
@@ -17,8 +18,10 @@ public class Enemy : MonoBehaviour
     public Moving Moving;
     public Sprite AttackSprite;
     public Sprite NeutralSprite;
+    public Sprite SleepSprite;
     private EnemyState enemyState = EnemyState.NEUTRAL;
     public Respawner Respawner;
+    public SpriteRenderer Highlight;
 
     private float sizeY;
 
@@ -33,6 +36,7 @@ public class Enemy : MonoBehaviour
         {
             case EnemyState.NEUTRAL:
                 NeutralLookAround();
+                PlayerSneakAttack();
                 break;
             case EnemyState.TARGETING:
                 bool shouldContinuingAttacking = TargetingLookAround();
@@ -44,6 +48,8 @@ public class Enemy : MonoBehaviour
                 break;
             case EnemyState.ATTACK:
                 AttackInProgress();
+                break;
+            case EnemyState.SLEEP:
                 break;
         }
     }
@@ -64,6 +70,33 @@ public class Enemy : MonoBehaviour
                 sprite.sprite = AttackSprite;
                 UpdateMoving(false);
                 MoveTowardsTarget(ray.collider.gameObject);
+            }
+        }
+    }
+
+    private void PlayerSneakAttack()
+    {
+        bool isLookingLeft = sprite.flipX;
+
+        var rays = new RaycastHit2D[]
+         {
+                DrawRay(transform.position.x, isLookingLeft ? Vector2.right :  Vector2.left )
+         };
+        foreach (RaycastHit2D ray in rays)
+        {
+            if (CollidedWithPlayer(ray))
+            {
+                Highlight.gameObject.SetActive(true);
+                if (Input.GetButtonUp("Submit")) {
+                    enemyState = EnemyState.SLEEP;
+                    UpdateMoving(false);
+                    sprite.sprite = SleepSprite;
+                    Highlight.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                Highlight.gameObject.SetActive(false);
             }
         }
     }
