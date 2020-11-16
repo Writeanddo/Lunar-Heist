@@ -75,7 +75,7 @@ public class Enemy : MonoBehaviour
         {
             if (CollidedWithPlayer(ray))
             {
-                enemyState = EnemyState.TARGETING;
+                UpdateState(EnemyState.TARGETING);
                 sprite.sprite = AttackSprite;
                 UpdateMoving(false);
                 MoveTowardsTarget(ray.collider.gameObject);
@@ -97,10 +97,9 @@ public class Enemy : MonoBehaviour
             {
                 Highlight.gameObject.SetActive(true);
                 if (Input.GetButtonUp("Submit")) {
-                    enemyState = EnemyState.SLEEP;
+                    UpdateState(EnemyState.SLEEP);
                     UpdateMoving(false);
                     sprite.sprite = SleepSprite;
-                    Highlight.gameObject.SetActive(false);
                 }
             }
             else
@@ -158,7 +157,7 @@ public class Enemy : MonoBehaviour
 
         if (transform.position == gameObject.transform.position)
         {
-            enemyState = EnemyState.ATTACK;
+            UpdateState(EnemyState.ATTACK);
             Respawner.Respawn("caught");
         }
 
@@ -187,8 +186,14 @@ public class Enemy : MonoBehaviour
 
     private void SetToNeutral()
     {
-        enemyState = EnemyState.NEUTRAL;
+        UpdateState(EnemyState.NEUTRAL);
         sprite.sprite = NeutralSprite;
         UpdateMoving(true);
+    }
+
+    private void UpdateState(EnemyState state)
+    {
+        enemyState = state;
+        Highlight.gameObject.SetActive(false);
     }
 }

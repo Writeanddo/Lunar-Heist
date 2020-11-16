@@ -53,4 +53,9 @@ public class ReskinAnimation : MonoBehaviour
     {
         SpriteToSet = null;
     }
+
+    public void SetDeath()
+    {
+        SpriteToSet = Character.Land;
+    }
 }
