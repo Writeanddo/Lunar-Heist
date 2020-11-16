@@ -15,7 +15,14 @@ public class PlayerController : MonoBehaviour
     private Vector2 Movement;
     private bool IsGrounded;
     private bool IsJumping;
-    private Collider2D[] OverlappingColliders;
+    private RaycastHit2D[] Hits = new RaycastHit2D[50];
+    private ContactFilter2D Filter;
+
+    void Start()
+    {
+        Filter = new ContactFilter2D();
+        Filter.layerMask = Ground;
+    }
 
     void Update()
     {
@@ -45,12 +52,27 @@ public class PlayerController : MonoBehaviour
 
         IsGrounded = false;
 
-        OverlappingColliders = Physics2D.OverlapBoxAll(BoxCollider.transform.position, BoxCollider.size * transform.localScale, 0, Ground);
+        Move(true);
+        Move(false);
 
-        for (int i = 0; i < OverlappingColliders.Length; i++)
+        UpdateAnimations();
+    }
+
+    void Move(bool isHorizontal)
+    {
+        Vector2 direction = isHorizontal ? Vector2.right : Vector2.up;
+
+        int count = Rb2d.Cast(direction, Filter, Hits, isHorizontal ? Movement.x : Movement.y);
+
+        for (int i = 0; i < count; i++)
         {
-            Collider2D collider = OverlappingColliders[i];
-            float distance = collider.Distance(BoxCollider).distance;
+            RaycastHit2D hit = Hits[i];
+            float distance = hit.distance;
+
+            if (isHorizontal)
+            {
+                Movement.x = 0;
+            }
 
             if (!IsJumping)
             {
@@ -66,8 +88,6 @@ public class PlayerController : MonoBehaviour
         }
 
         Rb2d.MovePosition(Rb2d.position + Movement);
-
-        UpdateAnimations();
     }
 
     private void UpdateAnimations()
