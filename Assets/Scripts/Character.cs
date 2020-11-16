@@ -19,5 +19,9 @@ public class Character : ScriptableObject
     public AudioClip[] JumpSounds;
     public AudioClip[] LandSounds;
     public AudioClip[] FootstepSounds;
+    public AudioClip[] DeathSounds;
+    public AudioClip[] CaughtSounds;
+    public AudioClip[] SpawnOutSounds;
+    public AudioClip[] SpawnInSounds;
 
 }

@@ -24,10 +24,42 @@ public class CharacterSoundPlayer : MonoBehaviour
 
     public void SetLand()
     {
-        Debug.Log("SetLand");
         if (Character.LandSounds.Length > 0)
         {
             source.PlayOneShot(Character.LandSounds.PickRandom(), 2.5f);
+        }
+    }
+
+    public void SetCaught()
+    {
+        if (Character.CaughtSounds.Length > 0)
+        {
+            source.PlayOneShot(Character.CaughtSounds.PickRandom());
+        }
+    }
+
+
+    public void SetRespawnOut()
+    {
+        if (Character.SpawnOutSounds.Length > 0)
+        {
+            source.PlayOneShot(Character.SpawnOutSounds.PickRandom());
+        }
+    }
+
+    public void SetRespawnIn()
+    {
+        if (Character.SpawnInSounds.Length > 0)
+        {
+            source.PlayOneShot(Character.SpawnInSounds.PickRandom());
+        }
+    }
+
+    public void SetDeath()
+    {
+        if (Character.DeathSounds.Length > 0)
+        {
+            source.PlayOneShot(Character.DeathSounds.PickRandom());
         }
     }
 }
