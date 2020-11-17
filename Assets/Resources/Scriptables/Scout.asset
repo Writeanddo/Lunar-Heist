@@ -24,6 +24,7 @@ MonoBehaviour:
   Jump: {fileID: 3110685388542573685, guid: 88f4c89d4a4327e458321c8608f35f74, type: 3}
   Land: {fileID: -1877164755443018612, guid: 88f4c89d4a4327e458321c8608f35f74, type: 3}
   Fall: {fileID: -5777254472039366939, guid: 88f4c89d4a4327e458321c8608f35f74, type: 3}
+  Caught: {fileID: 0}
   Head: {fileID: 21300000, guid: c7e69bad0d27edf4c8b3c23a78b00b16, type: 3}
   SceneName: Scout
   audioSnapshot: {fileID: -8145483164800001561, guid: a7515fa8f8ab25a499bf2772037867e4, type: 2}
@@ -40,3 +41,9 @@ MonoBehaviour:
   FootstepSounds:
   - {fileID: 8300000, guid: 7be29844cb375e84f81ff4de71778503, type: 3}
   - {fileID: 8300000, guid: ad4105b31753c7e41ab69aaab78b4807, type: 3}
+  DeathSounds:
+  - {fileID: 8300000, guid: 577f37d0b953fba48af65d15b32e73d8, type: 3}
+  CaughtSounds: []
+  SpawnOutSounds: []
+  SpawnInSounds:
+  - {fileID: 8300000, guid: 4cf45d4a2a643194f9d8eb510de5c850, type: 3}
