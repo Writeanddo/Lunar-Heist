@@ -11,6 +11,7 @@ public class Moving : MonoBehaviour
     private Vector2 initialPosition;
     private Vector2 currentTarget;
 
+
     private enum Direction
     {
         TOWARDS,
