@@ -10,14 +10,13 @@ public class PlayerDialogue : MonoBehaviour
 
     public AudioSource speakSFX;
 
-    void Start()
+    void OnEnable()
     {
         Text.text = "";
     }
 
     public void setText(string text)
     {
-        Debug.Log("Say " + text);
         Text.text = text;
         if (textRemovalWait != null)
         {
