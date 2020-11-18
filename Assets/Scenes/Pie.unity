@@ -3888,7 +3888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6832901908f678045ba08874ea3c9de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Thats a big stack of boxes...
+  text: That's a big stack of boxes...
 --- !u!212 &571007284
 SpriteRenderer:
   m_ObjectHideFlags: 0
