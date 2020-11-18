@@ -8,6 +8,7 @@ public class PlayerDialogue : MonoBehaviour
     public TextMeshPro Text;
     private IEnumerator textRemovalWait;
 
+    public AudioSource speakSFX;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class PlayerDialogue : MonoBehaviour
             StopCoroutine(textRemovalWait);
         }
 
+        speakSFX.Play();
         textRemovalWait = RemoveText();
         StartCoroutine(textRemovalWait);
     }
