@@ -24,6 +24,7 @@ public class BlockerEnabler : MonoBehaviour
 
             sprite.enabled = false;
             BlockerManager.Blockers[Name] = true;
+            gameObject.SetActive(false);
         }
     }
 
