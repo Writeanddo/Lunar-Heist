@@ -27,13 +27,14 @@ public class PlayerDialogue : MonoBehaviour
         {
             speakSFX.Play();
         }
-        textRemovalWait = RemoveText();
+        int wordCount = text.Split(' ').Length;
+        textRemovalWait = RemoveText(wordCount * 0.3f);
         StartCoroutine(textRemovalWait);
     }
 
-    private IEnumerator RemoveText()
+    private IEnumerator RemoveText(float lengthToWait)
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(lengthToWait);
         Text.text = "";
     }
 }
