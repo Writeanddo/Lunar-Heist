@@ -176,6 +176,75 @@ TextureImporter:
   - first:
       213: 6225828413916374604
     second: vent-tiles_57
+  - first:
+      213: 8819688405940579370
+    second: vent-tiles_58
+  - first:
+      213: -7909348337245567310
+    second: vent-tiles_59
+  - first:
+      213: 1243613410642045946
+    second: vent-tiles_60
+  - first:
+      213: -6012752817939928916
+    second: vent-tiles_61
+  - first:
+      213: 5472520979137418799
+    second: vent-tiles_62
+  - first:
+      213: -8779621331835583775
+    second: vent-tiles_63
+  - first:
+      213: 3725093747445967437
+    second: vent-tiles_64
+  - first:
+      213: 7468882471341811065
+    second: vent-tiles_65
+  - first:
+      213: 5027354542464351332
+    second: vent-tiles_66
+  - first:
+      213: -1378396270794643909
+    second: vent-tiles_67
+  - first:
+      213: -7467350311182571457
+    second: vent-tiles_68
+  - first:
+      213: 5492042328161454760
+    second: vent-tiles_69
+  - first:
+      213: 4967295843965951149
+    second: vent-tiles_70
+  - first:
+      213: -5004520430129269374
+    second: vent-tiles_71
+  - first:
+      213: 6139940821709857331
+    second: vent-tiles_72
+  - first:
+      213: 1151108429217774290
+    second: vent-tiles_73
+  - first:
+      213: -1672545840312384677
+    second: vent-tiles_74
+  - first:
+      213: -26204583044316611
+    second: vent-tiles_75
+  - first:
+      213: 5001627257746030098
+    second: vent-tiles_76
+  - first:
+      213: -4113583022780039279
+    second: vent-tiles_77
+  - first:
+      213: -8604795056177327809
+    second: vent-tiles_78
+  - first:
+      213: -9185023723914103304
+    second: vent-tiles_79
+  - first:
+      213: -1884767957049693989
+    second: vent-tiles_80
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1438,7 +1507,7 @@ TextureImporter:
         width: 90
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1459,7 +1528,7 @@ TextureImporter:
         width: 90
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1480,7 +1549,7 @@ TextureImporter:
         width: 90
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1488,6 +1557,489 @@ TextureImporter:
       bones: []
       spriteID: c46e404e4f5966650800000000000000
       internalID: 6225828413916374604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_58
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c28b160e3d56a70800000000000000
+      internalID: 8819688405940579370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_59
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6c6a1c7995c3290800000000000000
+      internalID: -7909348337245567310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_60
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb2b3bdec3324110800000000000000
+      internalID: 1243613410642045946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_61
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca826744b296e8ca0800000000000000
+      internalID: -6012752817939928916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_62
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26db5bf5dc42fb40800000000000000
+      internalID: 5472520979137418799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_63
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e28f754ae4882680800000000000000
+      internalID: -8779621331835583775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_64
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4aab83e60132b330800000000000000
+      internalID: 3725093747445967437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_65
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975687d290dc6a760800000000000000
+      internalID: 7468882471341811065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_66
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cb88ff150c4c540800000000000000
+      internalID: 5027354542464351332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_67
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36ef8f05e3fedce0800000000000000
+      internalID: -1378396270794643909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_68
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f386f88a474ae5890800000000000000
+      internalID: -7467350311182571457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_69
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa097d3667a73c40800000000000000
+      internalID: 5492042328161454760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_70
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 342
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac5dd190416fe440800000000000000
+      internalID: 4967295843965951149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_71
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 342
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285b5f21f2f5c8ab0800000000000000
+      internalID: -5004520430129269374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_72
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 342
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332afe385a3753550800000000000000
+      internalID: 6139940821709857331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_73
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 226
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dabb7d740f89ff00800000000000000
+      internalID: 1151108429217774290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_74
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 226
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b538f957b6ce9c8e0800000000000000
+      internalID: -1672545840312384677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_75
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 226
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3208201217e2aff0800000000000000
+      internalID: -26204583044316611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_76
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 294
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21efcdcbd79596540800000000000000
+      internalID: 5001627257746030098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_77
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 291
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f3e15190e99e6c0800000000000000
+      internalID: -4113583022780039279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_78
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 293
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31538f8c70a59880800000000000000
+      internalID: -8604795056177327809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_79
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 109
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f57092669d388080800000000000000
+      internalID: -9185023723914103304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_80
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 108
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8a30c6785f7d5e0800000000000000
+      internalID: -1884767957049693989
       vertices: []
       indices: 
       edges: []

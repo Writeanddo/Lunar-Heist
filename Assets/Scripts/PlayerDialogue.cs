@@ -17,13 +17,16 @@ public class PlayerDialogue : MonoBehaviour
 
     public void setText(string text)
     {
+        Debug.Log("Say " + text);
         Text.text = text;
         if (textRemovalWait != null)
         {
             StopCoroutine(textRemovalWait);
         }
-
-        speakSFX.Play();
+        if (speakSFX != null)
+        {
+            speakSFX.Play();
+        }
         textRemovalWait = RemoveText();
         StartCoroutine(textRemovalWait);
     }
