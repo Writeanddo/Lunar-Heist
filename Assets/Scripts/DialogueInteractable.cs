@@ -4,24 +4,39 @@ using System.Collections;
 public class DialogueInteractable : MonoBehaviour
 {
     public string text;
+    private Collider2D player;
+    private SpriteRenderer sprite;
 
-    // Use this for initialization
     void Start()
     {
-
+        sprite = GetComponent<SpriteRenderer>();
+        sprite.enabled = false;
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void Update()
     {
-        if (col.tag == "Player")
+        if (player != null && Input.GetButtonUp("Submit"))
         {
-            if (Input.GetButtonUp("Submit"))
-            {
-                Debug.Log("enter");
-            }
-            Debug.Log("dialogue interactable");
+            player.gameObject.GetComponentInChildren<PlayerDialogue>().setText(text);
+            sprite.enabled = false;
+        }
+    }
 
-            col.gameObject.GetComponentInChildren<PlayerDialogue>().setText(text);
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            player = collision;
+            sprite.enabled = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            player = null;
+            sprite.enabled = false;
         }
     }
 }

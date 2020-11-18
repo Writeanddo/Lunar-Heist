@@ -6,7 +6,7 @@ public class PlayerDialogue : MonoBehaviour
 {
 
     public TextMeshPro Text;
-    
+    private IEnumerator textRemovalWait;
 
 
     void Start()
@@ -14,15 +14,21 @@ public class PlayerDialogue : MonoBehaviour
         Text.text = "";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void setText(string text)
     {
         Text.text = text;
+        if (textRemovalWait != null)
+        {
+            StopCoroutine(textRemovalWait);
+        }
 
+        textRemovalWait = RemoveText();
+        StartCoroutine(textRemovalWait);
+    }
+
+    private IEnumerator RemoveText()
+    {
+        yield return new WaitForSeconds(3f);
+        Text.text = "";
     }
 }
