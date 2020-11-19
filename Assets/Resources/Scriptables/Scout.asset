@@ -45,7 +45,8 @@ MonoBehaviour:
   DeathSounds:
   - {fileID: 8300000, guid: 577f37d0b953fba48af65d15b32e73d8, type: 3}
   CaughtSounds: []
-  SpawnOutSounds: []
+  SpawnOutSounds:
+  - {fileID: 8300000, guid: cd300b78b6462d84c81165b04cedf702, type: 3}
   SpawnInSounds:
   - {fileID: 8300000, guid: 194ead6e1707c86498f5700d17d57e29, type: 3}
   - {fileID: 8300000, guid: eb1ef4319f64e1542967be0bb6c9cbce, type: 3}

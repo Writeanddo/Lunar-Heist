@@ -43,7 +43,7 @@ public class CharacterSoundPlayer : MonoBehaviour
     {
         if (Character.SpawnOutSounds.Length > 0)
         {
-            source.PlayOneShot(Character.SpawnOutSounds.PickRandom());
+            source.PlayOneShot(Character.SpawnOutSounds.PickRandom(), 5f);
         }
     }
 
