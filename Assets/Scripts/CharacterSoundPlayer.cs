@@ -62,4 +62,12 @@ public class CharacterSoundPlayer : MonoBehaviour
             source.PlayOneShot(Character.DeathSounds.PickRandom());
         }
     }
+
+    public void SetGrapple()
+    {
+        if (Character.DeathSounds.Length > 0)
+        {
+            source.PlayOneShot(Character.GrappleSounds.PickRandom());
+        }
+    }
 }

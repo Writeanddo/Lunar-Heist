@@ -24,6 +24,12 @@ public class PlayerController : MonoBehaviour
         Filter.layerMask = Ground;
     }
 
+    void OnEnable()
+    {
+        Velocity = Vector2.zero;
+        IsJumping = false;
+    }
+
     void Update()
     {
         Velocity.x = Input.GetAxisRaw("Horizontal") * Speed;

@@ -58,4 +58,9 @@ public class ReskinAnimation : MonoBehaviour
     {
         SpriteToSet = Character.Land;
     }
+
+    public void SetGrapple()
+    {
+        SpriteToSet = Character.Grapple;
+    }
 }

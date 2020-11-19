@@ -10,6 +10,7 @@ public class Character : ScriptableObject
     public Sprite Land;
     public Sprite Fall;
     public Sprite Caught;
+    public Sprite Grapple;
 
     public Sprite Head;
 
@@ -23,5 +24,6 @@ public class Character : ScriptableObject
     public AudioClip[] CaughtSounds;
     public AudioClip[] SpawnOutSounds;
     public AudioClip[] SpawnInSounds;
+    public AudioClip[] GrappleSounds;
 
 }
