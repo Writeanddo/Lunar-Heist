@@ -36,7 +36,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b2bc725b43dcab443ac3253ac242d635, type: 3}
   LandSounds:
   - {fileID: 8300000, guid: 86079d5515a9fb34fa2f45cb29bf5d38, type: 3}
-  FootstepSounds: []
+  FootstepSounds:
+  - {fileID: 8300000, guid: f59c20e64e17cd74cadca5feca884ea5, type: 3}
+  - {fileID: 8300000, guid: b381647a7ad6893478c2bfe7ddaaa030, type: 3}
   DeathSounds: []
   CaughtSounds: []
   SpawnOutSounds: []
