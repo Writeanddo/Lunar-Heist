@@ -25982,6 +25982,10 @@ PrefabInstance:
       propertyPath: speakSFX
       value: 
       objectReference: {fileID: 1844683169}
+    - target: {fileID: 5505651998381563853, guid: 312f0388598cb7e4bbb78fa8c707a8e1, type: 3}
+      propertyPath: Speed
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5505651999835610030, guid: 312f0388598cb7e4bbb78fa8c707a8e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.18
