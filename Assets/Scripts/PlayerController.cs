@@ -66,34 +66,59 @@ public class PlayerController : MonoBehaviour
 
     void Move(bool isHorizontal)
     {
-        Vector2 direction = isHorizontal ? Vector2.right : Vector2.up;
+        Vector2 direction;
+        float displacement;
 
-        int count = Rb2d.Cast(direction, Filter, Hits, isHorizontal ? Movement.x : Movement.y);
+        if (isHorizontal)
+        {
+            direction = Velocity.x > 0  ? Vector2.right : Vector2.left;
+            displacement = Mathf.Abs(Movement.x);
+        }
+        else
+        {
+            direction = Velocity.y > 0 ? Vector2.up : Vector2.down;
+            displacement = Mathf.Abs(Movement.y);
+        }
+
+        int count = Rb2d.Cast(direction, Filter, Hits, displacement + 0.01f);
 
         for (int i = 0; i < count; i++)
         {
             RaycastHit2D hit = Hits[i];
             float distance = hit.distance;
 
-            if (isHorizontal)
+            if (hit.normal.y == 1)
             {
-                Movement.x = 0;
-            }
-
-            if (!IsJumping)
-            {
-                Movement.y = 0;
-                Velocity.y = 0;
                 IsGrounded = true;
+                Velocity.y = 0;
             }
 
-            if (distance < 0)
+            displacement = distance - 0.01f < displacement ? distance - 0.01f : displacement;
+        }
+
+        if (isHorizontal)
+        {
+            if (Velocity.x < 0)
             {
-                Movement.y += Mathf.Abs(distance);
+                Rb2d.position = Rb2d.position + Vector2.left * displacement;
+            }
+            else
+            {
+                Rb2d.position = Rb2d.position + Vector2.right * displacement;
+            }
+        }
+        else
+        {
+            if (Velocity.y  <= 0)
+            {
+                Rb2d.position = Rb2d.position + Vector2.down * displacement;
+            }
+            else
+            {
+                Rb2d.position = Rb2d.position + Vector2.up * displacement;
             }
         }
 
-        Rb2d.MovePosition(Rb2d.position + Movement);
     }
 
     private void UpdateAnimations()
