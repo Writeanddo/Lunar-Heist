@@ -126251,6 +126251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scout
       objectReference: {fileID: 0}
+    - target: {fileID: 6540289256507552287, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2a3ca35601e1f5c45a5bf5a1f22d9141, type: 3}
     - target: {fileID: 6987879258261245229, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
       propertyPath: Speed
       value: 12
@@ -126270,6 +126274,22 @@ PrefabInstance:
     - target: {fileID: 7277430219577232082, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
       propertyPath: m_margin.w
       value: 1.1872902
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723072900355060532, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.02329874
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723072900355060532, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
+      propertyPath: m_Size.x
+      value: 1.289504
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723072900355060532, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723072900355060532, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.98
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe3a375fe86a094408178ab6856e13d6, type: 3}
