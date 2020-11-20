@@ -237,7 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 337891228}
   - component: {fileID: 337891229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108352,7 +108352,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.017791748, y: 0.017781734}
@@ -112790,7 +112790,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1173816662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125677,7 +125677,7 @@ GameObject:
   - component: {fileID: 1926061248}
   - component: {fileID: 1926061249}
   - component: {fileID: 1926061250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125767,7 +125767,7 @@ MonoBehaviour:
   TargetPosition: {fileID: 1173816662}
   speed: 3
   flipSpriteOnTurn: 0
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 1926061249}
 --- !u!1 &1927341955
 GameObject:
   m_ObjectHideFlags: 0
