@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System;
 using System.Collections;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class CharacterSwitcherController : MonoBehaviour
 {
@@ -23,9 +24,11 @@ public class CharacterSwitcherController : MonoBehaviour
 
     private bool switcherOpen;
     private List<TowerSceneWrapper> wrappers = new List<TowerSceneWrapper>();
+    public Light2D SceneLight;
 
     void Start()
     {
+        Application.targetFrameRate = 30;
         SelectedCharacter = (SelectedCharacter == null) ? Characters[0] : SelectedCharacter;
         UpdateSlots();
 
@@ -36,6 +39,8 @@ public class CharacterSwitcherController : MonoBehaviour
 
         Vector2 v2 = bounds.TopLeftScreen() + new Vector2(Offset, -Offset);
         transform.position = new Vector3(v2.x, v2.y, transform.position.z);
+        SceneLight.color = SelectedCharacter.ScreenLightColour;
+
     }
 
     private void LoadScene(string name, bool isTowerScene = false)
@@ -92,14 +97,19 @@ public class CharacterSwitcherController : MonoBehaviour
         }
         else
         {
-            Debug.Log("switch to " + character.SceneName);
-            wrappers.ForEach(w => w.Activate(character == w.Character));
-            SelectedCharacter = character;
-            warpSound.Play();
-            CloseSwitcher();
-            UpdateSlots();
-            character.audioSnapshot.TransitionTo(0.005f);
+            SwitchToCharacter(character);
         }
+    }
+
+    private void SwitchToCharacter(Character character)
+    {
+        wrappers.ForEach(w => w.Activate(character == w.Character));
+        SelectedCharacter = character;
+        warpSound.Play();
+        CloseSwitcher();
+        UpdateSlots();
+        character.audioSnapshot.TransitionTo(0.005f);
+        SceneLight.color = character.ScreenLightColour;
     }
 
     private void CloseSwitcher()

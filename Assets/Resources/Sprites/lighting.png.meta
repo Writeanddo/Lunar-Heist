@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: -3779678137760624508
     second: lighting_0
+  - first:
+      213: -3008594188714053865
+    second: lighting_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -120,6 +123,27 @@ TextureImporter:
       bones: []
       spriteID: 480d77162c2eb8bc0800000000000000
       internalID: -3779678137760624508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lighting_1
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 0
+        width: 994
+        height: 852
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fe46c86835f36d0800000000000000
+      internalID: -3008594188714053865
       vertices: []
       indices: 
       edges: []

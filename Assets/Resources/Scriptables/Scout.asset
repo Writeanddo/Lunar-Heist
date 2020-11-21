@@ -54,3 +54,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1755dc83fff5a914b8347452e19680fa, type: 3}
   - {fileID: 8300000, guid: c81c6753e356c7045921f1652ace9308, type: 3}
   GrappleSounds: []
+  ScreenLightColour: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}

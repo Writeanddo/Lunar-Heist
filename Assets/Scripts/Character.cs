@@ -26,4 +26,5 @@ public class Character : ScriptableObject
     public AudioClip[] SpawnInSounds;
     public AudioClip[] GrappleSounds;
 
+    public Color ScreenLightColour;
 }

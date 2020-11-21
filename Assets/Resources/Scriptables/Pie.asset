@@ -44,3 +44,4 @@ MonoBehaviour:
   SpawnOutSounds: []
   SpawnInSounds: []
   GrappleSounds: []
+  ScreenLightColour: {r: 0.45882353, g: 0.41568628, b: 0.47058824, a: 1}
