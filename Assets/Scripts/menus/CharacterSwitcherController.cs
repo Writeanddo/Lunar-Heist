@@ -28,7 +28,6 @@ public class CharacterSwitcherController : MonoBehaviour
 
     void Start()
     {
-        Application.targetFrameRate = 30;
         SelectedCharacter = (SelectedCharacter == null) ? Characters[0] : SelectedCharacter;
         UpdateSlots();
 
