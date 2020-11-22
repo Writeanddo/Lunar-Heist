@@ -49,6 +49,7 @@ MonoBehaviour:
   LineMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   Animator: {fileID: 5505651999835610028}
   Sprite: {fileID: 5505651999835610019}
+  CharacterSoundPlayer: {fileID: 1159064571}
 --- !u!1 &4105281164351395062
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,7 +86,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.85, y: 0.28}
+  m_AnchoredPosition: {x: 0.44, y: 0.12}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7112903323796570279
@@ -176,8 +177,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -212,7 +213,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 16.172028, w: 0}
+  m_margin: {x: 10.973369, y: -1.2276065, z: 1.0676837, w: 1.4825721}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -265,6 +266,7 @@ GameObject:
   - component: {fileID: 25760337}
   - component: {fileID: 1159064571}
   - component: {fileID: 1159064570}
+  - component: {fileID: 1154781794055332822}
   m_Layer: 0
   m_Name: Pie
   m_TagString: Player
@@ -307,7 +309,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3504a718b2f14084a96ea20dd8d9e77f, type: 2}
+  - {fileID: 2100000, guid: 1f8a29f38000db041acd605eacced769, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -389,7 +391,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.41, y: 3}
+    oldSize: {x: 1.5666667, y: 3.3333333}
     newSize: {x: 1.41, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -410,7 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df684efce0ee44f4f82c8fd749ccc6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 8
+  Speed: 12
   JumpHeight: 50
   Rb2d: {fileID: 25760337}
   BoxCollider: {fileID: 5505651998381563854}
@@ -550,3 +552,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1154781794055332822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5505651999835610031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 000000005d7b9f86f7ab3a54e9761791
+  m_ShapePath:
+  - {x: -0.78333336, y: -1.6666666, z: 0}
+  - {x: 0.78333336, y: -1.6666666, z: 0}
+  - {x: 0.78333336, y: 1.6666666, z: 0}
+  - {x: -0.78333336, y: 1.6666666, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 150288

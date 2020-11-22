@@ -199,8 +199,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 9.438557, y: 0, z: 6.173912, w: 1.1872902}
+  m_margin: {x: 10.973369, y: -1.2276065, z: 1.0676837, w: 1.4825721}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -430,7 +430,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02329874, y: 0}
+  m_Offset: {x: 0.02329874, y: -0.08677864}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -441,7 +441,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.289504, y: 3}
+  m_Size: {x: 1.289504, y: 3.1735573}
   m_EdgeRadius: 0
 --- !u!50 &6540289255633740653
 Rigidbody2D:
@@ -599,7 +599,7 @@ MonoBehaviour:
   - {x: -0.65555555, y: 1.6666666, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1210
+  m_InstanceId: -598846
 --- !u!1 &6540289257327452377
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     public SpriteRenderer Highlight;
 
     public AudioSource randomRoboDeath;
+    public AudioSource RobotPatrol;
     public AudioClip[] roboDeathSFX;
 
     private float sizeY;
@@ -103,6 +104,7 @@ public class Enemy : MonoBehaviour
                     UpdateState(EnemyState.SLEEP);
                     UpdateMoving(false);
                     sprite.sprite = SleepSprite;
+                    RobotPatrol.Stop();
                     randomRoboDeath.clip = roboDeathSFX[Random.Range(0, roboDeathSFX.Length)];
                     randomRoboDeath.Play();
                 }
