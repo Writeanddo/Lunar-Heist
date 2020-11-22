@@ -63,11 +63,19 @@ public class CharacterSoundPlayer : MonoBehaviour
         }
     }
 
-    public void SetGrapple()
+    public void PlayGrapple()
     {
         if (Character.GrappleSounds.Length > 0)
         {
-            source.PlayOneShot(Character.GrappleSounds.PickRandom());
+            source.clip = Character.GrappleSounds.PickRandom();
+            source.loop = true;
+            source.Play();
         }
+    }
+
+    public void StopGrapple()
+    {
+        source.loop = false;
+        source.Stop();
     }
 }

@@ -13,6 +13,7 @@ public class PlayerGraplingHook : MonoBehaviour
     private float speed = 20f;
     private GameObject Line;
 
+    public CharacterSoundPlayer CharacterSoundPlayer;
 
     void FixedUpdate()
     {
@@ -39,7 +40,8 @@ public class PlayerGraplingHook : MonoBehaviour
 
     private void DoneGrapling()
     {
-        target =Vector2.zero;
+        CharacterSoundPlayer.StopGrapple();
+        target = Vector2.zero;
         Controller.enabled = true;
         GameObject.Destroy(Line);
         Animator.SetBool("grapple", false);
@@ -47,6 +49,7 @@ public class PlayerGraplingHook : MonoBehaviour
 
     public void Graple(Vector2 target)
     {
+        CharacterSoundPlayer.PlayGrapple();
         if (Line != null)
         {
             GameObject.Destroy(Line);
