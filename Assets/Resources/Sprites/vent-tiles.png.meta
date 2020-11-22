@@ -287,6 +287,12 @@ TextureImporter:
   - first:
       213: 2917047995629707061
     second: vent-tiles_94
+  - first:
+      213: 7165343573162518412
+    second: vent-tiles_95
+  - first:
+      213: 7707342871846640504
+    second: vent-tiles_96
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2376,6 +2382,48 @@ TextureImporter:
       bones: []
       spriteID: 53f164462bf6b7820800000000000000
       internalID: 2917047995629707061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_95
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87eaf3240a607360800000000000000
+      internalID: 7165343573162518412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_96
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 45
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87bde86b18bf5fa60800000000000000
+      internalID: 7707342871846640504
       vertices: []
       indices: 
       edges: []

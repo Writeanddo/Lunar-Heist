@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TileGlowShader
-  m_Shader: {fileID: -6465566751694194690, guid: 8fa65ffc761210d419a474f55c8e4f51, type: 3}
+  m_Name: YellowGlowShader
+  m_Shader: {fileID: -6465566751694194690, guid: d6341d1bd6f18e741a12383f03359f0b, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -27,12 +27,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MainTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_10B8FB8E: {r: 1.137255, g: 0.34509805, b: 0, a: 0}
-    - Color_F6943242: {r: 0.2, g: 0.2, b: 0.2, a: 0.56078434}
+    - Color_D28C6A9: {r: 1.1764706, g: 0.7372549, b: 0.39215687, a: 0}
   m_BuildTextureStacks: []
