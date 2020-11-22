@@ -7,14 +7,26 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonUp("Pause")){
-            Debug.Log("Pause");
-            Menu.SetActive(!Menu.activeSelf);
+            if (Menu.activeSelf)
+            {
+                Resume();
+            }else
+            {
+                Pause();
+            }
         }
+    }
+
+    public void Pause()
+    {
+        Menu.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void Resume()
     {
         Menu.SetActive(false);
+        Time.timeScale = 1;
     }
 
 
