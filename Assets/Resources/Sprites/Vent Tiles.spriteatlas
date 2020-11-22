@@ -34,7 +34,7 @@ SpriteAtlas:
     - {fileID: 3709789598010588514, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
     - {fileID: -2079442789162390272, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
     - {fileID: 2800000, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
-    totalSpriteSurfaceArea: 763374
+    totalSpriteSurfaceArea: 828174
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -110,8 +110,16 @@ SpriteAtlas:
   - {fileID: 5492042328161454760, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: -6969171480097388726, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: -7467350311182571457, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -2617259341962649265, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 2890417149787264794, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: -6303035869872882967, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 2017663895864014452, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 3669072456921615609, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 2901174887335884655, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: -6570639976067119303, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: 7724874190602137485, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 4500720585127177692, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
+  - {fileID: 2917047995629707061, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: 1937073400463486768, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: 6550336543103250258, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   - {fileID: -1884767957049693989, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
@@ -198,8 +206,16 @@ SpriteAtlas:
   - vent-tiles_69
   - vent-tiles_19
   - vent-tiles_68
+  - vent-tiles_89
+  - vent-tiles_92
+  - vent-tiles_88
+  - vent-tiles_93
+  - vent-tiles_90
+  - vent-tiles_91
   - vent-tiles_85
   - vent-tiles_84
+  - vent-tiles_87
+  - vent-tiles_94
   - vent-tiles_86
   - vent-tiles_81
   - vent-tiles_80

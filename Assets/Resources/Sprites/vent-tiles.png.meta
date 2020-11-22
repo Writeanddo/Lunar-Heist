@@ -263,6 +263,30 @@ TextureImporter:
   - first:
       213: 1937073400463486768
     second: vent-tiles_86
+  - first:
+      213: 4500720585127177692
+    second: vent-tiles_87
+  - first:
+      213: -6303035869872882967
+    second: vent-tiles_88
+  - first:
+      213: -2617259341962649265
+    second: vent-tiles_89
+  - first:
+      213: 3669072456921615609
+    second: vent-tiles_90
+  - first:
+      213: 2901174887335884655
+    second: vent-tiles_91
+  - first:
+      213: 2890417149787264794
+    second: vent-tiles_92
+  - first:
+      213: 2017663895864014452
+    second: vent-tiles_93
+  - first:
+      213: 2917047995629707061
+    second: vent-tiles_94
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2113,7 +2137,7 @@ TextureImporter:
         width: 90
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2134,7 +2158,7 @@ TextureImporter:
         width: 90
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2155,7 +2179,7 @@ TextureImporter:
         width: 90
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2176,7 +2200,7 @@ TextureImporter:
         width: 90
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2184,6 +2208,174 @@ TextureImporter:
       bones: []
       spriteID: 03feb72aefdd1ea10800000000000000
       internalID: 1937073400463486768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_87
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 24
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd2bcdb685c57e30800000000000000
+      internalID: 4500720585127177692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_88
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 24
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea7ea1754e1788a0800000000000000
+      internalID: -6303035869872882967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_89
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 24
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f416e3dce70adabd0800000000000000
+      internalID: -2617259341962649265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_90
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 134
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc8bf1c5f92be230800000000000000
+      internalID: 3669072456921615609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_91
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 134
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6770fe503b034820800000000000000
+      internalID: 2901174887335884655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_92
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 134
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1754c96513dc1820800000000000000
+      internalID: 2890417149787264794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_93
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 83
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476fa1d8f9e200c10800000000000000
+      internalID: 2017663895864014452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vent-tiles_94
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 82
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f164462bf6b7820800000000000000
+      internalID: 2917047995629707061
       vertices: []
       indices: 
       edges: []
@@ -2197,7 +2389,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: f97a3c089e22b054596a4b05b6da6b8f, type: 3}
+      name: _Emission
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
