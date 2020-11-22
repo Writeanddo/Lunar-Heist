@@ -34,7 +34,7 @@ public class CharacterSoundPlayer : MonoBehaviour
     {
         if (Character.CaughtSounds.Length > 0)
         {
-            source.PlayOneShot(Character.CaughtSounds.PickRandom());
+            source.PlayOneShot(Character.CaughtSounds.PickRandom(), 0.25f);
         }
     }
 
@@ -65,7 +65,7 @@ public class CharacterSoundPlayer : MonoBehaviour
 
     public void SetGrapple()
     {
-        if (Character.DeathSounds.Length > 0)
+        if (Character.GrappleSounds.Length > 0)
         {
             source.PlayOneShot(Character.GrappleSounds.PickRandom());
         }
