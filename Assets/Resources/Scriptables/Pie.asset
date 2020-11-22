@@ -41,7 +41,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b381647a7ad6893478c2bfe7ddaaa030, type: 3}
   DeathSounds: []
   CaughtSounds: []
-  SpawnOutSounds: []
-  SpawnInSounds: []
-  GrappleSounds: []
+  SpawnOutSounds:
+  - {fileID: 8300000, guid: cd300b78b6462d84c81165b04cedf702, type: 3}
+  SpawnInSounds:
+  - {fileID: 8300000, guid: 194ead6e1707c86498f5700d17d57e29, type: 3}
+  - {fileID: 8300000, guid: eb1ef4319f64e1542967be0bb6c9cbce, type: 3}
+  - {fileID: 8300000, guid: 1c7da9e7f93f2394e8e4e0edc21e8b6f, type: 3}
+  - {fileID: 8300000, guid: 1755dc83fff5a914b8347452e19680fa, type: 3}
+  - {fileID: 8300000, guid: c81c6753e356c7045921f1652ace9308, type: 3}
+  GrappleSounds:
+  - {fileID: 8300000, guid: 9733d51fd1b2c2a4f947652b69b5162f, type: 3}
   ScreenLightColour: {r: 0.7254902, g: 0.6862745, b: 0.7372549, a: 1}
