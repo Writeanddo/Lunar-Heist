@@ -29,12 +29,22 @@ MonoBehaviour:
   Head: {fileID: 21300000, guid: 665e636c0419e854ea3680eb1918b8ac, type: 3}
   SceneName: Wynn
   audioSnapshot: {fileID: 8003639452310835386, guid: a7515fa8f8ab25a499bf2772037867e4, type: 2}
-  JumpSounds: []
+  JumpSounds:
+  - {fileID: 8300000, guid: 2402f864c844b6e498d0294dbe8b4d96, type: 3}
+  - {fileID: 8300000, guid: 3188dbbaec7568c4e972583716857ed1, type: 3}
   LandSounds: []
   FootstepSounds: []
-  DeathSounds: []
-  CaughtSounds: []
-  SpawnOutSounds: []
-  SpawnInSounds: []
+  DeathSounds:
+  - {fileID: 8300000, guid: f66e49b60312f1c4fb70ddfeba75be54, type: 3}
+  CaughtSounds:
+  - {fileID: 8300000, guid: f66e49b60312f1c4fb70ddfeba75be54, type: 3}
+  SpawnOutSounds:
+  - {fileID: 8300000, guid: cd300b78b6462d84c81165b04cedf702, type: 3}
+  SpawnInSounds:
+  - {fileID: 8300000, guid: 194ead6e1707c86498f5700d17d57e29, type: 3}
+  - {fileID: 8300000, guid: eb1ef4319f64e1542967be0bb6c9cbce, type: 3}
+  - {fileID: 8300000, guid: 1c7da9e7f93f2394e8e4e0edc21e8b6f, type: 3}
+  - {fileID: 8300000, guid: 1755dc83fff5a914b8347452e19680fa, type: 3}
+  - {fileID: 8300000, guid: c81c6753e356c7045921f1652ace9308, type: 3}
   GrappleSounds: []
   ScreenLightColour: {r: 0.3137255, g: 0.26666668, b: 0.32941177, a: 1}
