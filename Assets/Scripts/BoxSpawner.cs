@@ -34,6 +34,13 @@ public class BoxSpawner : MonoBehaviour
             canSpawn = true;
         }
     }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            canSpawn = false;
+        }
+    }
 
     private void SpawnBox()
     {
