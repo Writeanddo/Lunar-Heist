@@ -2728,8 +2728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ee195476b82da47a51f5ef7029449c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausedMusic: {fileID: 2126047700604414834, guid: a7515fa8f8ab25a499bf2772037867e4, type: 2}
-  resumeMusic: {fileID: -8145483164800001561, guid: a7515fa8f8ab25a499bf2772037867e4, type: 2}
+  Mixer: {fileID: 24100000, guid: a7515fa8f8ab25a499bf2772037867e4, type: 2}
   Menu: {fileID: 2024902366}
 --- !u!1 &1824722048
 GameObject:

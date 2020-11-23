@@ -4,8 +4,7 @@ using System.Collections;
 
 public class PauseMenu : MonoBehaviour
 {
-    public AudioMixerSnapshot pausedMusic;
-    public AudioMixerSnapshot resumeMusic;
+    public AudioMixer Mixer;
 
     public GameObject Menu;
     void Update()
@@ -25,14 +24,17 @@ public class PauseMenu : MonoBehaviour
     {
         Menu.SetActive(true);
         Time.timeScale = 0;
-        pausedMusic.TransitionTo(0.001f);
+        Mixer.SetFloat("MasterCutoffFrequencyLowPass", 50f);
+        Mixer.SetFloat("MasterResonanceLowPass", 0.1f);
     }
 
     public void Resume()
     {
         Menu.SetActive(false);
         Time.timeScale = 1;
-        resumeMusic.TransitionTo(0.001f);
+        Mixer.ClearFloat("MasterCutoffFrequencyLowPass");
+        Mixer.ClearFloat("MasterResonanceLowPass");
+
     }
 
 

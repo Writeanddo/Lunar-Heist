@@ -167,6 +167,24 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-133928640660159119
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: b65b5ce2e09b8104fbe46d8a2b96336c
+  m_EffectName: Lowpass
+  m_MixLevel: 046a8000f97128b4fa41bc3b569163d1
+  m_Parameters:
+  - m_ParameterName: Cutoff freq
+    m_GUID: 6f3572e3c62790f439efe140f7474361
+  - m_ParameterName: Resonance
+    m_GUID: 1b142b08903e2194aaf44dedfdab053c
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -188,7 +206,11 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 580007dacddd6f24e8c4830ae69e37fe
+    name: MasterCutoffFrequencyLowPass
+  - guid: b54ed42d6f33acb409a2d91c9a5f9fe0
+    name: MasterResonanceLowPass
   m_AudioMixerGroupViews:
   - guids:
     - 4b9f82237fa48b24180ba9ae13b9f044
@@ -200,7 +222,7 @@ AudioMixerController:
     - 5bef0d16ca4d0b14892f2c361b516843
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 2126047700604414834}
+  m_TargetSnapshot: {fileID: -8145483164800001561}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -222,6 +244,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 24400004}
+  - {fileID: 5347213689514764446}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -314,6 +337,24 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &5347213689514764446
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 1287d67ddf9da9f4e8d8372085de0407
+  m_EffectName: Lowpass
+  m_MixLevel: 71bb2aad591b2a04e982bd1cc4111493
+  m_Parameters:
+  - m_ParameterName: Cutoff freq
+    m_GUID: 580007dacddd6f24e8c4830ae69e37fe
+  - m_ParameterName: Resonance
+    m_GUID: b54ed42d6f33acb409a2d91c9a5f9fe0
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &5457469717535836599
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
