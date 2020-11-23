@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class Respawner : MonoBehaviour
 {
-    public GameObject[] Zones;
     public GameObject Player;
 
     private Animator PlayerAnimator;
+
+    private GameObject LastZone;
 
     void Start()
     {
@@ -30,8 +31,13 @@ public class Respawner : MonoBehaviour
     IEnumerator RespawnPlayer()
     {
         yield return new WaitForSeconds(1f);
-        Vector2 respawnPosition = Zones[0].gameObject.transform.position;
+        Vector2 respawnPosition = LastZone.gameObject.transform.position;
         Player.transform.position = new Vector3(respawnPosition.x, respawnPosition.y, Player.transform.position.z);
         PlayerAnimator.SetTrigger("respawn");
+    }
+
+    public void SetRespawn(GameObject obj)
+    {
+        LastZone = obj;
     }
 }
