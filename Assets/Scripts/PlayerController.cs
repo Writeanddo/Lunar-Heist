@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
             {
                 Velocity.y = Velocity.y * 0.5f;
             }
+        }
     }
 
     void FixedUpdate()
