@@ -9,9 +9,11 @@ public class BoxSpawner : MonoBehaviour
     public Transform BoxSpawnLocation;
 
     public GameObject Box;
+    public BoxCollider2D BoxCollider;
 
     private bool canSpawn;
     private IEnumerator ButtonTimeout;
+    public BoxCollider2D BoxBounds;
 
     void Start()
     {
@@ -22,6 +24,12 @@ public class BoxSpawner : MonoBehaviour
     void Update()
     {
         if (canSpawn && Input.GetButtonDown("Fire1"))
+        {
+            SpawnBox();
+        }
+
+       
+        if (!BoxBounds.IsTouching(BoxCollider))
         {
             SpawnBox();
         }
