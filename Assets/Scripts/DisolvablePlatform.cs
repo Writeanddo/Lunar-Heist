@@ -23,7 +23,7 @@ public class DisolvablePlatform : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && canTrigger)
+        if ((collision.tag == "Player" || collision.tag == "Box") && canTrigger)
         {
             canTrigger = false;
             StartCoroutine(StartDisolveTimer());
