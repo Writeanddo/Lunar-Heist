@@ -24,7 +24,7 @@ public class PauseMenu : MonoBehaviour
     {
         Menu.SetActive(true);
         Time.timeScale = 0;
-        Mixer.SetFloat("MasterCutoffFrequencyLowPass", 50f);
+        Mixer.SetFloat("MasterCutoffFrequencyLowPass", 250f);
         Mixer.SetFloat("MasterResonanceLowPass", 0.1f);
     }
 
