@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 Velocity;
     private Vector2 Movement;
     private bool IsGrounded;
-    private bool IsJumping;
     private RaycastHit2D[] Hits = new RaycastHit2D[50];
     private ContactFilter2D Filter;
 
@@ -27,7 +26,6 @@ public class PlayerController : MonoBehaviour
     void OnEnable()
     {
         Velocity = Vector2.zero;
-        IsJumping = false;
     }
 
     void Update()
@@ -37,7 +35,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded)
         {
             Velocity.y = Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
-            IsJumping = true;
         }
 
         if (Input.GetButtonUp("Jump"))
@@ -46,8 +43,6 @@ public class PlayerController : MonoBehaviour
             {
                 Velocity.y = Velocity.y * 0.5f;
             }
-            IsJumping = false;
-        }
     }
 
     void FixedUpdate()
