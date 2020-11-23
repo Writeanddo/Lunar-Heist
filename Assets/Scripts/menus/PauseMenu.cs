@@ -25,14 +25,14 @@ public class PauseMenu : MonoBehaviour
     {
         Menu.SetActive(true);
         Time.timeScale = 0;
-        pausedMusic.TransitionTo(0.1f);
+        pausedMusic.TransitionTo(0.001f);
     }
 
     public void Resume()
     {
         Menu.SetActive(false);
         Time.timeScale = 1;
-        resumeMusic.TransitionTo(0.1f);
+        resumeMusic.TransitionTo(0.001f);
     }
 
 

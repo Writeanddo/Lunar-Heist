@@ -41,8 +41,7 @@ AudioMixerGroupController:
   m_Name: Wynn
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: daf83e8677aa2e143a0d966dde58509c
-  m_Children:
-  - {fileID: 2929185336616953691}
+  m_Children: []
   m_Volume: f2599a19cf84f874ea1f2200935b982a
   m_Pitch: 72c28db9572d76845ac6307dc82e15b6
   m_Send: 00000000000000000000000000000000
@@ -61,8 +60,7 @@ AudioMixerGroupController:
   m_Name: Pie
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: bdadb07d512d45f45962cc0132d22f26
-  m_Children:
-  - {fileID: 4768013989175415130}
+  m_Children: []
   m_Volume: 06484fdde048a2c42a1be6fc31586f28
   m_Pitch: 6f9b27789383f2d4db0b1107d3379dfe
   m_Send: 00000000000000000000000000000000
@@ -86,6 +84,7 @@ AudioMixerSnapshotController:
     481585047c4ca6a4794a22dbb4818746: -80
     705bdf286588b974fa831649c35695e3: -0.05
     f2599a19cf84f874ea1f2200935b982a: -80
+    2ce46569663792b4bb155a70aab14313: -0.05
     183abd9938aa6bf41b75937c46f757bb: -80
     06484fdde048a2c42a1be6fc31586f28: -80
   m_TransitionOverrides: {}
@@ -130,8 +129,7 @@ AudioMixerGroupController:
   m_Name: Scout
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 808333e0e0dcdc946bf01479f1232101
-  m_Children:
-  - {fileID: 5457469717535836599}
+  m_Children: []
   m_Volume: 2b73fc62fca1fc94abcc894d4ebc88ab
   m_Pitch: d653acdc4ee91804d9985cb87e48f656
   m_Send: 00000000000000000000000000000000
@@ -202,7 +200,7 @@ AudioMixerController:
     - 5bef0d16ca4d0b14892f2c361b516843
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 8567985481256452086}
+  m_TargetSnapshot: {fileID: 2126047700604414834}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -214,8 +212,11 @@ AudioMixerGroupController:
   m_GroupID: 4b9f82237fa48b24180ba9ae13b9f044
   m_Children:
   - {fileID: -7913237084618527274}
+  - {fileID: 2929185336616953691}
   - {fileID: -2362537739464350889}
+  - {fileID: 5457469717535836599}
   - {fileID: -5366800443977040610}
+  - {fileID: 4768013989175415130}
   m_Volume: 705bdf286588b974fa831649c35695e3
   m_Pitch: 36b26bcd59f0e5440b4e4a4cce7ee882
   m_Send: 00000000000000000000000000000000
@@ -272,6 +273,7 @@ AudioMixerSnapshotController:
     705bdf286588b974fa831649c35695e3: -0.05
     f2599a19cf84f874ea1f2200935b982a: -80
     2ce46569663792b4bb155a70aab14313: -80
+    183abd9938aa6bf41b75937c46f757bb: -0.05
     06484fdde048a2c42a1be6fc31586f28: -80
   m_TransitionOverrides: {}
 --- !u!243 &2929185336616953691
@@ -280,7 +282,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Paused
+  m_Name: Wynn paused
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 1bd5a371e0fd97442ad0a2fb5fbb06b2
   m_Children: []
@@ -299,7 +301,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Paused
+  m_Name: Pie paused
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 5bef0d16ca4d0b14892f2c361b516843
   m_Children: []
@@ -318,7 +320,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Paused
+  m_Name: Scout paused
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 507d55f94a487b54794b078a66d5d0aa
   m_Children: []
@@ -388,6 +390,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: 4596a17c03e2890449dbb277f1b28c4d
   m_FloatValues:
     2b73fc62fca1fc94abcc894d4ebc88ab: -80
+    481585047c4ca6a4794a22dbb4818746: -0.05
     705bdf286588b974fa831649c35695e3: -0.05
     f2599a19cf84f874ea1f2200935b982a: -80
     2ce46569663792b4bb155a70aab14313: -80
