@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sprite: {fileID: 263106431434693934}
   Normal: {fileID: 2100000, guid: 1f8a29f38000db041acd605eacced769, type: 2}
-  Disolver: {fileID: 0}
+  Disolver: {fileID: 2100000, guid: 6e69f5feaf6f34442974a05319ea1446, type: 2}
   Collider: {fileID: 263106431434693933}
 --- !u!61 &263106431691346364
 BoxCollider2D:
