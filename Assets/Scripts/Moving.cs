@@ -6,11 +6,12 @@ public class Moving : MonoBehaviour
     public float speed = 1.0f;
     public bool flipSpriteOnTurn;
     public SpriteRenderer Sprite;
+    public BoxCollider2D BoxCollider;
 
     private Vector2 target;
     private Vector2 initialPosition;
     private Vector2 currentTarget;
-
+    private Rigidbody2D Player;
 
     private enum Direction
     {
@@ -30,7 +31,20 @@ public class Moving : MonoBehaviour
     void FixedUpdate()
     {
         float step = speed * Time.deltaTime;
+        Vector3 originalPosition = transform.position;
+
         transform.position = Vector3.MoveTowards(transform.position, currentTarget, step);
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(BoxCollider.transform.position, BoxCollider.size, 0, Vector2.up, 0.5f);
+
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].transform.gameObject.tag == "Player")
+            {
+                Player = hits[i].transform.gameObject.GetComponent<Rigidbody2D>();
+
+                Player.position = Player.position + new Vector2(transform.position.x - originalPosition.x, transform.position.y - originalPosition.y);
+            }
+        }
 
         switch (direction)
         {

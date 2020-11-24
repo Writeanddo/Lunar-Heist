@@ -114,8 +114,6 @@ public class PlayerController : MonoBehaviour
                 Rb2d.position = Rb2d.position + Vector2.up * displacement;
             }
         }
-        Debug.Log("IsGrounded" + IsGrounded);
-
     }
 
     private void UpdateAnimations()
