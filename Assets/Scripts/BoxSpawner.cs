@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Numerics;
 using UnityEngine;
 
 public class BoxSpawner : MonoBehaviour
@@ -52,6 +53,7 @@ public class BoxSpawner : MonoBehaviour
 
     private void SpawnBox()
     {
+        Box.GetComponent<Rigidbody2D>().velocity = UnityEngine.Vector3.zero;
         Box.transform.position = BoxSpawnLocation.position;
         Box.SetActive(true);
         Button.sprite = ButtonDown;
