@@ -5,10 +5,16 @@ public class DisolvablePlatform : MonoBehaviour
 {
     public SpriteRenderer Sprite;
     public Material Normal;
-    public Material Disolver;
+    private Material Disolver;
+    public Shader DisolverShader;
     public BoxCollider2D Collider;
     private bool canTrigger = true;
     private float disolving = 0;
+
+    void Start()
+    {
+        Disolver = new Material(DisolverShader);
+    }
 
     void Update()
     {
