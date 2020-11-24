@@ -59,21 +59,29 @@ public class Moving : MonoBehaviour
 
     private void AfterMoveTowardsTarget()
     {
-        if (transform.position.x >= currentTarget.x && transform.position.y >= currentTarget.y)
+        int xDistance = Mathf.RoundToInt(Mathf.Abs(currentTarget.x - transform.position.x));
+        int yDistance = Mathf.RoundToInt(Mathf.Abs(currentTarget.y - transform.position.y));
+
+        if (xDistance == 0 && yDistance == 0)
         {
-            direction = Direction.AWAY;
-            FlipSprite();
-            currentTarget = initialPosition;
+            TurnAround();
         }
     }
     private void AfterMoveAwayFromTarget()
     {
-        if (transform.position.x <= currentTarget.x && transform.position.y <= currentTarget.y)
+        int xDistance = Mathf.RoundToInt(Mathf.Abs(transform.position.x - currentTarget.x));
+        int yDistance = Mathf.RoundToInt(Mathf.Abs(transform.position.y - currentTarget.y));
+        if (xDistance == 0 && yDistance == 0)
         {
-            direction = Direction.TOWARDS;
-            FlipSprite();
-            currentTarget = target;
+            TurnAround();
         }
+    }
+
+    private void TurnAround()
+    {
+        direction = (direction == Direction.AWAY) ? Direction.TOWARDS : Direction.AWAY;
+        currentTarget = (currentTarget == initialPosition) ? target : initialPosition;
+        FlipSprite();
     }
 
     private void FlipSprite()

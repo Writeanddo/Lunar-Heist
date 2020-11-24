@@ -7,7 +7,7 @@ public class Respawner : MonoBehaviour
 
     private Animator PlayerAnimator;
 
-    private GameObject LastZone;
+    public GameObject LastZone;
 
     void Start()
     {
