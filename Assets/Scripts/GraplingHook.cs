@@ -3,11 +3,14 @@
 public class GraplingHook : MonoBehaviour
 {
     private Collider2D player;
-    public SpriteRenderer HoverSprite;
+    public SpriteRenderer MouseSprite;
+    public Color HighlightColour;
+    public SpriteRenderer Hook;
 
     void Start()
     {
-        HoverSprite.enabled = false;
+        MouseSprite.enabled = false;
+        Hook.color = HighlightColour;
     }
 
     void Update()
@@ -15,7 +18,7 @@ public class GraplingHook : MonoBehaviour
         if (player != null && Input.GetButtonDown("Fire1"))
         {
             player.gameObject.GetComponentInChildren<PlayerGraplingHook>().Graple(transform.position);
-            HoverSprite.enabled = false;
+            MouseSprite.enabled = false;
         }
     }
 
@@ -24,7 +27,8 @@ public class GraplingHook : MonoBehaviour
         if (collision.tag == "Player")
         {
             player = collision;
-            HoverSprite.enabled = true;
+            MouseSprite.enabled = true;
+            Hook.color = Color.white; ;
         }
     }
 
@@ -33,7 +37,8 @@ public class GraplingHook : MonoBehaviour
         if (collision.tag == "Player")
         {
             player = null;
-            HoverSprite.enabled = false;
+            MouseSprite.enabled = false;
+            Hook.color = HighlightColour;
         }
     }
 }

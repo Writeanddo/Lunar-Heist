@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 2868457350498428522}
   - component: {fileID: 2868457350498428521}
   - component: {fileID: 4317015845741564518}
+  - component: {fileID: 8962587669094260670}
   m_Layer: 0
   m_Name: Box
   m_TagString: Box
@@ -140,7 +141,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1f8a29f38000db041acd605eacced769, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -232,9 +233,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 2868457350498428523}
+  boxCollider2D: {fileID: 2868457350498428522}
   ColourOnSelect: {r: 0, g: 1, b: 0.036759853, a: 1}
   ColourOnHover: {r: 0.10849059, g: 1, b: 0.9200059, a: 1}
   drag: 0
+  BoxBounds: {fileID: 2868457349873547950}
+  BoxSpawner: {fileID: 4989487425201037609}
+  Dissolver: {fileID: 8962587669094260670}
+--- !u!114 &8962587669094260670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2868457350498428519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2ba14a031f2ea45b40d190d877e93b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sprite: {fileID: 2868457350498428523}
+  DisolverShader: {fileID: -6465566751694194690, guid: 81a7e5b506cdbbf45a7548568bc50db9, type: 3}
 --- !u!1 &2868457351426820122
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,9 +306,8 @@ MonoBehaviour:
   ButtonUp: {fileID: 799096958803339881, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   ButtonDown: {fileID: -1280848346772206472, guid: 085f9a57310c57d4b8b93709d55ca76a, type: 3}
   BoxSpawnLocation: {fileID: 2868457350406000225}
+  NormalMaterial: {fileID: 2100000, guid: 1f8a29f38000db041acd605eacced769, type: 2}
   Box: {fileID: 2868457350498428519}
-  BoxCollider: {fileID: 2868457350498428522}
-  BoxBounds: {fileID: 2868457349873547950}
 --- !u!1 &2868457351566137849
 GameObject:
   m_ObjectHideFlags: 0
