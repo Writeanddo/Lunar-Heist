@@ -25,8 +25,15 @@ public class Dissolver : MonoBehaviour
 
     public void Dissolve()
     {
+        Debug.Log("dissolve start");
         disolving = 0.9f;
         Sprite.material = DisolverMaterial;
+    }
+
+
+    public void StopDissolve()
+    {
+        disolving = 0;
     }
 
 }
