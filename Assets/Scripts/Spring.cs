@@ -4,25 +4,21 @@ using System.Collections;
 public class Spring : MonoBehaviour
 {
     public Vector2 Force;
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public int XVelocity;
+    public float YVelocity;
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if ((collision.tag == "Player" || collision.tag == "Box"))
+        if (collision.tag == "Box")
         {
-            Debug.Log("Collided");
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Force, ForceMode2D.Impulse);
+        } 
+        else if (collision.tag == "Player")
+        {
+            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+
+            playerController.Velocity = new Vector2(playerController.Velocity.x, YVelocity);
+            playerController.Speed =  XVelocity;
         }
     }
 }

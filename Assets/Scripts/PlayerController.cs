@@ -9,9 +9,9 @@ public class PlayerController : MonoBehaviour
     public LayerMask Ground;
     public Animator Animator;
     public SpriteRenderer Sprite;
+    public Vector2 Velocity;
 
     private int GravityModifier = 10;
-    private Vector2 Velocity;
     private Vector2 Movement;
     private bool IsGrounded;
     private RaycastHit2D[] Hits = new RaycastHit2D[50];
@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
             if (hit.normal.y == 1)
             {
                 IsGrounded = true;
+                Speed = 12;
                 Velocity.y = 0;
             }
 
