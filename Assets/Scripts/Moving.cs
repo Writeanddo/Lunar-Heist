@@ -13,6 +13,8 @@ public class Moving : MonoBehaviour
     private Vector2 currentTarget;
     private Rigidbody2D Player;
 
+    public bool mountable;
+
     private enum Direction
     {
         TOWARDS,
@@ -34,18 +36,20 @@ public class Moving : MonoBehaviour
         Vector3 originalPosition = transform.position;
 
         transform.position = Vector3.MoveTowards(transform.position, currentTarget, step);
-        RaycastHit2D[] hits = Physics2D.BoxCastAll(BoxCollider.transform.position, BoxCollider.size, 0, Vector2.up, 0.5f);
+        if (mountable) {
+            RaycastHit2D[] hits = Physics2D.BoxCastAll(BoxCollider.transform.position, BoxCollider.size, 0, Vector2.up, 0.5f);
 
-        for (int i = 0; i < hits.Length; i++)
-        {
-            if (hits[i].transform.gameObject.tag == "Player")
+            for (int i = 0; i < hits.Length; i++)
             {
-                Player = hits[i].transform.gameObject.GetComponent<Rigidbody2D>();
+                if (hits[i].transform.gameObject.tag == "Player")
+                {
+                    Player = hits[i].transform.gameObject.GetComponent<Rigidbody2D>();
 
-                Player.position = Player.position + new Vector2(transform.position.x - originalPosition.x, transform.position.y - originalPosition.y);
+                    Player.position = Player.position + new Vector2(transform.position.x - originalPosition.x, transform.position.y - originalPosition.y);
+                }
             }
         }
-
+        
         switch (direction)
         {
             case Direction.TOWARDS:

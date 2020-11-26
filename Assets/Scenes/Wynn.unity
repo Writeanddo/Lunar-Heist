@@ -18455,7 +18455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51213b52f158194cba659c8fce82828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawner: {fileID: 0}
+  Respawner: {fileID: 1527873721}
 --- !u!61 &1418626741
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23047,6 +23047,7 @@ MonoBehaviour:
   flipSpriteOnTurn: 1
   Sprite: {fileID: 1820193371}
   BoxCollider: {fileID: 0}
+  mountable: 0
 --- !u!61 &1820193373
 BoxCollider2D:
   m_ObjectHideFlags: 0
