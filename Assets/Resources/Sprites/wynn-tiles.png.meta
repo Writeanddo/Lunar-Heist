@@ -206,6 +206,9 @@ TextureImporter:
   - first:
       213: -8990711501009882517
     second: wynn-tiles_66
+  - first:
+      213: 6393963635782191472
+    second: wynn-tiles_67
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1699,7 +1702,7 @@ TextureImporter:
         width: 90
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1707,6 +1710,27 @@ TextureImporter:
       bones: []
       spriteID: b62794056839a3380800000000000000
       internalID: -8990711501009882517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_67
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 237
+        width: 270
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0790091dc0cebb850800000000000000
+      internalID: 6393963635782191472
       vertices: []
       indices: 
       edges: []
