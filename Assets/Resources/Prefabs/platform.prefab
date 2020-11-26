@@ -380,6 +380,8 @@ MonoBehaviour:
   speed: 3
   flipSpriteOnTurn: 0
   Sprite: {fileID: 5661379705380003840}
+  BoxCollider: {fileID: 0}
+  mountable: 1
 --- !u!1 &5661379706138507668
 GameObject:
   m_ObjectHideFlags: 0

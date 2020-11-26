@@ -7,26 +7,18 @@ public class BoxSpawner : MonoBehaviour
     public Sprite ButtonUp;
     public Sprite ButtonDown;
     public Transform BoxSpawnLocation;
+    public Material NormalMaterial;
+
 
     public GameObject Box;
-    public BoxCollider2D BoxCollider;
 
     private IEnumerator ButtonTimeout;
-    public BoxCollider2D BoxBounds;
-
-
-    void Update()
-    {
-        if (!BoxBounds.IsTouching(BoxCollider))
-        {
-            SpawnBox();
-        }
-    }
 
     public void SpawnBox()
     {
         Box.GetComponent<Rigidbody2D>().velocity = UnityEngine.Vector3.zero;
         Box.transform.position = BoxSpawnLocation.position;
+        Box.GetComponent<SpriteRenderer>().material = NormalMaterial;
         Box.SetActive(true);
         Button.sprite = ButtonDown;
         if (ButtonTimeout != null)

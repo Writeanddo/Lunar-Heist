@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 263106431691346362}
   - component: {fileID: 263106431691346363}
   - component: {fileID: 263106431691346364}
+  - component: {fileID: 8161182299224403969}
   m_Layer: 8
   m_Name: DisolvablePlatform
   m_TagString: Untagged
@@ -156,8 +157,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sprite: {fileID: 263106431434693934}
   Normal: {fileID: 2100000, guid: 1f8a29f38000db041acd605eacced769, type: 2}
-  DisolverShader: {fileID: -6465566751694194690, guid: 81a7e5b506cdbbf45a7548568bc50db9, type: 3}
   Collider: {fileID: 263106431434693933}
+  Dissolver: {fileID: 8161182299224403969}
 --- !u!61 &263106431691346364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -184,3 +185,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8174362, y: 0.9026375}
   m_EdgeRadius: 0
+--- !u!114 &8161182299224403969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263106431691346361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2ba14a031f2ea45b40d190d877e93b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sprite: {fileID: 263106431434693934}
+  DisolverShader: {fileID: -6465566751694194690, guid: 81a7e5b506cdbbf45a7548568bc50db9, type: 3}
