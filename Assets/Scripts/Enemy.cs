@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     public float AttackSpeed;
     public float VisionDistance = 4f;
     public SpriteRenderer sprite;
-    public Moving Moving;
+    public MonoBehaviour Moving;
     public Sprite AttackSprite;
     public Sprite NeutralSprite;
     public Sprite SleepSprite;
@@ -26,6 +26,8 @@ public class Enemy : MonoBehaviour
     public AudioSource randomRoboDeath;
     public AudioSource RobotPatrol;
     public AudioClip[] roboDeathSFX;
+
+    private int[] layersToConsider = new int[2]{ Constants.PLAYER_LAYER, Constants.GROUND_LAYER };
 
     private float sizeY;
 
@@ -71,17 +73,14 @@ public class Enemy : MonoBehaviour
     {
         bool isLookingLeft = sprite.flipX;
 
-        var rays = new RaycastHit2D[]
-         {
-                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right )
-         };
+        var rays = RaysDirectionVision(isLookingLeft);
         foreach (RaycastHit2D ray in rays)
         {
             if (CollidedWithPlayer(ray))
             {
                 UpdateState(EnemyState.TARGETING);
                 sprite.sprite = AttackSprite;
-                UpdateMoving(false);
+                UpdateAttachedScript(false);
                 MoveTowardsTarget(ray.collider.gameObject);
             }
         }
@@ -93,16 +92,16 @@ public class Enemy : MonoBehaviour
 
         var rays = new RaycastHit2D[]
          {
-                DrawRay(transform.position.x, isLookingLeft ? Vector2.right :  Vector2.left )
+                DrawRay(transform.position.x, isLookingLeft ? Vector2.right :  Vector2.left, transform.position.y, 2f)
          };
         foreach (RaycastHit2D ray in rays)
         {
             if (CollidedWithPlayer(ray))
             {
                 Highlight.gameObject.SetActive(true);
-                if (Input.GetButtonUp("Submit")) {
+                if (Input.GetButtonUp("Fire1")) {
                     UpdateState(EnemyState.SLEEP);
-                    UpdateMoving(false);
+                    UpdateAttachedScript(false);
                     sprite.sprite = SleepSprite;
                     RobotPatrol.Stop();
                     randomRoboDeath.clip = roboDeathSFX[Random.Range(0, roboDeathSFX.Length)];
@@ -118,11 +117,14 @@ public class Enemy : MonoBehaviour
 
     private bool TargetingLookAround()
     {
-        var rays = new RaycastHit2D[]
-         {
-                DrawRay(transform.position.x, Vector2.left),
-                DrawRay(transform.position.x, Vector2.right)
-         };
+
+        var leftRays = RaysDirectionVision(true);
+        var rightRays = RaysDirectionVision(false);
+
+        var rays = new RaycastHit2D[leftRays.Length + rightRays.Length];
+        leftRays.CopyTo(rays, 0);
+        rightRays.CopyTo(rays, leftRays.Length);
+
         foreach (RaycastHit2D ray in rays)
         {
             if (CollidedWithPlayer(ray))
@@ -140,8 +142,8 @@ public class Enemy : MonoBehaviour
         bool collidedWithPlayer = false;
         var rays = new RaycastHit2D[]
        {
-                DrawRay(transform.position.x, Vector2.left),
-                DrawRay(transform.position.x, Vector2.right)
+                DrawRay(transform.position.x, Vector2.left, transform.position.y, VisionDistance),
+                DrawRay(transform.position.x, Vector2.right, transform.position.y, VisionDistance)
        };
         foreach (RaycastHit2D ray in rays)
         {
@@ -170,15 +172,14 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private RaycastHit2D DrawRay(float x, Vector2 direction)
+    private RaycastHit2D DrawRay(float x, Vector2 direction, float yStart, float rayLength)
     {
-        float yStart = transform.position.y;
         Vector2 origin = new Vector2(x, yStart);
 
-        return RayHelper.DrayRay(origin, direction, VisionDistance, transform, Constants.PLAYER_LAYER);
+        return RayHelper.DrayRay(origin, direction, rayLength, transform, layersToConsider);
     }
 
-    private void UpdateMoving(bool enable)
+    private void UpdateAttachedScript(bool enable)
     {
         if (Moving != null && Moving.enabled != enable)
         {
@@ -195,12 +196,25 @@ public class Enemy : MonoBehaviour
     {
         UpdateState(EnemyState.NEUTRAL);
         sprite.sprite = NeutralSprite;
-        UpdateMoving(true);
+        UpdateAttachedScript(true);
     }
 
     private void UpdateState(EnemyState state)
     {
         enemyState = state;
         Highlight.gameObject.SetActive(false);
+    }
+
+    private RaycastHit2D[] RaysDirectionVision(bool isLookingLeft)
+    {
+        return new RaycastHit2D[]
+         {
+                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y, VisionDistance),
+                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.25f) : new Vector2(1,0.25f), transform.position.y, VisionDistance),
+                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.5f) : new Vector2(1,0.5f), transform.position.y, VisionDistance),
+                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.4f) : new Vector2(1,0.4f), transform.position.y, VisionDistance),
+                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y - sizeY /2, VisionDistance),
+                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y + sizeY /2, VisionDistance),
+         };
     }
 }
