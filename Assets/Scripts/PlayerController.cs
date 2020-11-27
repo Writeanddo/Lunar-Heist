@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
             RaycastHit2D hit = Hits[i];
             float distance = hit.distance;
 
-            if (hit.normal.y == 1)
+            if (hit.normal.y != 0)
             {
                 IsGrounded = true;
                 Speed = 12;
