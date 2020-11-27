@@ -163,10 +163,10 @@ MonoBehaviour:
   platRespawnSFX: {fileID: 8870777713853459962}
   countdownSourceSFX: {fileID: 6644220454447875409}
   countdownSFX:
-  - {fileID: 8300000, guid: cf43a622c544033459b8c02eb5ef5c32, type: 3}
-  - {fileID: 8300000, guid: 65fb911caf3454947b336ad5ec335392, type: 3}
-  - {fileID: 8300000, guid: 54e0d6500e99ecd49b062a5e73e4e54d, type: 3}
-  - {fileID: 8300000, guid: 2020d1235ab143849834662e73fc43d7, type: 3}
+  - {fileID: 8300000, guid: 2fde23ab843e3b94daa8e1a50c7ba7da, type: 3}
+  - {fileID: 8300000, guid: 3d98f34c800d5ab4f93d12b3a82d5497, type: 3}
+  - {fileID: 8300000, guid: 1841186f6c0c6f345823aa33b190f9fc, type: 3}
+  - {fileID: 8300000, guid: 8e41fef1f7c0a354dbe3514c91edd66b, type: 3}
   Dissolver: {fileID: 8161182299224403969}
 --- !u!61 &263106431691346364
 BoxCollider2D:
@@ -538,7 +538,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
