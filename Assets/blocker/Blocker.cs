@@ -5,10 +5,11 @@ public class Blocker : MonoBehaviour
     private BlockerManager BlockerManager;
     public BlockerName Name;
     public GameObject BlockerObject;
+    public bool SetActiveOnUnblocked;
     
     void Start()
     {
-        BlockerObject.SetActive(true);
+        BlockerObject.SetActive(!SetActiveOnUnblocked);
     }
 
     void OnEnable()
@@ -17,7 +18,7 @@ public class Blocker : MonoBehaviour
 
         if (BlockerManager.Blockers[Name])
         {
-            BlockerObject.SetActive(false);
+            BlockerObject.SetActive(SetActiveOnUnblocked);
         }
     }
 }
