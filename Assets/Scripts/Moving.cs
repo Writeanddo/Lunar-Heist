@@ -33,10 +33,10 @@ public class Moving : MonoBehaviour
     void FixedUpdate()
     {
         float step = speed * Time.deltaTime;
+        Vector3 originalPosition = transform.position;
         transform.position = Vector3.MoveTowards(transform.position, currentTarget, step);
 
         if (mountable) {
-            Vector3 originalPosition = transform.position;
             Rigidbody2D Player = BoxCollider.GetPlayerRidingHits();
 
             if (Player != null)
