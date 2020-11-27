@@ -32,6 +32,7 @@ MonoBehaviour:
   JumpSounds:
   - {fileID: 8300000, guid: 2402f864c844b6e498d0294dbe8b4d96, type: 3}
   - {fileID: 8300000, guid: 3188dbbaec7568c4e972583716857ed1, type: 3}
+  - {fileID: 8300000, guid: 22bb474d0006a8645ad2c4c77090b5f2, type: 3}
   LandSounds: []
   FootstepSounds:
   - {fileID: 8300000, guid: 0c9cb28b3fa1ec54d82d0063bdbcb54a, type: 3}
