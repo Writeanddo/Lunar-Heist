@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private bool IsGrounded;
     private RaycastHit2D[] Hits = new RaycastHit2D[50];
     private ContactFilter2D Filter;
+    private int CoyoteTimer = 20;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         Velocity.x = Input.GetAxisRaw("Horizontal") * Speed;
 
-        if (Input.GetButtonDown("Jump") && IsGrounded)
+        if (Input.GetButtonDown("Jump") && (IsGrounded || CoyoteTimer > 0))
         {
             Velocity.y = Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
         }
@@ -44,6 +45,8 @@ public class PlayerController : MonoBehaviour
                 Velocity.y = Velocity.y * 0.5f;
             }
         }
+
+        CoyoteTimer--;
     }
 
     void FixedUpdate()
@@ -88,6 +91,7 @@ public class PlayerController : MonoBehaviour
                 IsGrounded = true;
                 Speed = 12;
                 Velocity.y = 0;
+                CoyoteTimer = 20;
             }
 
             displacement = distance - 0.01f < displacement ? distance - 0.01f : displacement;
