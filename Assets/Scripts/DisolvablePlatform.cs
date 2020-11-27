@@ -10,6 +10,8 @@ public class DisolvablePlatform : MonoBehaviour
 
     public AudioSource dissolveSFX;
     public AudioSource platRespawnSFX;
+    public AudioSource countdownSourceSFX;
+    public AudioClip[] countdownSFX;
 
     public Dissolver Dissolver;
 
@@ -25,6 +27,7 @@ public class DisolvablePlatform : MonoBehaviour
 
     IEnumerator StartDisolveTimer()
     {
+        countdownSourceSFX.PlayOneShot(countdownSFX.PickRandom());
         yield return new WaitForSeconds(1f);
         Dissolver.Dissolve();
         dissolveSFX.Play();
