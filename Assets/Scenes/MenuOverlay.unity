@@ -619,7 +619,7 @@ MonoBehaviour:
   Slot1: {fileID: 530868282}
   Slot2: {fileID: 1466143461}
   Slot3: {fileID: 191211245}
-  SelectedCharacter: {fileID: 11400000, guid: 29ec0b3dbe324d74da9894069be752d8, type: 2}
+  SelectedCharacter: {fileID: 11400000, guid: 3551c556236b979498d1104a5141ea05, type: 2}
   Characters:
   - {fileID: 11400000, guid: 29ec0b3dbe324d74da9894069be752d8, type: 2}
   - {fileID: 11400000, guid: ee00bbca6948b49478dd5fde221c610b, type: 2}

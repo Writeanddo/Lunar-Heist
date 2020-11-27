@@ -18,7 +18,7 @@ public class BlockerEnabler : MonoBehaviour
 
     void Update()
     {
-        if (player != null && Input.GetButtonUp("Submit"))
+        if (player != null && Input.GetButtonUp("Fire1"))
         {
             player.gameObject.GetComponentInChildren<PlayerDialogue>().setText(text);
 
