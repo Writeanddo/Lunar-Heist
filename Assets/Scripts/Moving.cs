@@ -33,20 +33,15 @@ public class Moving : MonoBehaviour
     void FixedUpdate()
     {
         float step = speed * Time.deltaTime;
-        Vector3 originalPosition = transform.position;
-
         transform.position = Vector3.MoveTowards(transform.position, currentTarget, step);
+
         if (mountable) {
-            RaycastHit2D[] hits = Physics2D.BoxCastAll(BoxCollider.transform.position, BoxCollider.size, 0, Vector2.up, 0.5f);
+            Vector3 originalPosition = transform.position;
+            Rigidbody2D Player = BoxCollider.GetPlayerRidingHits();
 
-            for (int i = 0; i < hits.Length; i++)
+            if (Player != null)
             {
-                if (hits[i].transform.gameObject.tag == "Player")
-                {
-                    Player = hits[i].transform.gameObject.GetComponent<Rigidbody2D>();
-
-                    Player.position = Player.position + new Vector2(transform.position.x - originalPosition.x, transform.position.y - originalPosition.y);
-                }
+                Player.position = Player.position + new Vector2(transform.position.x - originalPosition.x, transform.position.y - originalPosition.y);
             }
         }
         

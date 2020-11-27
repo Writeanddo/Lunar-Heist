@@ -19,12 +19,29 @@ public class Box : MonoBehaviour
 
     private List<Collider2D> results = new List<Collider2D>();
     private ContactFilter2D filter = new ContactFilter2D().NoFilter();
-  
+    public bool mountable = false;
+
+
     void Update()
     {
         if (outOfBounds())
         {
             BoxWentOutOfBounds();
+        }
+    }
+
+    void FixedUpdate()
+    {
+
+        if (mountable)
+        {
+            Vector3 originalPosition = transform.position;
+            Rigidbody2D Player = boxCollider2D.GetPlayerRidingHits(4f);
+
+            if (Player != null)
+            {
+                Player.position += new Vector2(transform.position.x - originalPosition.x, transform.position.y - originalPosition.y - 0.05f);
+            }
         }
     }
 
