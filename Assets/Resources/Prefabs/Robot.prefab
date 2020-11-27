@@ -408,8 +408,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackSpeed: 5
-  VisionDistance: 6
-  AttackVisionDistance: 12
   sprite: {fileID: 6522745960752308707}
   Moving: {fileID: 6522745960752308708}
   AttackSprite: {fileID: -2185472608353246101, guid: 211dc868616288144a8358c0d48b1065, type: 3}
@@ -455,7 +453,7 @@ MonoBehaviour:
   - {x: -0.5833333, y: 1.6666666, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 115322
+  m_InstanceId: -74640
 --- !u!1 &6522745960830287523
 GameObject:
   m_ObjectHideFlags: 0
