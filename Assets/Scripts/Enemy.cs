@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -13,8 +14,6 @@ public class Enemy : MonoBehaviour
     }
 
     public float AttackSpeed;
-    public float VisionDistance = 4f;
-    public float AttackVisionDistance = 4f;
     public SpriteRenderer sprite;
     public MonoBehaviour Moving;
     public Sprite AttackSprite;
@@ -27,14 +26,16 @@ public class Enemy : MonoBehaviour
     public AudioSource randomRoboDeath;
     public AudioSource RobotPatrol;
     public AudioClip[] roboDeathSFX;
+    public BoxCollider2D Collider;
 
     private int[] layersToConsider = new int[2]{ Constants.PLAYER_LAYER, Constants.GROUND_LAYER };
+    private int layerMask;
 
-    private float sizeY;
+    private ContactFilter2D noFilter = new ContactFilter2D().NoFilter();
 
     void Awake()
     {
-        sizeY = sprite.size.y;
+        layerMask = RayHelper.GetLayerMask(layersToConsider);
     }
 
     void Update()
@@ -74,7 +75,7 @@ public class Enemy : MonoBehaviour
     {
         bool isLookingLeft = sprite.flipX;
 
-        var rays = RaysDirectionVision(isLookingLeft, VisionDistance);
+        var rays = RaysDirectionVision(isLookingLeft);
         foreach (RaycastHit2D ray in rays)
         {
             if (CollidedWithPlayer(ray))
@@ -119,14 +120,12 @@ public class Enemy : MonoBehaviour
     private bool TargetingLookAround()
     {
 
-        var leftRays = RaysDirectionVision(true, AttackVisionDistance);
-        var rightRays = RaysDirectionVision(false, AttackVisionDistance);
+        var leftRays = RaysDirectionVision(true);
+        var rightRays = RaysDirectionVision(false);
 
-        var rays = new RaycastHit2D[leftRays.Length + rightRays.Length];
-        leftRays.CopyTo(rays, 0);
-        rightRays.CopyTo(rays, leftRays.Length);
+        leftRays.AddRange(rightRays);
 
-        foreach (RaycastHit2D ray in rays)
+        foreach (RaycastHit2D ray in leftRays)
         {
             if (CollidedWithPlayer(ray))
             {
@@ -140,24 +139,7 @@ public class Enemy : MonoBehaviour
 
     private void AttackInProgress()
     {
-        bool collidedWithPlayer = false;
-        var rays = new RaycastHit2D[]
-       {
-                DrawRay(transform.position.x, Vector2.left, transform.position.y, AttackVisionDistance),
-                DrawRay(transform.position.x, Vector2.right, transform.position.y, AttackVisionDistance)
-       };
-        foreach (RaycastHit2D ray in rays)
-        {
-            if (CollidedWithPlayer(ray))
-            {
-                collidedWithPlayer = true;
-            }
-        }
-
-        if (!collidedWithPlayer)
-        {
-            SetToNeutral();
-        }
+       
     }
 
     private void MoveTowardsTarget(GameObject gameObject)
@@ -165,10 +147,10 @@ public class Enemy : MonoBehaviour
         float step = AttackSpeed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, gameObject.transform.position, step);
 
-        if (transform.position == gameObject.transform.position)
+        if (playerRightNextToRobot())
         {
             UpdateState(EnemyState.ATTACK);
-            Respawner.Respawn("caught");
+            Respawner.Respawn("caught", SetToNeutral);
         }
 
     }
@@ -206,19 +188,69 @@ public class Enemy : MonoBehaviour
         Highlight.gameObject.SetActive(false);
     }
 
-    private RaycastHit2D[] RaysDirectionVision(bool isLookingLeft, float distance)
+    private List<RaycastHit2D> RaysDirectionVision(bool isLookingLeft)
     {
-        return new RaycastHit2D[]
-         {
-                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y, distance),
-                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.25f) : new Vector2(1,0.25f), transform.position.y, distance),
-                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.5f) : new Vector2(1,0.5f), transform.position.y, distance),
-                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.4f) : new Vector2(1,0.4f), transform.position.y, distance),
-                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,-0.4f) : new Vector2(1,0.4f), transform.position.y, distance),
-                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,-0.25f) : new Vector2(1,0.4f), transform.position.y, distance),
-                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y - sizeY /2, distance),
-                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y + sizeY /2, distance),
-                DrawRay(transform.position.x, Vector2.up, transform.position.y, 3f),
-         };
+        return new List<RaycastHit2D>
+        {
+            cast(isLookingLeft ? Vector2.left : Vector2.right),
+            cast(isLookingLeft ? new Vector2(-1, 0.25f) : new Vector2(1, 0.25f)),
+            cast(isLookingLeft ? new Vector2(-1, 0.5f) : new Vector2(1, 0.5f)),
+            cast(isLookingLeft ? new Vector2(-1, 0.75f) : new Vector2(1, 0.75f)),
+            cast(isLookingLeft ? new Vector2(-1, -0.25f) : new Vector2(1, -0.25f)),
+            cast(isLookingLeft ? new Vector2(-1, -0.5f) : new Vector2(1, -0.5f)),
+            cast(isLookingLeft ? new Vector2(-1, -0.75f) : new Vector2(1, -0.75f)),
+            cast(Vector2.up, 5f),
+            cast(Vector2.down, 5f)
+        };
+    }
+
+    private bool playerRightNextToRobot()
+    {
+        bool onRobot = playerIsOnRobot();
+
+        if (onRobot) return true;
+
+        float width = Collider.size.x;
+        var collided = new List<RaycastHit2D>
+        {
+            cast(Vector2.left, width),
+            cast(Vector2.right, width),
+            cast(Vector2.up, width),
+            cast(Vector2.down, width),
+            cast(new Vector2(1, 0.5f), width),
+            cast(new Vector2(1, -0.5f), width),
+            cast(new Vector2(-1, -0.5f), width),
+            cast(new Vector2(-1, 0.5f), width),
+        };
+
+        foreach (RaycastHit2D ray in collided)
+        {
+            if (CollidedWithPlayer(ray))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private RaycastHit2D cast(Vector2 direction, float size= Mathf.Infinity)
+    {
+        var position = Collider.transform.position;
+
+        return Physics2D.BoxCast(position, Collider.size, 0, direction, size, layerMask);
+    }
+
+    private bool playerIsOnRobot()
+    {
+        var directlyOnPlayerColliders = new List<Collider2D>();
+        Physics2D.OverlapCollider(Collider, noFilter, directlyOnPlayerColliders);
+        foreach (Collider2D collider in directlyOnPlayerColliders)
+        {
+            if (collider.gameObject.tag == "Player")
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -379,7 +379,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -429,6 +429,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4e677b6c5515b134caaa6da3d71c0c89, type: 3}
   - {fileID: 8300000, guid: 4d532c229baa8664ea1f139d8da71020, type: 3}
   - {fileID: 8300000, guid: e67fbaee3b3dbac45a5a7e5b6acf83e0, type: 3}
+  Collider: {fileID: 6522745960752308709}
 --- !u!114 &6522745960752308696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,7 +455,7 @@ MonoBehaviour:
   - {x: -0.5833333, y: 1.6666666, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 78954
+  m_InstanceId: 115322
 --- !u!1 &6522745960830287523
 GameObject:
   m_ObjectHideFlags: 0
