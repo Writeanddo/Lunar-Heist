@@ -391,6 +391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackSpeed: 5
   VisionDistance: 25
+  AttackVisionDistance: 25
   sprite: {fileID: 5085015027841733195}
   Moving: {fileID: 5085015027841733192}
   AttackSprite: {fileID: -2185472608353246101, guid: 211dc868616288144a8358c0d48b1065, type: 3}
@@ -435,7 +436,7 @@ MonoBehaviour:
   - {x: -0.5833333, y: 1.6666666, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -16626
+  m_InstanceId: 78892
 --- !u!114 &5085015027841733192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a297406e71e364fad5f9ce2eaa52f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 0
 --- !u!1 &5085015027935726859
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
 
     public float AttackSpeed;
     public float VisionDistance = 4f;
+    public float AttackVisionDistance = 4f;
     public SpriteRenderer sprite;
     public MonoBehaviour Moving;
     public Sprite AttackSprite;
@@ -73,7 +74,7 @@ public class Enemy : MonoBehaviour
     {
         bool isLookingLeft = sprite.flipX;
 
-        var rays = RaysDirectionVision(isLookingLeft);
+        var rays = RaysDirectionVision(isLookingLeft, VisionDistance);
         foreach (RaycastHit2D ray in rays)
         {
             if (CollidedWithPlayer(ray))
@@ -118,8 +119,8 @@ public class Enemy : MonoBehaviour
     private bool TargetingLookAround()
     {
 
-        var leftRays = RaysDirectionVision(true);
-        var rightRays = RaysDirectionVision(false);
+        var leftRays = RaysDirectionVision(true, AttackVisionDistance);
+        var rightRays = RaysDirectionVision(false, AttackVisionDistance);
 
         var rays = new RaycastHit2D[leftRays.Length + rightRays.Length];
         leftRays.CopyTo(rays, 0);
@@ -142,8 +143,8 @@ public class Enemy : MonoBehaviour
         bool collidedWithPlayer = false;
         var rays = new RaycastHit2D[]
        {
-                DrawRay(transform.position.x, Vector2.left, transform.position.y, VisionDistance),
-                DrawRay(transform.position.x, Vector2.right, transform.position.y, VisionDistance)
+                DrawRay(transform.position.x, Vector2.left, transform.position.y, AttackVisionDistance),
+                DrawRay(transform.position.x, Vector2.right, transform.position.y, AttackVisionDistance)
        };
         foreach (RaycastHit2D ray in rays)
         {
@@ -205,16 +206,19 @@ public class Enemy : MonoBehaviour
         Highlight.gameObject.SetActive(false);
     }
 
-    private RaycastHit2D[] RaysDirectionVision(bool isLookingLeft)
+    private RaycastHit2D[] RaysDirectionVision(bool isLookingLeft, float distance)
     {
         return new RaycastHit2D[]
          {
-                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y, VisionDistance),
-                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.25f) : new Vector2(1,0.25f), transform.position.y, VisionDistance),
-                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.5f) : new Vector2(1,0.5f), transform.position.y, VisionDistance),
-                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.4f) : new Vector2(1,0.4f), transform.position.y, VisionDistance),
-                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y - sizeY /2, VisionDistance),
-                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y + sizeY /2, VisionDistance),
+                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y, distance),
+                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.25f) : new Vector2(1,0.25f), transform.position.y, distance),
+                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.5f) : new Vector2(1,0.5f), transform.position.y, distance),
+                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,0.4f) : new Vector2(1,0.4f), transform.position.y, distance),
+                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,-0.4f) : new Vector2(1,0.4f), transform.position.y, distance),
+                DrawRay(transform.position.x, isLookingLeft ? new Vector2(-1,-0.25f) : new Vector2(1,0.4f), transform.position.y, distance),
+                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y - sizeY /2, distance),
+                DrawRay(transform.position.x, isLookingLeft ? Vector2.left :  Vector2.right, transform.position.y + sizeY /2, distance),
+                DrawRay(transform.position.x, Vector2.up, transform.position.y, 3f),
          };
     }
 }
