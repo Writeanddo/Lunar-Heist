@@ -8,6 +8,10 @@ public class DisolvablePlatform : MonoBehaviour
     public BoxCollider2D Collider;
     private bool canTrigger = true;
 
+    public AudioSource platRespawnSFX;
+    public AudioSource countdownSourceSFX;
+    public AudioClip[] countdownSFX;
+
     public Dissolver Dissolver;
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -22,6 +26,7 @@ public class DisolvablePlatform : MonoBehaviour
 
     IEnumerator StartDisolveTimer()
     {
+        countdownSourceSFX.PlayOneShot(countdownSFX.PickRandom());
         yield return new WaitForSeconds(1f);
         Dissolver.Dissolve();
         Collider.enabled = false;
@@ -31,6 +36,7 @@ public class DisolvablePlatform : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
         Sprite.material = Normal;
+        platRespawnSFX.Play();
         Collider.enabled = true;
         canTrigger = true;
     }

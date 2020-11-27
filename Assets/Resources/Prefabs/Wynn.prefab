@@ -127,8 +127,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
-  m_fontSizeBase: 2
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 10.488165, y: 0, z: 6.8796983, w: 1.1128926}
+  m_margin: {x: 10.973369, y: -1.2276065, z: 1.0676837, w: 1.4825721}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 2864222968188398218}
   - component: {fileID: 1866251868}
   - component: {fileID: 1866251867}
+  - component: {fileID: 6904848021105787240}
   m_Layer: 11
   m_Name: Wynn
   m_TagString: Player
@@ -257,7 +258,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3504a718b2f14084a96ea20dd8d9e77f, type: 2}
+  - {fileID: 2100000, guid: 1f8a29f38000db041acd605eacced769, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -334,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df684efce0ee44f4f82c8fd749ccc6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 8
+  Speed: 12
   JumpHeight: 50
   Rb2d: {fileID: 2864222968188398218}
   BoxCollider: {fileID: 2788187533484357791}
@@ -343,6 +344,7 @@ MonoBehaviour:
     m_Bits: 256
   Animator: {fileID: 6904848021679061210}
   Sprite: {fileID: 6904848021679061211}
+  Velocity: {x: 0, y: 0}
 --- !u!61 &2788187533484357791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -356,18 +358,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.003306985}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.51, y: 3}
+    oldSize: {x: 1.6777778, y: 3.3333333}
     newSize: {x: 1.51, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.51, y: 3}
+  m_Size: {x: 1.51, y: 3.3373334}
   m_EdgeRadius: 0
 --- !u!50 &2864222968188398218
 Rigidbody2D:
@@ -500,3 +502,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6904848021105787240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6904848021679061215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 000000005d7b9f86f7ab3a54e9761791
+  m_ShapePath:
+  - {x: -0.8388889, y: -1.6666666, z: 0}
+  - {x: 0.8388889, y: -1.6666666, z: 0}
+  - {x: 0.8388889, y: 1.6666666, z: 0}
+  - {x: -0.8388889, y: 1.6666666, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 18762
