@@ -1151,8 +1151,8 @@ MonoBehaviour:
   ClickMe: {fileID: 246240787}
   voices: {fileID: 116183114}
   voiceList:
-  - {fileID: 8300000, guid: abbdfe15685776942adcac6afbea9007, type: 3}
-  - {fileID: 8300000, guid: b4af335f31bf1b4408324dbde3361596, type: 3}
+  - {fileID: 8300000, guid: e33f405522c34ef46b5b087eb709eb4b, type: 3}
+  - {fileID: 8300000, guid: 845857668b14c1f479c9b95e6c7d783b, type: 3}
   - {fileID: 8300000, guid: 0ae2864d4f52afa4b9abd596c03822d3, type: 3}
 --- !u!1 &2074711533
 GameObject:
