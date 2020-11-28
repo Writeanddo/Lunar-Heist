@@ -39,7 +39,8 @@ MonoBehaviour:
   FootstepSounds:
   - {fileID: 8300000, guid: f59c20e64e17cd74cadca5feca884ea5, type: 3}
   - {fileID: 8300000, guid: b381647a7ad6893478c2bfe7ddaaa030, type: 3}
-  DeathSounds: []
+  DeathSounds:
+  - {fileID: 8300000, guid: 5c64e86f6acb5ee408c04a8b6ae6b8d1, type: 3}
   CaughtSounds:
   - {fileID: 8300000, guid: cd300b78b6462d84c81165b04cedf702, type: 3}
   SpawnOutSounds:
