@@ -66,6 +66,19 @@ public class PlayerController : MonoBehaviour
         Move(true);
         Move(false);
 
+        Collider2D[] overlappingColliders = Physics2D.OverlapBoxAll(BoxCollider.transform.position, BoxCollider.size, 0, Ground);
+
+        for (int i= 0; i < overlappingColliders.Length; i++)
+        {
+            Collider2D collider = overlappingColliders[i];
+            ColliderDistance2D colliderDistance = collider.Distance(BoxCollider);
+
+            if (colliderDistance.isOverlapped)
+            {
+                Rb2d.position  = Rb2d.position + colliderDistance.normal * -colliderDistance.distance;
+            }
+        }
+
         UpdateAnimations();
     }
 
