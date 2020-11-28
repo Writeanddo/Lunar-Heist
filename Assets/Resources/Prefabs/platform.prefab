@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.017791748, y: 0.017781734}
+  m_Offset: {x: -0.0024871826, y: 0.0042619705}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5292358, y: 2.6715136}
+  m_Size: {x: 2.9212952, y: 2.9689484}
   m_EdgeRadius: 0
 --- !u!50 &5661379704408537098
 Rigidbody2D:
@@ -308,7 +308,7 @@ MonoBehaviour:
   speed: 3
   flipSpriteOnTurn: 0
   Sprite: {fileID: 5661379705380003840}
-  BoxCollider: {fileID: 0}
+  BoxCollider: {fileID: 5661379704408537099}
   mountable: 1
 --- !u!1 &5661379706138507668
 GameObject:
