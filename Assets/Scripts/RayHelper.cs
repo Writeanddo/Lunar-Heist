@@ -34,4 +34,10 @@ public static class RayHelper
         }
         return mask;
     }
+
+
+    public static LayerMask GetLayerMask(int layer)
+    {
+        return 1 << layer;
+    }
 }
