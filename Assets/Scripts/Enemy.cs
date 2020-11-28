@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
         ATTACK,
         SLEEP
     }
-
+    public float vision = 20f;
     public float AttackSpeed;
     public SpriteRenderer sprite;
     public MonoBehaviour Moving;
@@ -216,13 +216,13 @@ public class Enemy : MonoBehaviour
 
     private RaycastHit2D[] RaysDirectionVisionLeft()
     {
-        leftRays[0] = cast(Vector2.left);
-        leftRays[1] = cast(new Vector2(-1, 0.25f));
-        leftRays[2] = cast(new Vector2(-1, 0.5f));
-        leftRays[3] = cast(new Vector2(-1, 0.75f));
-        leftRays[4] = cast(new Vector2(-1, -0.25f));
-        leftRays[5] = cast(new Vector2(-1, -0.5f));
-        leftRays[6] = cast(new Vector2(-1, -0.75f));
+        leftRays[0] = cast(Vector2.left, vision);
+        leftRays[1] = cast(new Vector2(-1, 0.25f), vision);
+        leftRays[2] = cast(new Vector2(-1, 0.5f), vision);
+        leftRays[3] = cast(new Vector2(-1, 0.75f), vision);
+        leftRays[4] = cast(new Vector2(-1, -0.25f), vision);
+        leftRays[5] = cast(new Vector2(-1, -0.5f), vision);
+        leftRays[6] = cast(new Vector2(-1, -0.75f), vision);
         leftRays[7] = cast(Vector2.up, 5f);
         leftRays[8] = cast(Vector2.down, 5f);
 
@@ -231,13 +231,13 @@ public class Enemy : MonoBehaviour
 
     private RaycastHit2D[] RaysDirectionVisionRight()
     {
-        rightRays[0] = cast(Vector2.right);
-        rightRays[1] = cast(new Vector2(1, 0.25f));
-        rightRays[2] = cast(new Vector2(1, 0.5f));
-        rightRays[3] = cast(new Vector2(1, 0.75f));
-        rightRays[4] = cast(new Vector2(1, -0.25f));
-        rightRays[5] = cast(new Vector2(1, -0.5f));
-        rightRays[6] = cast(new Vector2(1, -0.75f));
+        rightRays[0] = cast(Vector2.right, vision);
+        rightRays[1] = cast(new Vector2(1, 0.25f), vision);
+        rightRays[2] = cast(new Vector2(1, 0.5f), vision);
+        rightRays[3] = cast(new Vector2(1, 0.75f), vision);
+        rightRays[4] = cast(new Vector2(1, -0.25f), vision);
+        rightRays[5] = cast(new Vector2(1, -0.5f), vision);
+        rightRays[6] = cast(new Vector2(1, -0.75f), vision);
         return rightRays;
     }
 
@@ -268,7 +268,7 @@ public class Enemy : MonoBehaviour
         return false;
     }
 
-    private RaycastHit2D cast(Vector2 direction, float size = Mathf.Infinity)
+    private RaycastHit2D cast(Vector2 direction, float size)
     {
         var position = Collider.transform.position;
 
