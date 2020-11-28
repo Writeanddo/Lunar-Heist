@@ -13,7 +13,8 @@ public class SecurityCamera : MonoBehaviour
 
     void Start()
     {
-        safeLayerFilter.layerMask = layerMask;
+        safeLayerFilter.useTriggers = true;
+        safeLayerFilter.SetLayerMask(layerMask);
     }
 
     void Update()
