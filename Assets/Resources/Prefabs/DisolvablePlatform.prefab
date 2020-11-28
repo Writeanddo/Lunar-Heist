@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 263106431691346363}
   - component: {fileID: 263106431691346364}
   - component: {fileID: 8161182299224403969}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DisolvablePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4107118460792147049}
   - component: {fileID: 8870777713853459962}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: respawn SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8358618762213950108}
   - component: {fileID: 3254426062862292338}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: dissolve SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3188903471551644531}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,7 +504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995090636845093183}
   - component: {fileID: 6644220454447875409}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: countdown Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
