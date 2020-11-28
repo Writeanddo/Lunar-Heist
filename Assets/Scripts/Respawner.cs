@@ -7,25 +7,25 @@ public class Respawner : MonoBehaviour
     public GameObject Player;
 
     private Animator PlayerAnimator;
+    private PlayerController PlayerController;
 
     public GameObject LastZone;
 
     void Start()
     {
         PlayerAnimator = Player.GetComponent<Animator>();
-    }
-
-    void Update()
-    {
-
+        PlayerController = Player.GetComponent<PlayerController>();
     }
 
     public void Respawn(string animationTrigger, UnityAction onRespawn = null)
     {
+        PlayerController.FreezeInputs();
+
         if (animationTrigger != null)
         {
             PlayerAnimator.SetTrigger(animationTrigger);
         }
+
         StartCoroutine(RespawnPlayer(onRespawn));
     }
 
@@ -39,6 +39,8 @@ public class Respawner : MonoBehaviour
         {
             onRespawn();
         }
+        
+        PlayerController.ThawInputs();
     }
 
     public void SetRespawn(GameObject obj)

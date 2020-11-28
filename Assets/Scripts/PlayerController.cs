@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private RaycastHit2D[] Hits = new RaycastHit2D[50];
     private ContactFilter2D Filter;
     private int CoyoteTimer = 20;
+    private bool IsFrozen  = false;
 
     void Start()
     {
@@ -31,22 +32,27 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Velocity.x = Input.GetAxisRaw("Horizontal") * Speed;
+        Velocity.x = 0;
 
-        if (Input.GetButtonDown("Jump") && (IsGrounded || CoyoteTimer > 0))
+        if (!IsFrozen)
         {
-            Velocity.y = Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
-        }
+            Velocity.x = Input.GetAxisRaw("Horizontal") * Speed;
 
-        if (Input.GetButtonUp("Jump"))
-        {
-            if (Velocity.y > 0)
+            if (Input.GetButtonDown("Jump") && (IsGrounded || CoyoteTimer > 0))
             {
-                Velocity.y = Velocity.y * 0.5f;
+                Velocity.y = Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
             }
-        }
+    
+            if (Input.GetButtonUp("Jump"))
+            {
+                if (Velocity.y > 0)
+                {
+                    Velocity.y = Velocity.y * 0.5f;
+                }
+            }
 
-        CoyoteTimer--;
+            CoyoteTimer--;
+        }
     }
 
     void FixedUpdate()
@@ -136,5 +142,13 @@ public class PlayerController : MonoBehaviour
         Animator.SetInteger("xVelocity", Mathf.FloorToInt(Velocity.x));
         Animator.SetInteger("yVelocity", Mathf.FloorToInt(Velocity.y));
         Animator.SetBool("isGrounded", IsGrounded);
+    }
+
+    public void FreezeInputs() {
+        IsFrozen = true;
+    }
+
+    public void ThawInputs() {
+        IsFrozen = false;
     }
 }
