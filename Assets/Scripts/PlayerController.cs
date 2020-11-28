@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer Sprite;
     public Vector2 Velocity;
 
-    private int GravityModifier = 10;
+    public int GravityModifier = 10;
     private Vector2 Movement;
     private bool IsGrounded;
     private RaycastHit2D[] Hits = new RaycastHit2D[50];
