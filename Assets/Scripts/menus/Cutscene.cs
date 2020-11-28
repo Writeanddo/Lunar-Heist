@@ -17,6 +17,9 @@ public class Cutscene : MonoBehaviour
 
     private bool fadingOut;
 
+    public AudioSource voices;
+    public List<AudioClip> voiceList;
+
     void Start()
     {
         UnityEngine.Camera.main.backgroundColor = Color.black;
@@ -50,6 +53,7 @@ public class Cutscene : MonoBehaviour
             textIndex = 0;
             TextContainer.SetActive(true);
             setText();
+            voices.PlayOneShot(voiceList[0]);
         }
         else if (textIndex == Dialogue.Count - 1)
         {
@@ -61,6 +65,7 @@ public class Cutscene : MonoBehaviour
         {
             textIndex += 1;
             setText();
+            voices.PlayOneShot(voiceList[textIndex]);
         }
     }
 
@@ -68,5 +73,6 @@ public class Cutscene : MonoBehaviour
     {
         Text.text = "\n" + Dialogue[textIndex];
         Text.color = WhoIsSpeaking[textIndex];
+        voices.clip = voiceList[textIndex];
     }
 }
