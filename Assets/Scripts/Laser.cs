@@ -6,6 +6,7 @@ using System.Collections;
 public class Laser : MonoBehaviour
 {
     public float Interval = 2f;
+    public float Offset = 0f;
     public Respawner Respawner;
 
     private SpriteRenderer sprite;
@@ -13,22 +14,35 @@ public class Laser : MonoBehaviour
     private float timer;
 
     private bool respawning = false;
+    private bool doneOffset = false;
 
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
         sprite.enabled = startOn;
+        doneOffset = Offset == 0;
     }
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        if (timer >= Interval)
+        if (!doneOffset) {
+            if (timer >= Offset)
+            {
+                timer = 0f;
+                sprite.enabled = !sprite.enabled;
+                doneOffset = true;
+            }
+        }else
         {
-            timer = 0f;
-            sprite.enabled = !sprite.enabled;
+            if (timer >= Interval)
+            {
+                timer = 0f;
+                sprite.enabled = !sprite.enabled;
+            }
         }
+      
     }
 
     void OnTriggerEnter2D(Collider2D collision)
