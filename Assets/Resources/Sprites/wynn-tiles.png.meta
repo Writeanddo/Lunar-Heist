@@ -209,6 +209,15 @@ TextureImporter:
   - first:
       213: 6393963635782191472
     second: wynn-tiles_67
+  - first:
+      213: 7134405882767910376
+    second: wynn-tiles_68
+  - first:
+      213: 1695508733647253163
+    second: wynn-tiles_69
+  - first:
+      213: 3173105748013091722
+    second: wynn-tiles_70
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1723,7 +1732,7 @@ TextureImporter:
         width: 270
         height: 390
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1731,6 +1740,69 @@ TextureImporter:
       bones: []
       spriteID: 0790091dc0cebb850800000000000000
       internalID: 6393963635782191472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_68
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 0
+        width: 120
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5a6d5c950820360800000000000000
+      internalID: 7134405882767910376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_69
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 123
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baeed96c538a78710800000000000000
+      internalID: 1695508733647253163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_70
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 0
+        width: 90
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b0211bdd2290c20800000000000000
+      internalID: 3173105748013091722
       vertices: []
       indices: 
       edges: []

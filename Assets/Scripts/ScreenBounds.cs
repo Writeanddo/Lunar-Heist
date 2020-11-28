@@ -4,7 +4,7 @@ public class ScreenBounds
 {
 	public Vector2 ScreenSize()
 	{
-		float height = Camera.main.orthographicSize * 2.0f;
+		float height = UnityEngine.Camera.main.orthographicSize * 2.0f;
 		float width = height * Screen.width / Screen.height;
 
 		return new Vector2(width, height);
@@ -12,16 +12,16 @@ public class ScreenBounds
 
 	public Vector2 TopLeftScreen()
 	{
-		return Camera.main.ScreenToWorldPoint(new Vector3(0, Camera.main.pixelHeight, Camera.main.nearClipPlane));
+		return UnityEngine.Camera.main.ScreenToWorldPoint(new Vector3(0, UnityEngine.Camera.main.pixelHeight, UnityEngine.Camera.main.nearClipPlane));
 	}
 	public Vector2 TopRightScreen()
 	{
-		return Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, Camera.main.nearClipPlane));
+		return UnityEngine.Camera.main.ScreenToWorldPoint(new Vector3(UnityEngine.Camera.main.pixelWidth, UnityEngine.Camera.main.pixelHeight, UnityEngine.Camera.main.nearClipPlane));
 	}
 
 	public Vector2 BottomLeftScreen()
 	{
-		return Camera.main.ScreenToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane));
+		return UnityEngine.Camera.main.ScreenToWorldPoint(new Vector3(0, 0, UnityEngine.Camera.main.nearClipPlane));
 	}
 	public Vector2 BottomRightScreen()
 	{

@@ -19,7 +19,7 @@ public class Cutscene : MonoBehaviour
 
     void Start()
     {
-        Camera.main.backgroundColor = Color.black;
+        UnityEngine.Camera.main.backgroundColor = Color.black;
     }
 
     void Update()

@@ -50,7 +50,7 @@ public class Box : MonoBehaviour
         sprite.color = ColourOnSelect;
         drag = true;
 
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+        offset = gameObject.transform.position - UnityEngine.Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
     }
 
     void OnMouseDrag()
@@ -58,7 +58,7 @@ public class Box : MonoBehaviour
         if (!outOfBounds() && drag)
         {
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+            Vector3 curPosition = UnityEngine.Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
             transform.position = curPosition;
         }else
         {
