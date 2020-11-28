@@ -836,6 +836,7 @@ MonoBehaviour:
   Text: {fileID: 186454555}
   NextScene: MenuOverlay
   Panel: {fileID: 1211134691}
+  ClickMe: {fileID: 246240787}
 --- !u!1 &2074711533
 GameObject:
   m_ObjectHideFlags: 0

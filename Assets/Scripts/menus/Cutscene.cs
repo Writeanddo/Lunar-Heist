@@ -13,8 +13,14 @@ public class Cutscene : MonoBehaviour
     public TextMeshProUGUI Text;
     public string NextScene;
     public Image Panel;
+    public GameObject ClickMe;
 
     private bool fadingOut;
+
+    void Start()
+    {
+        Camera.main.backgroundColor = Color.black;
+    }
 
     void Update()
     {
@@ -22,8 +28,6 @@ public class Cutscene : MonoBehaviour
         {
             Next();
         }
-
-     
     }
 
     void FixedUpdate()
@@ -51,6 +55,7 @@ public class Cutscene : MonoBehaviour
         {
             fadingOut = true;
             TextContainer.SetActive(false);
+            ClickMe.SetActive(false);
         }
         else
         {

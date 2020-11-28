@@ -6,6 +6,6 @@ public class StartMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadSceneAsync("MenuOverlay", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("OpeningCutscene", LoadSceneMode.Single);
     }
 }
