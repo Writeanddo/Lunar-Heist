@@ -8,4 +8,9 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("OpeningCutscene", LoadSceneMode.Single);
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits", LoadSceneMode.Single);
+    }
 }

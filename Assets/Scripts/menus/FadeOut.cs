@@ -18,7 +18,7 @@ public class FadeOut : MonoBehaviour
 
             if (Panel.color.a <= 0)
             {
-                SceneManager.LoadScene(NextScene);
+                onDone();
             }
         }else if (fadingOut && toOpaque)
         {
@@ -26,7 +26,7 @@ public class FadeOut : MonoBehaviour
 
             if (Panel.color.a >= 1)
             {
-                SceneManager.LoadScene(NextScene);
+                onDone();
             }
         }
     }
@@ -34,6 +34,14 @@ public class FadeOut : MonoBehaviour
     public void FadeToScene()
     {
         fadingOut = true;
+    }
+
+    private void onDone()
+    {
+        if (NextScene != "")
+        {
+            SceneManager.LoadScene(NextScene);
+        }
     }
 
 }
