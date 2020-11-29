@@ -20,6 +20,8 @@ public class Cutscene : MonoBehaviour
     public List<AudioClip> voiceList;
     public UnityEvent OnComplete;
 
+    public AudioSource cutsceneMusic;
+
     void Start()
     {
         UnityEngine.Camera.main.backgroundColor = Color.black;
@@ -43,6 +45,7 @@ public class Cutscene : MonoBehaviour
         }
         else if (textIndex == Dialogue.Count - 1)
         {
+            cutsceneMusic.volume = 0;
             OnDoneTalk();
         }
         else
