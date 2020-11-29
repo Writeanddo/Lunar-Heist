@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     private ContactFilter2D Filter;
     private int CoyoteTimer = 20;
     private bool IsFrozen  = false;
-    private bool IsJumping  = false;
 
     void Start()
     {
@@ -39,10 +38,10 @@ public class PlayerController : MonoBehaviour
         {
             Velocity.x = Input.GetAxisRaw("Horizontal") * Speed;
 
-            if (Input.GetButtonDown("Jump") && !IsJumping &&(IsGrounded || CoyoteTimer > 0))
+            if (Input.GetButtonDown("Jump") && (IsGrounded || CoyoteTimer > 0))
             {
                 Velocity.y = Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
-                IsJumping = true;
+                CoyoteTimer =  0;
             }
     
             if (Input.GetButtonUp("Jump"))
@@ -110,7 +109,6 @@ public class PlayerController : MonoBehaviour
             if (hit.normal.y != 0)
             {
                 IsGrounded = true;
-                IsJumping = false;
                 Speed = 12;
                 Velocity.y = 0;
                 CoyoteTimer = 20;
