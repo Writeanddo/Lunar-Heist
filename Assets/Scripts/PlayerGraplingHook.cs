@@ -15,6 +15,11 @@ public class PlayerGraplingHook : MonoBehaviour
 
     public CharacterSoundPlayer CharacterSoundPlayer;
 
+    void OnEnable()
+    {
+        CharacterSoundPlayer.StopGrapple();
+    }
+
     void FixedUpdate()
     {
         if (target !=Vector2.zero)
