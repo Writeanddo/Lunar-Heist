@@ -539,6 +539,9 @@ TextureImporter:
   - first:
       213: -5672111792575603559
     second: pie-tiles_178
+  - first:
+      213: 1194878520115866813
+    second: pie-tiles_179
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -4384,7 +4387,7 @@ TextureImporter:
         width: 90
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4392,6 +4395,27 @@ TextureImporter:
       bones: []
       spriteID: 99c1a35706c9841b0800000000000000
       internalID: -5672111792575603559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pie-tiles_179
+      rect:
+        serializedVersion: 2
+        x: 3410
+        y: 720
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc204deeaf059010800000000000000
+      internalID: 1194878520115866813
       vertices: []
       indices: 
       edges: []
