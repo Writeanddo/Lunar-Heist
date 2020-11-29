@@ -533,6 +533,12 @@ TextureImporter:
   - first:
       213: 714683099722419685
     second: pie-tiles_176
+  - first:
+      213: -5074124546127710749
+    second: pie-tiles_177
+  - first:
+      213: -5672111792575603559
+    second: pie-tiles_178
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -4336,7 +4342,7 @@ TextureImporter:
         width: 90
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4344,6 +4350,48 @@ TextureImporter:
       bones: []
       spriteID: 5ed0eed1e701be900800000000000000
       internalID: 714683099722419685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pie-tiles_177
+      rect:
+        serializedVersion: 2
+        x: 2969
+        y: 0
+        width: 525
+        height: 647
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5b7f1fb961599b0800000000000000
+      internalID: -5074124546127710749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pie-tiles_178
+      rect:
+        serializedVersion: 2
+        x: 3289
+        y: 434
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c1a35706c9841b0800000000000000
+      internalID: -5672111792575603559
       vertices: []
       indices: 
       edges: []
