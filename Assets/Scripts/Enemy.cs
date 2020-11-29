@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 
@@ -39,12 +40,27 @@ public class Enemy : MonoBehaviour
 
     private ContactFilter2D noFilter = new ContactFilter2D().NoFilter();
 
+    private IEnumerator initSound;
+
     void OnEnable()
     {
         if (enemyState != EnemyState.SLEEP)
         {
             RobotPatrol.Play();
+            initSound = playSound();
+            if (initSound != null)
+            {
+                StopCoroutine(initSound);
+            }
+            StartCoroutine(initSound);
         }    
+    }
+
+    IEnumerator playSound()
+    {
+        yield return new WaitForSeconds(1f);
+        RobotPatrol.Play();
+
     }
 
     void Start()
