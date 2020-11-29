@@ -483,10 +483,12 @@ MonoBehaviour:
   - Thats a big diamond
   - Heh! yeah.
   - Should we grab it and run?
+  - Our way out should be arriving in... well now!
   WhoIsSpeaking:
-  - {r: 0.68235296, g: 0.98039216, b: 1, a: 1}
+  - {r: 0.33333334, g: 1, b: 0.9607843, a: 1}
   - {r: 1, g: 0.56078434, b: 0.76862746, a: 1}
   - {r: 0.023584902, g: 1, b: 0.17577147, a: 1}
+  - {r: 0.33490568, g: 1, b: 0.96174794, a: 1}
   textIndex: -1
   TextContainer: {fileID: 543706655}
   Text: {fileID: 459361170}
