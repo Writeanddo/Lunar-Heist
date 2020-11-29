@@ -76,7 +76,7 @@ public class Moving : MonoBehaviour
         }
     }
 
-    private void TurnAround()
+    public void TurnAround()
     {
         direction = (direction == Direction.AWAY) ? Direction.TOWARDS : Direction.AWAY;
         currentTarget = (currentTarget == initialPosition) ? target : initialPosition;
