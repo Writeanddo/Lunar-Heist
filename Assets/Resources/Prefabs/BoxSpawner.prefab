@@ -272,8 +272,9 @@ MonoBehaviour:
   BoxSpawner: {fileID: 4989487425201037609}
   Dissolver: {fileID: 8962587669094260670}
   mountable: 0
-  boxDespawnSoundSource: {fileID: 0}
-  boxDespawnSound: []
+  boxDespawnSoundSource: {fileID: 6423080337650544895}
+  boxDespawnSound:
+  - {fileID: 8300000, guid: cd300b78b6462d84c81165b04cedf702, type: 3}
 --- !u!114 &8962587669094260670
 MonoBehaviour:
   m_ObjectHideFlags: 0
