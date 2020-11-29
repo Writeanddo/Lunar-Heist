@@ -371,6 +371,8 @@ MonoBehaviour:
   cameraSoundSouce: {fileID: 2422079687875270410}
   cameraSound:
   - {fileID: 8300000, guid: aca1d1ccb16904c44925aef2cb847d0c, type: 3}
+  - {fileID: 8300000, guid: 10db94a5cecb77a4c92127751f83a541, type: 3}
+  - {fileID: 8300000, guid: 805ec91fc02c47146a313401a964230f, type: 3}
 --- !u!1 &6415632759245227558
 GameObject:
   m_ObjectHideFlags: 0
