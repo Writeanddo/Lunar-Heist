@@ -497,8 +497,8 @@ MonoBehaviour:
   voices: {fileID: 1180070497}
   voiceList:
   - {fileID: 8300000, guid: e87870b8c4d31d045bb08246929163aa, type: 3}
-  - {fileID: 8300000, guid: 3e84cd8eb77c9264d82118f5e4f01856, type: 3}
-  - {fileID: 8300000, guid: 45cfb7a3101a53c41a88dcbdf3c7eced, type: 3}
+  - {fileID: 8300000, guid: 009267cfea2b599448fdbce72cf06883, type: 3}
+  - {fileID: 8300000, guid: 29a9643b104b16c438f55c093416499b, type: 3}
   - {fileID: 8300000, guid: 1730dda6bb1abaa4cb4d71416aa93277, type: 3}
   OnComplete:
     m_PersistentCalls:
