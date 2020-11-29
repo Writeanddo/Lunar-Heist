@@ -254,6 +254,9 @@ TextureImporter:
   - first:
       213: -3063321977867376685
     second: wynn-tiles_81
+  - first:
+      213: -1294408145647100617
+    second: wynn-tiles_82
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1891,7 +1894,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1075
         y: 675
-        width: 89
+        width: 90
         height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1910,7 +1913,7 @@ TextureImporter:
       name: wynn-tiles_74
       rect:
         serializedVersion: 2
-        x: 1114
+        x: 1115
         y: 720
         width: 90
         height: 90
@@ -1931,9 +1934,9 @@ TextureImporter:
       name: wynn-tiles_75
       rect:
         serializedVersion: 2
-        x: 1114
+        x: 1115
         y: 630
-        width: 91
+        width: 90
         height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1954,7 +1957,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1025
         y: 630
-        width: 89
+        width: 90
         height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1975,7 +1978,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1025
         y: 720
-        width: 89
+        width: 90
         height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1994,9 +1997,9 @@ TextureImporter:
       name: wynn-tiles_78
       rect:
         serializedVersion: 2
-        x: 1114
+        x: 1115
         y: 675
-        width: 91
+        width: 90
         height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2017,7 +2020,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1072
         y: 630
-        width: 91
+        width: 90
         height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2038,7 +2041,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1025
         y: 675
-        width: 89
+        width: 90
         height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
