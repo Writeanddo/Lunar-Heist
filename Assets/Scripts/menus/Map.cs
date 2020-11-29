@@ -19,8 +19,15 @@ public class Map : MonoBehaviour
         Tower = FindObjectOfType<Tower>();
     }
 
+    public void RelocateTower()
+    {
+        Tower = FindObjectOfType<Tower>();
+    }
+
     void FixedUpdate()
     {
-        Marker.transform.localPosition = Tower.GetRatioOfPlayer() - new Vector2(0.5f, 2);
+        Vector2 ratio = Tower.GetRatioOfPlayer();
+        float y = (ratio.y * 3) - 1.5f;
+        Marker.transform.localPosition = new Vector2(ratio.x - 0.5f, y);
     }
 }

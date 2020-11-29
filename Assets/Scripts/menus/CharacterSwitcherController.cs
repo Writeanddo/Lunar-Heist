@@ -25,6 +25,7 @@ public class CharacterSwitcherController : MonoBehaviour
     private bool switcherOpen;
     private List<TowerSceneWrapper> wrappers = new List<TowerSceneWrapper>();
     public Light2D SceneLight;
+    public Map Map;
 
     void Start()
     {
@@ -109,6 +110,7 @@ public class CharacterSwitcherController : MonoBehaviour
         UpdateSlots();
         character.audioSnapshot.TransitionTo(0.005f);
         SceneLight.color = character.ScreenLightColour;
+        Map.RelocateTower();
     }
 
     private void CloseSwitcher()

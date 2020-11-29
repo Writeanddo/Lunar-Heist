@@ -24,6 +24,6 @@ public class Tower : MonoBehaviour
         float ratioY = (playerPosition.y - boxStartY) / TowerBounds.size.y;
 
 
-        return new Vector2(ratioX, ratioY);
+        return new Vector2(ratioX - 0.5f, ratioY - 0.5f);
     }
 }
