@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class TogglePlatform : MonoBehaviour
 {
@@ -15,14 +16,14 @@ public class TogglePlatform : MonoBehaviour
     private SpriteRenderer sprite;
     public bool startOn;
     private float timer;
-
-
+    private bool isOn;
     void Start()
     {
         boxColider = GetComponentInChildren<BoxCollider2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
 
         OnShader = new Material(OnShader);
+        OnShader.SetColor("Color_D28C6A9", StartColour * 3.3f);
 
         SetOnOrOff(startOn);
     }
@@ -30,22 +31,30 @@ public class TogglePlatform : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+      
 
-        OnShader.SetColor("Color_D28C6A9", Color.Lerp(StartColour, EndColour, Mathf.PingPong(Time.time, Interval)));
         if (timer >= Interval)
         {
             timer = 0f;
-            SetOnOrOff(!boxColider.enabled);
+            SetOnOrOff(!isOn);
+        }
+
+        if (isOn)
+        {
+            OnShader.SetColor("Color_D28C6A9", Color.Lerp(StartColour, EndColour, timer / Interval) * 3.3f);
         }
 
     }
 
     private void SetOnOrOff(bool on)
     {
+        isOn = on;
         boxColider.enabled = on;
         sprite.material = on ? OnShader : OffShader;
 
-        Color c = new Color(1, 1, 1, on ? 1 : 0.25f);
-        sprite.color = c;
+        if (!on)
+        {
+            sprite.color = new Color(1, 1, 1, 0.25f); 
+        }
     }
 }
