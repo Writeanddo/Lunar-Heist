@@ -33,7 +33,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2402f864c844b6e498d0294dbe8b4d96, type: 3}
   - {fileID: 8300000, guid: 3188dbbaec7568c4e972583716857ed1, type: 3}
   - {fileID: 8300000, guid: 22bb474d0006a8645ad2c4c77090b5f2, type: 3}
-  LandSounds: []
+  LandSounds:
+  - {fileID: 8300000, guid: f3ad8b47410429841b269ae1d9882adc, type: 3}
+  - {fileID: 8300000, guid: 5b432b6c450849947a42633f5aba4d7b, type: 3}
+  - {fileID: 8300000, guid: 67ef18012a330494db7c0ceccb750137, type: 3}
   FootstepSounds:
   - {fileID: 8300000, guid: 0c9cb28b3fa1ec54d82d0063bdbcb54a, type: 3}
   DeathSounds:
