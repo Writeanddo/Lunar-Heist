@@ -24,7 +24,7 @@ public class FadeOut : MonoBehaviour
         {
             Panel.color = new Color(Panel.color.r, Panel.color.g, Panel.color.b, Panel.color.a + 0.1f);
 
-            if (Panel.color.a <= 1)
+            if (Panel.color.a >= 1)
             {
                 SceneManager.LoadScene(NextScene);
             }
