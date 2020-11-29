@@ -218,6 +218,12 @@ TextureImporter:
   - first:
       213: 3173105748013091722
     second: wynn-tiles_70
+  - first:
+      213: -4507849246748547737
+    second: wynn-tiles_71
+  - first:
+      213: -1945037473310998059
+    second: wynn-tiles_72
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1795,7 +1801,7 @@ TextureImporter:
         width: 90
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1803,6 +1809,48 @@ TextureImporter:
       bones: []
       spriteID: a8b0211bdd2290c20800000000000000
       internalID: 3173105748013091722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_71
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 570
+        width: 165
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7656a826ef6e071c0800000000000000
+      internalID: -4507849246748547737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wynn-tiles_72
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 519
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1897829b6d105e0800000000000000
+      internalID: -1945037473310998059
       vertices: []
       indices: 
       edges: []

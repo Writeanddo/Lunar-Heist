@@ -1142,7 +1142,7 @@ MonoBehaviour:
   WhoIsSpeaking:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 0.5613208, b: 0.76972264, a: 1}
+  - {r: 0.6839622, g: 0.9797983, b: 1, a: 1}
   textIndex: -1
   TextContainer: {fileID: 1363923496}
   Text: {fileID: 186454555}

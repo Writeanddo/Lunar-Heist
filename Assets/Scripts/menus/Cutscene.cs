@@ -52,8 +52,7 @@ public class Cutscene : MonoBehaviour
         {
             textIndex = 0;
             TextContainer.SetActive(true);
-            setText();
-            voices.PlayOneShot(voiceList[0]);
+            setTextAndVoices();
         }
         else if (textIndex == Dialogue.Count - 1)
         {
@@ -64,15 +63,17 @@ public class Cutscene : MonoBehaviour
         else
         {
             textIndex += 1;
-            setText();
-            voices.PlayOneShot(voiceList[textIndex]);
+            setTextAndVoices();
         }
     }
 
-    private void setText()
+    private void setTextAndVoices()
     {
         Text.text = "\n" + Dialogue[textIndex];
         Text.color = WhoIsSpeaking[textIndex];
-        voices.clip = voiceList[textIndex];
+        if (voiceList.Count > 0)
+        {
+            voices.PlayOneShot(voiceList[textIndex]);
+        }
     }
 }
