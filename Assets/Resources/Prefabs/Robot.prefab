@@ -42,7 +42,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32d16f6a30fe52a4d92d6b7ddb48dc75, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -407,6 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74d7247a55e06d148b2d25e45f57e60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vision: 20
   AttackSpeed: 5
   sprite: {fileID: 6522745960752308707}
   Moving: {fileID: 6522745960752308708}
@@ -453,7 +454,7 @@ MonoBehaviour:
   - {x: -0.5833333, y: 1.6666666, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -74640
+  m_InstanceId: 111892
 --- !u!1 &6522745960830287523
 GameObject:
   m_ObjectHideFlags: 0

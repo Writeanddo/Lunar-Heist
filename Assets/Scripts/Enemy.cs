@@ -39,6 +39,13 @@ public class Enemy : MonoBehaviour
 
     private ContactFilter2D noFilter = new ContactFilter2D().NoFilter();
 
+    void OnEnable()
+    {
+        if (enemyState != EnemyState.SLEEP)
+        {
+            RobotPatrol.Play();
+        }    
+    }
 
     void Start()
     {
