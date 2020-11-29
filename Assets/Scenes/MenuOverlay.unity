@@ -615,7 +615,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec02677fc180cc14482c206c4a8ff054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpSound: {fileID: 2106259804}
+  warpSoundSource: {fileID: 2106259804}
+  warpSound:
+  - {fileID: 8300000, guid: b54363a289596e549a53724a66640039, type: 3}
   Slot1: {fileID: 530868282}
   Slot2: {fileID: 1466143461}
   Slot3: {fileID: 191211245}
@@ -657,7 +659,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -7913237084618527274, guid: a7515fa8f8ab25a499bf2772037867e4, type: 2}
   m_audioClip: {fileID: 8300000, guid: 415cf2306ccb9254db4a9ba66eca9e46, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3058,7 +3060,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b54363a289596e549a53724a66640039, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1

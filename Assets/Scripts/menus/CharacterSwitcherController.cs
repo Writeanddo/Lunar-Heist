@@ -8,7 +8,9 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class CharacterSwitcherController : MonoBehaviour
 {
-    public AudioSource warpSound;
+    public AudioSource warpSoundSource;
+    public AudioClip[] warpSound;
+
 
     public CharacterSlot Slot1;
     public CharacterSlot Slot2;
@@ -105,7 +107,7 @@ public class CharacterSwitcherController : MonoBehaviour
     {
         wrappers.ForEach(w => w.Activate(character == w.Character));
         SelectedCharacter = character;
-        warpSound.Play();
+        warpSoundSource.PlayOneShot(warpSound[0]);
         CloseSwitcher();
         UpdateSlots();
         character.audioSnapshot.TransitionTo(0.005f);
