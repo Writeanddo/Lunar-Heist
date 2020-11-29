@@ -515,6 +515,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  cutsceneMusic: {fileID: 649424371}
 --- !u!114 &606827740
 MonoBehaviour:
   m_ObjectHideFlags: 0
