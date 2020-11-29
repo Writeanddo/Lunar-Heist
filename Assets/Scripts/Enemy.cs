@@ -120,7 +120,7 @@ public class Enemy : MonoBehaviour
         if (CollidedWithPlayer(ray))
         {
             Highlight.gameObject.SetActive(true);
-            if (Input.GetButtonUp("Fire1"))
+            if (Input.GetButtonDown("Fire1"))
             {
                 UpdateState(EnemyState.SLEEP);
                 UpdateAttachedScript(false);
