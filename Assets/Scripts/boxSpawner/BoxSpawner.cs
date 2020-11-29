@@ -14,6 +14,8 @@ public class BoxSpawner : MonoBehaviour
 
     private IEnumerator ButtonTimeout;
 
+    public AudioSource spawnSound;
+
     public void SpawnBox()
     {
         Box.GetComponent<Rigidbody2D>().velocity = UnityEngine.Vector3.zero;
@@ -21,6 +23,7 @@ public class BoxSpawner : MonoBehaviour
         Box.GetComponent<SpriteRenderer>().material = NormalMaterial;
         Box.SetActive(true);
         Button.sprite = ButtonDown;
+        spawnSound.Play();
         if (ButtonTimeout != null)
         {
             StartCoroutine(ButtonTimeout);
