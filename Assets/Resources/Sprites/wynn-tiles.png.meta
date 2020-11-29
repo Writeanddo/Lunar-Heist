@@ -224,6 +224,9 @@ TextureImporter:
   - first:
       213: -1945037473310998059
     second: wynn-tiles_72
+  - first:
+      213: -6703608394500311533
+    second: wynn-tiles_73
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
