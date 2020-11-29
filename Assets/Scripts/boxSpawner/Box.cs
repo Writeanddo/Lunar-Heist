@@ -21,6 +21,9 @@ public class Box : MonoBehaviour
     private ContactFilter2D filter = new ContactFilter2D().NoFilter();
     public bool mountable = false;
 
+    public AudioSource boxDespawnSoundSource;
+    public AudioClip[] boxDespawnSound;
+
 
     void Update()
     {
@@ -108,6 +111,7 @@ public class Box : MonoBehaviour
             outOfBoundsHandled = true;
             Dissolver.Dissolve();
             StartCoroutine(StartDisolveTimer());
+            boxDespawnSoundSource.PlayOneShot(boxDespawnSound.PickRandom());
         }
     }
 
