@@ -6,48 +6,38 @@ public class TogglePlatform : MonoBehaviour
 {
 
     public float Interval = 2f;
-    public float Offset = 0f;
 
     public Material OnShader;
     public Material OffShader;
+
+    public Color StartColour;
+    public Color EndColour;
 
     private BoxCollider2D boxColider;
     private SpriteRenderer sprite;
     public bool startOn;
     private float timer;
 
-    private bool doneOffset = false;
 
     void Start()
     {
         boxColider = GetComponentInChildren<BoxCollider2D>();
         sprite = GetComponentInChildren<SpriteRenderer>();
 
-        SetOnOrOff(startOn);
+        OnShader = new Material(OnShader);
 
-        doneOffset = Offset == 0;
+        SetOnOrOff(startOn);
     }
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        if (!doneOffset)
+        OnShader.SetColor("Color_D28C6A9", Color.Lerp(StartColour, EndColour, Mathf.PingPong(Time.time, Interval)));
+        if (timer >= Interval)
         {
-            if (timer >= Offset)
-            {
-                timer = 0f;
-                SetOnOrOff(!boxColider.enabled);
-                doneOffset = true;
-            }
-        }
-        else
-        {
-            if (timer >= Interval)
-            {
-                timer = 0f;
-                SetOnOrOff(!boxColider.enabled);
-            }
+            timer = 0f;
+            SetOnOrOff(!boxColider.enabled);
         }
 
     }
