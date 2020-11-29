@@ -46,7 +46,6 @@ public class Enemy : MonoBehaviour
     {
         if (enemyState != EnemyState.SLEEP)
         {
-            RobotPatrol.Play();
             initSound = playSound();
             if (initSound != null)
             {
