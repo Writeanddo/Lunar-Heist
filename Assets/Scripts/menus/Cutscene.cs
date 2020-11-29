@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Cutscene : MonoBehaviour
 {
@@ -11,14 +11,14 @@ public class Cutscene : MonoBehaviour
     public int textIndex = -1;
     public GameObject TextContainer;
     public TextMeshProUGUI Text;
-    public string NextScene;
     public Image Panel;
     public GameObject ClickMe;
 
-    private bool fadingOut;
+    private bool done;
 
     public AudioSource voices;
     public List<AudioClip> voiceList;
+    public UnityEvent OnComplete;
 
     void Start()
     {
@@ -27,22 +27,9 @@ public class Cutscene : MonoBehaviour
 
     void Update()
     {
-        if (!fadingOut && Input.GetButtonUp("Fire1"))
+        if (!done && Input.GetButtonUp("Fire1"))
         {
             Next();
-        }
-    }
-
-    void FixedUpdate()
-    {
-        if (fadingOut)
-        {
-            Panel.color = new Color(Panel.color.r, Panel.color.g, Panel.color.b, Panel.color.a - 0.1f);
-
-            if (Panel.color.a <= 0)
-            {
-                SceneManager.LoadScene(NextScene);
-            }
         }
     }
 
@@ -56,9 +43,7 @@ public class Cutscene : MonoBehaviour
         }
         else if (textIndex == Dialogue.Count - 1)
         {
-            fadingOut = true;
-            TextContainer.SetActive(false);
-            ClickMe.SetActive(false);
+            OnDoneTalk();
         }
         else
         {
@@ -75,5 +60,13 @@ public class Cutscene : MonoBehaviour
         {
             voices.PlayOneShot(voiceList[textIndex]);
         }
+    }
+
+    private void OnDoneTalk()
+    {
+        TextContainer.SetActive(false);
+        ClickMe.SetActive(false);
+        OnComplete.Invoke();
+        done = true;
     }
 }
