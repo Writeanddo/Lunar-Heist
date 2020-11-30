@@ -4,4 +4,6 @@ The "Moon Diamond" is being kept in the Lunar tower for one night only. Help thi
 
 This game was made for Github Game Off 2020
 
+https://octobass.itch.io/lunar-heist
+
 ![https://i.imgur.com/K4Pogl3.gif](https://i.imgur.com/K4Pogl3.gif)
