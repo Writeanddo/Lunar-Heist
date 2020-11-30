@@ -480,8 +480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue:
-  - Thats a big diamond
-  - Heh! yeah.
+  - That's a big diamond!
+  - Heh! Yeah.
   - Should we grab it and run?
   - Our way out should be arriving in... well now!
   WhoIsSpeaking:
