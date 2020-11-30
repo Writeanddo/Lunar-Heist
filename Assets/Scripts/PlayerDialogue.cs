@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.Events;
 
 public class PlayerDialogue : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class PlayerDialogue : MonoBehaviour
         Text.text = "";
     }
 
-    public void setText(string text)
+    public void setText(string text, UnityAction onEnd = null)
     {
         Text.text = text;
         if (textRemovalWait != null)
@@ -27,13 +28,14 @@ public class PlayerDialogue : MonoBehaviour
             speakSFX.Play();
         }
         int wordCount = text.Split(' ').Length;
-        textRemovalWait = RemoveText(wordCount * 0.3f);
+        textRemovalWait = RemoveText(wordCount * 0.3f, onEnd);
         StartCoroutine(textRemovalWait);
     }
 
-    private IEnumerator RemoveText(float lengthToWait)
+    private IEnumerator RemoveText(float lengthToWait, UnityAction onEnd)
     {
         yield return new WaitForSeconds(lengthToWait);
         Text.text = "";
+        onEnd.Invoke();
     }
 }

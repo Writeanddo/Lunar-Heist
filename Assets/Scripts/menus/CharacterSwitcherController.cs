@@ -19,6 +19,7 @@ public class CharacterSwitcherController : MonoBehaviour
 
     public Character SelectedCharacter;
     public List<Character> Characters;
+    public Dictionary<Character, bool> characterStatus = new Dictionary<Character, bool>();
 
     public float Offset = 1;
 
@@ -28,6 +29,15 @@ public class CharacterSwitcherController : MonoBehaviour
     private List<TowerSceneWrapper> wrappers = new List<TowerSceneWrapper>();
     public Light2D SceneLight;
     public Map Map;
+
+    void Awake()
+    {
+
+        characterStatus.Add(Characters[0], true);
+        characterStatus.Add(Characters[1], true);
+        characterStatus.Add(Characters[2], true);
+        Debug.Log("awake"+characterStatus.Count);
+    }
 
     void Start()
     {
@@ -43,6 +53,7 @@ public class CharacterSwitcherController : MonoBehaviour
         transform.position = new Vector3(v2.x, v2.y, transform.position.z);
         SceneLight.color = SelectedCharacter.ScreenLightColour;
 
+        Debug.Log(characterStatus.Count);
     }
 
     private void LoadScene(string name, bool isTowerScene = false)
@@ -125,9 +136,18 @@ public class CharacterSwitcherController : MonoBehaviour
 
     private void OpenSwitcher()
     {
+        var count = characterStatus.Values.ToList().FindAll(v => v == true).Count;
+
         Slot1.Preview();
-        Slot2.Preview();
-        Slot3.Preview();
+        if (count >= 2)
+        {
+            Slot2.Preview();
+        }
+
+        if (count == 3)
+        {
+            Slot3.Preview();
+        }
         switcherOpen = true;
     }
 
@@ -135,8 +155,57 @@ public class CharacterSwitcherController : MonoBehaviour
     {
         var OtherCharacters = Characters.FindAll(c => c != SelectedCharacter);
         Slot1.Setup(SelectedCharacter, this, true, disabledColour);
-        Slot2.Setup(OtherCharacters[0], this, false, disabledColour);
-        Slot3.Setup(OtherCharacters[1], this, false, disabledColour);
+
+        var count = characterStatus.Values.ToList().FindAll(v => v == true).Count;
+
+        if (count == 3)
+        {
+
+            Slot2.Setup(OtherCharacters[0], this, false, disabledColour);
+            Slot3.Setup(OtherCharacters[1], this, false, disabledColour);
+        }
+
+
+        if (count == 2)
+        {
+            if (characterStatus[OtherCharacters[0]])
+            {
+                Slot2.Setup(OtherCharacters[0], this, false, disabledColour);
+            }
+
+            if (characterStatus[OtherCharacters[1]])
+            {
+                Slot2.Setup(OtherCharacters[1], this, false, disabledColour);
+            }
+
+            Slot3.gameObject.SetActive(false);
+        }
+
+        if (count == 1)
+        {
+            Slot2.gameObject.SetActive(false);
+        }
+    }
+
+    public void SetCharacterComplete(Character character)
+    {
+        characterStatus[character] = false;
+       
+        // if all characters are done load scene
+        if (characterStatus.Values.All(v => !v))
+        {
+            SceneManager.LoadScene("EndingCutscene");
+        }else
+        {
+            foreach (var key in characterStatus.Keys)
+            {
+                if (characterStatus[key])
+                {
+                    SwitchToCharacter(key);
+                    return;
+                }
+            }
+        }
     }
 
 }
