@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     public AudioMixer Mixer;
 
     public GameObject Menu;
+    public GameObject ControlsMenu;
     void Update()
     {
         if (Input.GetButtonUp("Pause")){
@@ -23,6 +24,7 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         Menu.SetActive(true);
+        ControlsMenu.SetActive(false);
         Time.timeScale = 0;
         Mixer.SetFloat("MasterCutoffFrequencyLowPass", 250f);
         Mixer.SetFloat("MasterResonanceLowPass", 0.1f);
@@ -37,6 +39,11 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+    public void Controls()
+    {
+        ControlsMenu.SetActive(true);
+        Menu.SetActive(false);
+    }
 
     public void Quit()
     {
