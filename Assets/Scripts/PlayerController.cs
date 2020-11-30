@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private bool IsGrounded;
     private RaycastHit2D[] Hits = new RaycastHit2D[50];
     private ContactFilter2D Filter;
-    private int CoyoteTimer = 20;
+    private float CoyoteTimer = 333;
     private bool IsFrozen  = false;
 
     void Start()
@@ -38,10 +38,10 @@ public class PlayerController : MonoBehaviour
         {
             Velocity.x = Input.GetAxisRaw("Horizontal") * Speed;
 
-            if (Input.GetButtonDown("Jump") && (IsGrounded || CoyoteTimer > 0))
+            if (Input.GetButtonDown("Jump") && (IsGrounded || CoyoteTimer >= 0))
             {
                 Velocity.y = Mathf.Sqrt(-2 * Physics2D.gravity.y * JumpHeight);
-                CoyoteTimer =  0;
+                CoyoteTimer =  -1;
             }
     
             if (Input.GetButtonUp("Jump"))
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            CoyoteTimer--;
+            CoyoteTimer = Mathf.Clamp(CoyoteTimer - Time.deltaTime, -1, 333);
         }
     }
 
@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
                 IsGrounded = true;
                 Speed = 12;
                 Velocity.y = 0;
-                CoyoteTimer = 20;
+                CoyoteTimer = 333;
             }
 
             displacement = distance - 0.01f < displacement ? distance - 0.01f : displacement;
