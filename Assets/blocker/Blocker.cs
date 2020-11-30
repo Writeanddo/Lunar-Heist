@@ -15,7 +15,6 @@ public class Blocker : MonoBehaviour
     void OnEnable()
     {
         BlockerManager = FindObjectOfType<BlockerManager>();
-
         if (BlockerManager.Blockers[Name])
         {
             BlockerObject.SetActive(SetActiveOnUnblocked);

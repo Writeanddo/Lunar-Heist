@@ -46,7 +46,6 @@ public class CharacterSlot : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("Select " + character.name);
         controller.SelectCharacter(character);
     }
 }

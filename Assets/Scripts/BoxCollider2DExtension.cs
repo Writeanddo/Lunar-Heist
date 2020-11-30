@@ -9,7 +9,6 @@ public static class BoxCollider2DExtension
         {
             if (hits[i].transform.gameObject.tag == "Player")
             {
-                Debug.Log("player colliding");
                 return hits[i].transform.gameObject.GetComponent<Rigidbody2D>();
             }
         }

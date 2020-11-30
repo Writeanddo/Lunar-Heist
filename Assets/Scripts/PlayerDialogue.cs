@@ -36,6 +36,9 @@ public class PlayerDialogue : MonoBehaviour
     {
         yield return new WaitForSeconds(lengthToWait);
         Text.text = "";
-        onEnd.Invoke();
+        if (onEnd != null)
+        {
+            onEnd.Invoke();
+        }
     }
 }

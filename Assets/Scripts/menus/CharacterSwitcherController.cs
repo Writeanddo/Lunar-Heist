@@ -36,7 +36,6 @@ public class CharacterSwitcherController : MonoBehaviour
         characterStatus.Add(Characters[0], true);
         characterStatus.Add(Characters[1], true);
         characterStatus.Add(Characters[2], true);
-        Debug.Log("awake"+characterStatus.Count);
     }
 
     void Start()
@@ -53,7 +52,6 @@ public class CharacterSwitcherController : MonoBehaviour
         transform.position = new Vector3(v2.x, v2.y, transform.position.z);
         SceneLight.color = SelectedCharacter.ScreenLightColour;
 
-        Debug.Log(characterStatus.Count);
     }
 
     private void LoadScene(string name, bool isTowerScene = false)
