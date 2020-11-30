@@ -17,6 +17,10 @@ public class TogglePlatform : MonoBehaviour
     public bool startOn;
     private float timer;
     private bool isOn;
+
+    public AudioSource toggleSoundSource;
+    public AudioClip[] toggleSound;
+
     void Start()
     {
         boxColider = GetComponentInChildren<BoxCollider2D>();
@@ -51,10 +55,11 @@ public class TogglePlatform : MonoBehaviour
         isOn = on;
         boxColider.enabled = on;
         sprite.material = on ? OnShader : OffShader;
+        toggleSoundSource.PlayOneShot(toggleSound.PickRandom());
 
         if (!on)
         {
-            sprite.color = new Color(1, 1, 1, 0.25f); 
+            sprite.color = new Color(1, 1, 1, 0.25f);
         }
     }
 }
