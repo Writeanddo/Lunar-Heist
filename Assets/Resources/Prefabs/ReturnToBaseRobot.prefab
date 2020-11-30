@@ -389,9 +389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74d7247a55e06d148b2d25e45f57e60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vision: 20
   AttackSpeed: 5
-  VisionDistance: 30
-  AttackVisionDistance: 30
   sprite: {fileID: 5085015027841733195}
   Moving: {fileID: 5085015027841733192}
   AttackSprite: {fileID: -2185472608353246101, guid: 211dc868616288144a8358c0d48b1065, type: 3}
@@ -402,15 +401,10 @@ MonoBehaviour:
   randomRoboDeath: {fileID: 0}
   RobotPatrol: {fileID: 5085015026269386673}
   roboDeathSFX:
-  - {fileID: 8300000, guid: b7b2abbcb990b57419e161ac6ec8e31c, type: 3}
-  - {fileID: 8300000, guid: 83bf8a381f113714e8b51c5439b1f156, type: 3}
-  - {fileID: 8300000, guid: f537c0d1f95d54c43a445118434bfb03, type: 3}
-  - {fileID: 8300000, guid: 3283ed5727c7a6e41876a8fa2df38744, type: 3}
-  - {fileID: 8300000, guid: 2db38d2827ec3e343b13798b34f7ae15, type: 3}
   - {fileID: 8300000, guid: 707a87cf2ca4360458f4e21673e4e14a, type: 3}
+  - {fileID: 8300000, guid: e67fbaee3b3dbac45a5a7e5b6acf83e0, type: 3}
   - {fileID: 8300000, guid: 4e677b6c5515b134caaa6da3d71c0c89, type: 3}
   - {fileID: 8300000, guid: 4d532c229baa8664ea1f139d8da71020, type: 3}
-  - {fileID: 8300000, guid: e67fbaee3b3dbac45a5a7e5b6acf83e0, type: 3}
   Collider: {fileID: 5085015027841733197}
 --- !u!114 &5085015027841733232
 MonoBehaviour:
@@ -437,7 +431,7 @@ MonoBehaviour:
   - {x: -0.5833333, y: 1.6666666, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 115260
+  m_InstanceId: 36526
 --- !u!114 &5085015027841733192
 MonoBehaviour:
   m_ObjectHideFlags: 0
