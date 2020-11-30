@@ -873,8 +873,8 @@ Camera:
   m_GameObject: {fileID: 698678156}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.14903414, g: 0.0738252, b: 0.1981132, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -14093,7 +14093,6 @@ GameObject:
   - component: {fileID: 1436479800}
   - component: {fileID: 1436479802}
   - component: {fileID: 1436479801}
-  - component: {fileID: 1436479803}
   - component: {fileID: 1436479804}
   - component: {fileID: 1436479805}
   m_Layer: 0
@@ -14187,22 +14186,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1436479803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436479799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dfb8b5e62306564e85a50b0362e2c23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadingOut: 0
-  NextScene: 
-  Panel: {fileID: 0}
-  toOpaque: 0
 --- !u!114 &1436479804
 MonoBehaviour:
   m_ObjectHideFlags: 0
