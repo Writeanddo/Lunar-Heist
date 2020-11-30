@@ -134,11 +134,9 @@ MonoBehaviour:
   startOn: 0
   laserSoundSource: {fileID: 6150660680449354844}
   laserSound:
-  - {fileID: 8300000, guid: cec83a5383b00ed459b1421b018feb89, type: 3}
-  - {fileID: 8300000, guid: 8cb0f7e4ec7e5094bbe84ec5b66036ef, type: 3}
-  - {fileID: 8300000, guid: 0c43f03e00a75914fb186a2bbbcfe80a, type: 3}
-  - {fileID: 8300000, guid: c1786e6cfb9d1964994da221fe8ee085, type: 3}
-  - {fileID: 8300000, guid: 2921489d3f78d3c4e96f07afd2672ba8, type: 3}
+  - {fileID: 8300000, guid: 210f9753e75045643a0fb34c5e602ea7, type: 3}
+  - {fileID: 8300000, guid: dbaabb7807e5a9345a4f8d4b03e13f79, type: 3}
+  - {fileID: 8300000, guid: 9150c1cbf841c5b488756e435a1d6947, type: 3}
 --- !u!60 &5267777270014154026
 PolygonCollider2D:
   m_ObjectHideFlags: 0
