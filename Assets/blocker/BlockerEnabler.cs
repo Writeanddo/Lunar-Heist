@@ -8,6 +8,8 @@ public class BlockerEnabler : MonoBehaviour
     private Collider2D player;
     private SpriteRenderer sprite;
     private BlockerManager BlockerManager;
+    public GameObject item;
+
 
     void Start()
     {
@@ -25,6 +27,11 @@ public class BlockerEnabler : MonoBehaviour
             sprite.enabled = false;
             BlockerManager.Blockers[Name] = true;
             gameObject.SetActive(false);
+
+            if (item != null)
+            {
+                item.SetActive(false);
+            }
         }
     }
 
