@@ -16,6 +16,9 @@ public class Laser : MonoBehaviour
     private bool respawning = false;
     private bool doneOffset = false;
 
+    public AudioSource laserSoundSource;
+    public AudioClip[] laserSound;
+
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -40,6 +43,11 @@ public class Laser : MonoBehaviour
             {
                 timer = 0f;
                 sprite.enabled = !sprite.enabled;
+
+                if (sprite.enabled)
+                {
+                    laserSoundSource.PlayOneShot(laserSound.PickRandom());
+                }
             }
         }
       
