@@ -137,7 +137,7 @@ public class Enemy : MonoBehaviour
     {
         bool isLookingLeft = sprite.flipX;
 
-        var ray = DrawRay(transform.position.x, isLookingLeft ? Vector2.right : Vector2.left, transform.position.y, 2f);
+        var ray = DrawRay(transform.position.x, isLookingLeft ? Vector2.right : Vector2.left, transform.position.y, 2.5f);
 
         if (CollidedWithPlayer(ray))
         {
