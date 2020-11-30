@@ -17,4 +17,10 @@ public class StartMenu : MonoBehaviour
         startMenuMusic.volume = 0;
         SceneManager.LoadScene("Credits", LoadSceneMode.Single);
     }
+
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
