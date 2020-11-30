@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private bool IsGrounded;
     private RaycastHit2D[] Hits = new RaycastHit2D[50];
     private ContactFilter2D Filter;
-    private float CoyoteTimer = 333;
+    private float CoyoteTimer = 0.15f;
     private bool IsFrozen  = false;
 
     void Start()
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            CoyoteTimer = Mathf.Clamp(CoyoteTimer - Time.deltaTime, -1, 333);
+            CoyoteTimer = Mathf.Clamp(CoyoteTimer - Time.deltaTime, -1, 0.15f);
         }
     }
 
@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
                 IsGrounded = true;
                 Speed = 12;
                 Velocity.y = 0;
-                CoyoteTimer = 333;
+                CoyoteTimer = 0.15f;
             }
 
             displacement = distance - 0.01f < displacement ? distance - 0.01f : displacement;
