@@ -46,7 +46,7 @@ MonoBehaviour:
   SpawnOutSounds:
   - {fileID: 8300000, guid: cd300b78b6462d84c81165b04cedf702, type: 3}
   SpawnInSounds:
-  - {fileID: 8300000, guid: 1c7da9e7f93f2394e8e4e0edc21e8b6f, type: 3}
-  - {fileID: 8300000, guid: 1755dc83fff5a914b8347452e19680fa, type: 3}
+  - {fileID: 8300000, guid: 7a23a66ada283d147a03a84a6c62b91f, type: 3}
+  - {fileID: 8300000, guid: 5a1a3e4fa55301f489cdbc07f578b7ea, type: 3}
   GrappleSounds: []
   ScreenLightColour: {r: 0.3137255, g: 0.26666668, b: 0.32941177, a: 1}
