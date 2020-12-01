@@ -7,6 +7,18 @@ public class BoxButton : MonoBehaviour
     public SpriteRenderer Sprite;
     public GameObject ClickSprite;
 
+    void Update()
+    {
+        if (ClickSprite.activeSelf)
+        {
+            if (Input.GetButtonUp("Fire1"))
+            {
+                BoxSpawner.SpawnBox();
+                ClickSprite.SetActive(false);
+            }
+        }
+    }
+
     void OnMouseDown()
     {
         BoxSpawner.SpawnBox();
