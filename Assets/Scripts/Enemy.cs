@@ -53,6 +53,10 @@ public class Enemy : MonoBehaviour
             }
             StartCoroutine(initSound);
         }    
+        if (enemyState == EnemyState.ATTACK)
+        {
+            enemyState = EnemyState.TARGETING;
+        }
     }
 
     IEnumerator playSound()

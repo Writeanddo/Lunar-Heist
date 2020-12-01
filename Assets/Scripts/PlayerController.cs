@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     void OnEnable()
     {
         Velocity = Vector2.zero;
+        ThawInputs();
     }
 
     void Update()
