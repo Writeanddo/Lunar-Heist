@@ -14,13 +14,31 @@ public class DisolvablePlatform : MonoBehaviour
 
     public Dissolver Dissolver;
 
+    private IEnumerator DisolveTimer;
+    private IEnumerator RespawnPlatformTimer;
+
+    void OnEnable()
+    {
+        if (DisolveTimer != null)
+        {
+            StopCoroutine(DisolveTimer);
+        }
+        if (RespawnPlatformTimer != null)
+        {
+            StopCoroutine(RespawnPlatformTimer);
+        }
+        respawn();    
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if ((collision.tag == "Player" || collision.tag == "Box") && canTrigger)
         {
             canTrigger = false;
-            StartCoroutine(StartDisolveTimer());
-            StartCoroutine(RespawnPlatform());
+            DisolveTimer = StartDisolveTimer();
+            RespawnPlatformTimer = RespawnPlatform();
+            StartCoroutine(DisolveTimer);
+            StartCoroutine(RespawnPlatformTimer);
         }
     }
 
@@ -35,6 +53,11 @@ public class DisolvablePlatform : MonoBehaviour
     IEnumerator RespawnPlatform()
     {
         yield return new WaitForSeconds(4f);
+        respawn();
+    }
+
+    private void respawn()
+    {
         Sprite.material = Normal;
         platRespawnSFX.Play();
         Collider.enabled = true;
