@@ -11,6 +11,7 @@ public class Dissolver : MonoBehaviour
     void Start()
     {
         DisolverMaterial = new Material(DisolverShader);
+        DisolverMaterial.SetTexture("Texture2D_74AE4E17", Resources.Load<Texture2D>("Sprites/noise"));
     }
 
     void Update()
