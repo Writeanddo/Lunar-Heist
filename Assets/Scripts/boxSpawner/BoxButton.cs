@@ -21,11 +21,14 @@ public class BoxButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        BoxSpawner.SpawnBox();
+        if (!ClickSprite.activeSelf) {
+            BoxSpawner.SpawnBox();
+        }
     }
 
     void OnMouseOver()
     {
+        
         Sprite.color = ButtonOnHoverColour;
         ClickSprite.SetActive(true);
 

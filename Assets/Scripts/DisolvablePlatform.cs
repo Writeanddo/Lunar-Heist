@@ -27,7 +27,7 @@ public class DisolvablePlatform : MonoBehaviour
         {
             StopCoroutine(RespawnPlatformTimer);
         }
-        respawn();    
+        respawn(false);    
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -56,10 +56,14 @@ public class DisolvablePlatform : MonoBehaviour
         respawn();
     }
 
-    private void respawn()
+    private void respawn(bool playSound = true)
     {
         Sprite.material = Normal;
-        platRespawnSFX.Play();
+
+        if (playSound)
+        {
+            platRespawnSFX.Play();
+        }
         Collider.enabled = true;
         canTrigger = true;
     }
