@@ -28,7 +28,7 @@ public class PlayerDialogue : MonoBehaviour
             speakSFX.Play();
         }
         int wordCount = text.Split(' ').Length;
-        textRemovalWait = RemoveText(wordCount * 0.3f, onEnd);
+        textRemovalWait = RemoveText(wordCount * 0.4f, onEnd);
         StartCoroutine(textRemovalWait);
     }
 
