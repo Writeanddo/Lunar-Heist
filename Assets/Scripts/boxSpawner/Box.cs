@@ -24,6 +24,15 @@ public class Box : MonoBehaviour
     public AudioSource boxDespawnSoundSource;
     public AudioClip[] boxDespawnSound;
 
+    void OnEnable()
+    {
+        if (outOfBoundsHandled && outOfBounds())
+        {
+            Dissolver.StopDissolve();
+            outOfBoundsHandled = false;
+            BoxSpawner.SpawnBox();
+        }    
+    }
 
     void Update()
     {
